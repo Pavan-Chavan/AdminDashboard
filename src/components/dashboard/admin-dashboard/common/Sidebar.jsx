@@ -9,7 +9,7 @@ const Sidebar = () => {
   const sidebarData = [
     {
       icon: "/img/dashboard/sidebar/gear.svg",
-      title: "Venues Category",
+      title: "Main Category",
       href: "categories"
     },
     {
