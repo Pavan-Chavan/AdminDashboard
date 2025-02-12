@@ -1,0 +1,101 @@
+.modal-content {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.sketch-picker {
+  box-shadow: none !important;
+  margin: 0 auto;
+}
+
+
+.status-published {
+  color: rgb(1, 173, 1);
+}
+
+.status-draft {
+  color: red;
+}
+
+/* Style for active sidebar item */
+.side_current {
+  background-color: #FDF5F5;
+  color: #dc3545; /* Red text color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+.sidebar__item a:hover {
+  background-color: #FDF5F5;
+  color: #dc3545; /* Light grey hover effect */
+  border-radius: 6px;
+}
+
+.sidebar__item a.active {
+  background-color: #FDF5F5; /* Highlight background */
+  color: #dc3545; /* Active color */
+  border-radius: 6px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+    h3 {
+      margin-bottom: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+  
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+  
+      .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &.bg-blue-1 {
+          background-color: #007bff;
+          color: #fff;
+        }
+  
+        &.bg-light-2 {
+          background-color: #f8f9fa;
+          color: #212529;
+        }
+      }
+    }
+  }
+  
