@@ -22,6 +22,7 @@ import AdminDashboard from "./pages/dashboard/admin-dashboard/dashboard";
 import AdminAddVenue from "./pages/dashboard/admin-dashboard/add-venue";
 import Category from "./pages/dashboard/admin-dashboard/category";
 import Venue from "./pages/dashboard/admin-dashboard/venue";
+import WebSocketComponent from "./pages/bajarbhav-pulling/WebSocketComponent";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               
               <Route path="admin-dashboard">
                 <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="bhajarbhav-pulling" element={<WebSocketComponent />} />
                 <Route path="categories" element={<Category />} />
                 <Route path="venues" element={<Venue />} />
                 <Route path="venue/:mode" element={<AdminAddVenue />} />

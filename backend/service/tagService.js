@@ -4,10 +4,10 @@ const db = require("../db");
 const app = express();
 
 app.post("/add-tags", (req, res) => {
-  const { tag_name, tag_color, tag_img } = req.body;
-  const sql = "INSERT INTO tags (tag_name, tag_color, tag_img) VALUES (?, ?, ?)";
+  const { tag_name, tag_color, tag_img, slug } = req.body;
+  const sql = "INSERT INTO tags (tag_name, tag_color, tag_img, slug) VALUES (?, ?, ?, ?)";
   
-  db.query(sql, [tag_name, tag_color, tag_img], (err, result) => {
+  db.query(sql, [tag_name, tag_color, tag_img, slug], (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -46,10 +46,10 @@ app.get("/get-tag/:id", (req, res) => {
 // 🔹 Update (Modify a tag)
 app.put("/edit-tags/:id", (req, res) => {
   const { id } = req.params;
-  const { tag_name, tag_color, tag_img } = req.body;
-  const sql = "UPDATE tags SET tag_name = ?, tag_color = ?, tag_img = ? WHERE tag_id = ?";
+  const { tag_name, tag_color, tag_img, slug } = req.body;
+  const sql = "UPDATE tags SET tag_name = ?, tag_color = ?, tag_img = ?, slug = ? WHERE tag_id = ?";
   
-  db.query(sql, [tag_name, tag_color, tag_img, id], (err, result) => {
+  db.query(sql, [tag_name, tag_color, tag_img, slug, id], (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }

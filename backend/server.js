@@ -3,6 +3,8 @@ const db = require('./db');
 require('dotenv').config();
 const app = express();
 const cors = require('cors');
+const http = require('http');
+const WebSocket = require('ws');
 
 const corsOptions = {
   origin: process.env.IS_PROD ? process.env.FRONTENT_DOMAIN : process.env.FRONTENT_DOMAIN_LOCAL,  //'https://wedeazzy.com', // Replace with your frontend domain
@@ -20,16 +22,47 @@ const authService = require('./service/auth.js');
 const categoriesService = require('./service/categoriesService.js');
 const subCategoriesService = require('./service/subCategoriesService.js');
 const tagService = require('./service/tagService.js');
-
+const bajarbhavPullingService = require('./service/bajarbhavPullingService');
+const scarpingWeb = require('./service/scarpingService');
 
 // routes
 app.use('/api/auth', authService);
 app.use('/api/categories', categoriesService);
 app.use('/api/sub-categories', subCategoriesService);
 app.use('/api/tags', tagService);
+app.use('/api', bajarbhavPullingService);
+
+const server = http.createServer(app);
+
+// Create the WebSocket server and attach it to the same HTTP server
+const wss = new WebSocket.Server({ server });
+
+// WebSocket connection handling
+wss.on('connection', (ws) => {
+  console.log('WebSocket client connected');
+
+  ws.on('message', (message) => {
+    try {
+      const data = JSON.parse(message);
+      if (data.secretKeys === process.env.WEBSCOKET_secretKeys) {
+        const marketTypes = data.payload.marketTypes;
+        const marketTypesDetails = data.payload.marketTypesDetails;
+        scarpingWeb(marketTypes, ws, marketTypesDetails);
+      }
+    } catch (err) {
+      console.error('Error processing message', err);
+    }
+  });
+
+  ws.on('close', () => {
+    console.log('WebSocket client disconnected');
+  });
+  ws.send(JSON.stringify({status : "info" , message : `Welcome to data pulling service`}));
+});
 
 // Start the server
 const PORT = process.env.SERVER_PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`WebSocket server attached and running on the same port`);
 });
