@@ -18,10 +18,15 @@ app.options('*', cors(corsOptions));
 
 const authService = require('./service/auth.js');
 const categoriesService = require('./service/categoriesService.js');
+const subCategoriesService = require('./service/subCategoriesService.js');
+const tagService = require('./service/tagService.js');
+
 
 // routes
 app.use('/api/auth', authService);
 app.use('/api/categories', categoriesService);
+app.use('/api/sub-categories', subCategoriesService);
+app.use('/api/tags', tagService);
 
 // Start the server
 const PORT = process.env.SERVER_PORT || 3000;
