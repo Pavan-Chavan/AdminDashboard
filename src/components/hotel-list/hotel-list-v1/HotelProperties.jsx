@@ -91,7 +91,7 @@ const HotelProperties = ({venues = {data:[]}}) => {
                 <div className="text-14 d-flex text-green-2 lh-15 mt-10">
                   <div className=""> Vegetarian Package: </div><div className="fw-500"> &nbsp;<s>{` ₹${venue.veg_package_price}`}</s>/Plate</div>
                 </div>
-                <div className="text-14 d-flex lh-15" style={{color:"#d13535"}}>
+                <div className="text-14 d-flex lh-15" style={{color:"#639D49"}}>
                   <div className=""> Non-Vegetarian Package: </div><div className="fw-500"> &nbsp;<s>{` ₹${venue.non_veg_package_price}`}</s>/Plate</div>
                 </div>
                 <div className="row x-gap-10 y-gap-10 pt-20">

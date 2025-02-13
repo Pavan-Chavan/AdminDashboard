@@ -13,7 +13,14 @@ function Footer() {
           <div className="row y-gap-20 items-center">
             <div className="col-auto">
               <div className="text-14 lh-14 mr-30">
-                © {new Date().getFullYear()} All rights reserved | Cooked with ❤️ by Psyber Inc.
+                © {new Date().getFullYear()}<a
+                href="https://krushimaharashtra.com/"
+                className="mx-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              Krushi Maharashtra
+              </a>
               </div>
             </div>
 

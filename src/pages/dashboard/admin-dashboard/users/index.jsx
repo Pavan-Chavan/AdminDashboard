@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import UserTable from "@/components/dashboard/admin-dashboard/users";
 
 const metadata = {
-  title: "Users | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Users | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 const allowedUser = ["admin"];
 

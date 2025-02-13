@@ -9,8 +9,14 @@ const Sidebar = () => {
   const sidebarData = [
     {
       icon: "/img/dashboard/sidebar/gear.svg",
-      title: "Main Category",
-      href: "categories"
+      title: "Posts",
+      allowedRole: ["admin"],
+      links: [
+        { title: "All Posts", href: "/", allowedRole: ["admin"] },
+        { title: "Add New Post", href: "/", allowedRole: ["admin"] },
+        { title: "Categories", href: "categories", allowedRole: ["admin"] },
+        { title: "Tags", href: "/", allowedRole: ["admin"] },
+      ],
     },
     {
       icon: "/img/dashboard/sidebar/gear.svg",

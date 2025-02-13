@@ -6,8 +6,8 @@ import NotFound from "@/components/common/NotFound";
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
-  title: "404 | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "404 | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 
 const NotFoundPage = () => {

@@ -4,8 +4,8 @@ import DashboardPage from "../../../../components/dashboard/admin-dashboard/reco
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
-  title: "Admin Recovery | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Admin Recovery | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 
 export default function BDAdminRecovery() {

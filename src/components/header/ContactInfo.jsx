@@ -3,14 +3,14 @@ const ContactInfo = () => {
     {
       id: 1,
       title: "Toll Free Customer Care",
-      action: "tel:+91 99300 90487",
-      text: "+91 99300 90487",
+      action: "tel:+91 75889 86874",
+      text: "+91 75889 86874",
     },
     {
       id: 2,
       title: "Need live support?",
-      action: "mailto:wedeazzy@gmail.com",
-      text: "wedeazzy@gmail.com",
+      action: "mailto:krushimaharashtra.info@gmail.com",
+      text: "krushimaharashtra.info@gmail.com",
     },
   ];
   return (

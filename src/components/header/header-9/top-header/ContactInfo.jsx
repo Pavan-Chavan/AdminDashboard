@@ -4,8 +4,8 @@ const ContactInfo = () => {
   return (
     <div className="row x-gap-15 y-gap-15 items-center">
       <div className="col-auto md:d-none">
-        <a href="tel:+91 99300 90487" className="text-12 text-white">
-          +91 99300 90487
+        <a href="tel:+91 75889 86874" className="text-12 text-white">
+          +91 75889 86874
         </a>
       </div>
       {/* End .col-auto */}
@@ -14,8 +14,8 @@ const ContactInfo = () => {
       </div>
       {/* End .col-auto */}
       <div className="col-auto">
-        <a href="mailto:wedeazzy@gmail.com" className="text-12 text-white">
-          wedeazzy@gmail.com
+        <a href="mailto:krushimaharashtra.info@gmail.com" className="text-12 text-white">
+          krushimaharashtra.info@gmail.com
         </a>
       </div>
       {/* End .col-auto */}

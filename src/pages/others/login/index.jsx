@@ -7,8 +7,8 @@ import Header1 from "@/components/header/header-1";
 import { Link } from "react-router-dom";
 
 const metadata = {
-  title: "Login | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Login | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 
 const LogIn = ({role}) => {

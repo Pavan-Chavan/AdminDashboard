@@ -109,6 +109,9 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                   <thead className="bg-light-2">
                     <tr>
                       <th>Category Name</th>
+                      <th>Description</th>
+                      <th>Slug</th>
+                      <th>Count</th>
                       <th>Badge Color</th>
                       <th>Actions</th>
                     </tr>
@@ -117,6 +120,9 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                     {filteredCategories.map((category, index) => (
                       <tr key={index}>
                         <td>{category.category_name || "N/A"}</td>
+                        <td>{category.category_description || "--"}</td>
+                        <td>{category.category_slug || "N/A"}</td>
+                        <td>{category.category_count || "0"}</td>
                         <td>
                           <div
                             style={{

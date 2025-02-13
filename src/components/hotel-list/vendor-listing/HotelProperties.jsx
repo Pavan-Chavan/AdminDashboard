@@ -104,12 +104,12 @@ const HotelProperties = ({vendors}) => {
                     </button>
                   </div>
                 </div> */}
-                {/* <div className="text-14 d-flex lh-15" style={{color:"#d13535"}}>
+                {/* <div className="text-14 d-flex lh-15" style={{color:"#639D49"}}>
                   <div className="">Package: </div><div className="fw-500">{` ₹${vendor.vendor_rate}`}</div>
                 </div> */}
                 <div className="row x-gap-10 y-gap-10 pt-20">
                   <div className="col-auto">
-                      <div className={`py-5 px-15 mr-5 mt-5 text-12 lh-16 fw-500 uppercase text-white bg-yellow-1`} style={{width:"fit-content", backgroundColor: "#d13535", flex: "0 0 130px", borderRadius: "0 15px 15px 0"}}>
+                      <div className={`py-5 px-15 mr-5 mt-5 text-12 lh-16 fw-500 uppercase text-white bg-yellow-1`} style={{width:"fit-content", backgroundColor: "#639D49", flex: "0 0 130px", borderRadius: "0 15px 15px 0"}}>
                         {vendor?.vendor_service}
                       </div>
                     </div>

@@ -24,7 +24,7 @@ const Sidebar = ({onFilterChange, searchParams, allCategories, handleCategoryDro
   const renderSelectedCategory = () => {
     return searchParams.venue_categories.length === 0 ? "Select Categories" : searchParams.venue_categories.map((category) => {
       return (
-        <div className={`py-5 px-15 mr-5 mt-5 rounded-right-4 text-12 lh-16 fw-500 uppercase text-white`} style={{width:"fit-content", backgroundColor: "#d13535", flex: "0 0 130px"}}>
+        <div className={`py-5 px-15 mr-5 mt-5 rounded-right-4 text-12 lh-16 fw-500 uppercase text-white`} style={{width:"fit-content", backgroundColor: "#639D49", flex: "0 0 130px"}}>
           {category}
         </div>
       )

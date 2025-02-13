@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import VendorTable from "@/components/dashboard/admin-dashboard/vendors";
 
 const metadata = {
-  title: "Vendors | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Vendors | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 const allowedUser = ["admin", "vendor-user"];
 

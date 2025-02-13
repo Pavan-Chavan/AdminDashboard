@@ -21,8 +21,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import ServiceSlider from "@/components/hotels/ServiceSlider";
 
 const metadata = {
-  title: "WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 
 const Home_1 = () => {

@@ -7,14 +7,13 @@ const Copyright = () => {
         <div className="row x-gap-30 y-gap-10">
           <div className="col-auto">
             <div className="d-flex items-center">
-              © {new Date().getFullYear()} All rights reserved | Cooked with ❤️ by
-              <a
-                href="https://psyber.co/"
+              © {new Date().getFullYear()}<a
+                href="https://krushimaharashtra.com/"
                 className="mx-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              Psyber Inc.
+              Krushi Maharashtra
               </a>
             </div>
           </div>

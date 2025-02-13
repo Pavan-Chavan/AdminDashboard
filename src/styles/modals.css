@@ -5,7 +5,7 @@
 
 .sketch-picker {
   box-shadow: none !important;
-  margin: 0 auto;
+  margin: 0 0 0 0;
 }
 
 
@@ -19,20 +19,20 @@
 
 /* Style for active sidebar item */
 .side_current {
-  background-color: #FDF5F5;
-  color: #dc3545; /* Red text color */
+  background-color: #43ff640d;
+  color: #266907; /* Red text color */
   border-radius: 6px; /* Rounded corners */
 }
 
 .sidebar__item a:hover {
-  background-color: #FDF5F5;
-  color: #dc3545; /* Light grey hover effect */
+  background-color: #43ff640d;
+  color: #266907; /* Light grey hover effect */
   border-radius: 6px;
 }
 
 .sidebar__item a.active {
-  background-color: #FDF5F5; /* Highlight background */
-  color: #dc3545; /* Active color */
+  background-color: #43ff640d; /* Highlight background */
+  color: #266907; /* Active color */
   border-radius: 6px;
 }
 
@@ -53,7 +53,7 @@
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 600px;
     max-width: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   

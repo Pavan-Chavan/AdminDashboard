@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import CategoryTable from "@/components/dashboard/admin-dashboard/category";
 
 const metadata = {
-  title: "Categories | WedEazzy - Your Dream Wedding Partner",
-  description: "WedEazzy - Your Dream Wedding Partner",
+  title: "Categories | Krushi Maharashtra - अन्नदाता सुखी भव:",
+  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
 };
 
 export default function Category() {
