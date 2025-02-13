@@ -99,7 +99,7 @@ const TermsConent = () => {
                 <b>Address:</b> Workafella Goregaon, AK Estate, Besides Radisson
                 Blu Hotel, S.V. Rd, Goregaon West, Mumbai, Maharashtra 400062{" "}
                 <br />
-                <b>Email:</b> wedeazzy@gmail.com
+                <b>Email:</b> krushimaharashtra.info@gmail.com
               </p>
             </div>
           </TabPanel>
@@ -209,7 +209,7 @@ const TermsConent = () => {
                 <b>Address:</b> Workafella Goregaon, AK Estate, Besides Radisson
                 Blu Hotel, S.V. Rd, Goregaon West, Mumbai, Maharashtra 400062
                 <br />
-                <b>Email:</b> wedeazzy@gmail.com
+                <b>Email:</b> krushimaharashtra.info@gmail.com
               </p>
             </div>
           </TabPanel>
