@@ -19,10 +19,11 @@ import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
 import Home from "./pages";
 import LogIn from "./pages/others/login";
 import AdminDashboard from "./pages/dashboard/admin-dashboard/dashboard";
-import AdminAddVenue from "./pages/dashboard/admin-dashboard/add-venue";
+import CreateEditBlog from "./pages/dashboard/admin-dashboard/blog-posts";
 import Category from "./pages/dashboard/admin-dashboard/category";
-import Venue from "./pages/dashboard/admin-dashboard/venue";
+import Venue from "./pages/dashboard/admin-dashboard/blog";
 import WebSocketComponent from "./pages/bajarbhav-pulling/WebSocketComponent";
+import Blogs from "./pages/dashboard/admin-dashboard/blog";
 
 
 function App() {
@@ -46,8 +47,8 @@ function App() {
                 <Route path="dashboard" element={<AdminDashboard />} />
                 <Route path="bhajarbhav-pulling" element={<WebSocketComponent />} />
                 <Route path="categories" element={<Category />} />
-                <Route path="venues" element={<Venue />} />
-                <Route path="venue/:mode" element={<AdminAddVenue />} />
+                <Route path="blog-posts" element={<Blogs />} />  need to modify to list
+                <Route path="blog-posts/:mode" element={<CreateEditBlog />} />
               </Route>
             </Route>
           </Routes>

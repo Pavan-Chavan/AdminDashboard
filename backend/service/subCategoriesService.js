@@ -17,10 +17,12 @@ app.post("/add-sub-categories", (req, res) => {
 });
 
 // 🔹 Read (Get all categories)
-app.get("/get-sub-categories", (req, res) => {
-  const sql = "SELECT * FROM sub_categories";
+app.get("/get-sub-categories/:category", (req, res) => {
+  const {category} = req.params || "";
   
-  db.query(sql, (err, results) => {
+  const sql = "SELECT * FROM sub_categories WHERE parent_category_name = ?";
+  
+  db.query(sql, [category], (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }

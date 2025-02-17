@@ -24,6 +24,14 @@ const Sidebar = () => {
       href: "bhajarbhav-pulling"
     },
     {
+      icon: "/img/dashboard/sidebar/house.svg",
+      title: "Blog Posts",
+      links: [
+        { title: "All Blogs", href: "blog-posts"},
+        { title: "Add Blogs", href: "blog-posts/add"},
+      ],
+    },
+    {
       icon: "/img/dashboard/sidebar/gear.svg",
       title: "Settings",
       href: "settings",

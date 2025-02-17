@@ -16,6 +16,49 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `blog_posts`
+--
+
+DROP TABLE IF EXISTS `blog_posts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `blog_posts` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `sub_category` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `seo_title` varchar(255) DEFAULT NULL,
+  `seo_description` text,
+  `keywords` varchar(500) DEFAULT NULL,
+  `featured_image` varchar(500) DEFAULT NULL,
+  `author` varchar(100) NOT NULL,
+  `published_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `canonical_url` varchar(500) DEFAULT NULL,
+  `og_title` varchar(255) DEFAULT NULL,
+  `og_description` text,
+  `og_url` varchar(500) DEFAULT NULL,
+  `twitter_title` varchar(255) DEFAULT NULL,
+  `twitter_description` text,
+  `tags` json DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug` (`slug`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `blog_posts`
+--
+
+LOCK TABLES `blog_posts` WRITE;
+/*!40000 ALTER TABLE `blog_posts` DISABLE KEYS */;
+INSERT INTO `blog_posts` VALUES (8,'this is best blog edite','Shetii','maati','<p>asdfasd</p>','this-is-slug','asdfasdf','asdfasd','asdf','featured_blog_img_17-02-25-00-59-29_qslb4c13.png','manoj','2025-02-14 19:46:35','2025-02-17 00:59:30','asdf','asdf','asdf','asdf','asdf','asdf','[{\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}, {\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"a\", \"tag_name\": \"a\", \"tag_color\": \"#233223\"}, {\"slug\": \"aa\", \"tag_name\": \"aa\", \"tag_color\": \"#233223\"}]');
+/*!40000 ALTER TABLE `blog_posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categories`
 --
 
@@ -37,7 +80,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Shetii','#231243',NULL);
+INSERT INTO `categories` VALUES (1,'Shetii','#231243',NULL),(2,'Bakari','#099878',NULL);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,11 +175,11 @@ DROP TABLE IF EXISTS `tags`;
 CREATE TABLE `tags` (
   `tag_id` int NOT NULL AUTO_INCREMENT,
   `tag_name` varchar(255) NOT NULL,
-  `tag_color` varchar(50) DEFAULT NULL,
+  `tag_color` varchar(50) DEFAULT '#FFFFFF',
   `tag_img` varchar(255) DEFAULT NULL,
   `slug` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +188,7 @@ CREATE TABLE `tags` (
 
 LOCK TABLES `tags` WRITE;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
-INSERT INTO `tags` VALUES (1,'Agree',NULL,NULL,NULL);
+INSERT INTO `tags` VALUES (1,'Agree','#233223',NULL,'agri'),(2,'foot','#435421',NULL,'food'),(5,'test','#233223',NULL,'test'),(6,'while','#233223',NULL,'while'),(7,'while','#233223',NULL,'while'),(8,'wh','#233223',NULL,'wh'),(9,'shoock','#233223',NULL,'shoock'),(10,'shoock123','#233223',NULL,'shoock123'),(11,'shoock123','#233223',NULL,'shoock123'),(12,'kolkata','#233223',NULL,'kolkata'),(13,'a','#233223',NULL,'a'),(14,'aa','#233223',NULL,'aa'),(15,'aaa','#233223',NULL,'aaa'),(16,'aaa','#233223',NULL,'aaa');
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -158,4 +201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-12 23:53:27
+-- Dump completed on 2025-02-17 11:33:17

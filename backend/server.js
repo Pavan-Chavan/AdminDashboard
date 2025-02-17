@@ -23,7 +23,7 @@ const categoriesService = require('./service/categoriesService.js');
 const subCategoriesService = require('./service/subCategoriesService.js');
 const tagService = require('./service/tagService.js');
 const bajarbhavPullingService = require('./service/bajarbhavPullingService');
-const scarpingWeb = require('./service/scarpingService');
+const blogPostService = require('./service/blogPostService');
 
 // routes
 app.use('/api/auth', authService);
@@ -31,6 +31,7 @@ app.use('/api/categories', categoriesService);
 app.use('/api/sub-categories', subCategoriesService);
 app.use('/api/tags', tagService);
 app.use('/api', bajarbhavPullingService);
+app.use('/api/blogpost', blogPostService);
 
 const server = http.createServer(app);
 

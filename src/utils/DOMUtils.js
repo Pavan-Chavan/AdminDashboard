@@ -197,3 +197,32 @@ export const getIDFromURL = (input) => {
   const number = match ? parseInt(match[0], 10) : null; 
   return number;
 }
+
+export const getImageName = (file) => {
+  if (!file || !file.type) return "unknown_file"; // Handle missing file
+  
+  const now = new Date();
+  const formattedDate = now.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).replace(/\//g, "-").replace(/, /g, "-").replace(/:/g, "-");
+
+  const fileExtension = file.type.split("/")[1] || "jpg"; // Extract extension, default to 'jpg'
+  const uniqueId = Math.random().toString(36).substring(2, 10); // Random string
+  
+  return `featured_blog_img_${formattedDate}_${uniqueId}.${fileExtension}`;
+};
+
+export const createSlug = (title) => {
+  return title
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove leading/trailing spaces
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/--+/g, "-"); // Remove multiple hyphens
+};

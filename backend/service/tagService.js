@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const db = require("../db");
+const { isEmpty } = require('lodash');
 const app = express();
 
 app.post("/add-tags", (req, res) => {
@@ -17,9 +18,20 @@ app.post("/add-tags", (req, res) => {
 
 // 🔹 Read (Get all tags)
 app.get("/get-tags", (req, res) => {
-  const sql = "SELECT * FROM tags";
-  
-  db.query(sql, (err, results) => {
+  const { tag_name } = req.query;
+  let sql = "SELECT * FROM tags";
+  let params = [];
+
+  if (isEmpty(tag_name)) {
+    return res.json([]); 
+  }
+
+  if (!isEmpty(tag_name)) {
+    sql += " WHERE tag_name LIKE ?";
+    params.push(`%${tag_name}%`); // Using LIKE for partial matching
+  }
+
+  db.query(sql, params, (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
