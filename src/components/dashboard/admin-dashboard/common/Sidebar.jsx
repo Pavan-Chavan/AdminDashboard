@@ -12,24 +12,16 @@ const Sidebar = () => {
       title: "Posts",
       allowedRole: ["admin"],
       links: [
-        { title: "All Posts", href: "/", allowedRole: ["admin"] },
-        { title: "Add New Post", href: "/", allowedRole: ["admin"] },
+        { title: "All Posts", href: "blog-posts", allowedRole: ["admin"] },
+        { title: "Add New Post", href: "blog-posts/add", allowedRole: ["admin"] },
         { title: "Categories", href: "categories", allowedRole: ["admin"] },
-        { title: "Tags", href: "/", allowedRole: ["admin"] },
+        { title: "Tags", href: "tags", allowedRole: ["admin"] },
       ],
     },
     {
       icon: "/img/dashboard/sidebar/gear.svg",
       title: "BajarBhav data pulling",
       href: "bhajarbhav-pulling"
-    },
-    {
-      icon: "/img/dashboard/sidebar/house.svg",
-      title: "Blog Posts",
-      links: [
-        { title: "All Blogs", href: "blog-posts"},
-        { title: "Add Blogs", href: "blog-posts/add"},
-      ],
     },
     {
       icon: "/img/dashboard/sidebar/gear.svg",
