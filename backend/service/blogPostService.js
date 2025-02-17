@@ -22,6 +22,7 @@ app.post("/create-blog", (req, res) => {
     twitter_title,
     twitter_description,
     tags,
+    published_date
   } = req.body;
 
   const sql = `
@@ -30,12 +31,12 @@ app.post("/create-blog", (req, res) => {
       featured_image, author, published_date, updated_date, canonical_url, 
       og_title, og_description, og_url, twitter_title, twitter_description, tags
     ) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), ?, ?, ?, ?, ?, ?, ?)`;
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?, ?)`;
 
   const values = [
     title,
-    category,
-    sub_category,
+    JSON.stringify(category),
+    JSON.stringify(sub_category),
     content,
     slug,
     seo_title,
@@ -43,6 +44,7 @@ app.post("/create-blog", (req, res) => {
     keywords,
     featured_image,
     author,
+    published_date,
     canonical_url,
     og_title,
     og_description,
@@ -130,6 +132,7 @@ app.post("/update-blog/:id", (req, res) => {
     category,
     sub_category,
     content,
+    published_date,
     slug,
     seo_title,
     seo_description,
@@ -150,13 +153,13 @@ app.post("/update-blog/:id", (req, res) => {
       title = ?, category = ?, sub_category = ?, content = ?, slug = ?, seo_title = ?, 
       seo_description = ?, keywords = ?, featured_image = ?, author = ?, updated_date = NOW(), 
       canonical_url = ?, og_title = ?, og_description = ?, og_url = ?, 
-      twitter_title = ?, twitter_description = ?, tags = ?
+      twitter_title = ?, twitter_description = ?, tags = ?, published_date = ?
     WHERE id = ?`;
 
   const values = [
     title,
-    category,
-    sub_category,
+    JSON.stringify(category),
+    JSON.stringify(sub_category),
     content,
     slug,
     seo_title,
@@ -171,6 +174,7 @@ app.post("/update-blog/:id", (req, res) => {
     twitter_title,
     twitter_description,
     JSON.stringify(tags),
+    published_date,
     req.params.id,
   ];
 

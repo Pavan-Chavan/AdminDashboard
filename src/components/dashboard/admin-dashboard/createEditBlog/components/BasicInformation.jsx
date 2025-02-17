@@ -3,24 +3,29 @@ import axios from "axios";
 import { api } from "@/utils/apiProvider";
 import { useEffect, useState } from "react";
 import { showAlert } from "@/utils/isTextMatched";
-import { createSlug, debounce } from "@/utils/DOMUtils";
+import { createSlug, debounce, formatDate } from "@/utils/DOMUtils";
 
 const BasicInformation = ({
   blogpostdata = {},
+  selectedCategory = [],
   allCategories = [],
   handleChange = () => {},
   handleTagsDropDownChange = () => {},
   handleCategoryDropDownChange = () => {},
+  handleSubCategoryDropDownChange = () => {},
   handleDropDownChange
 }) => {
   const [subCategory, setSubCategory] = useState([]);
-  const [selectedSubCategory, setSubSelectedCategory] = useState(null);
   const [tags, setTags] = useState([]);
   const [serachTagQuery, setSearchTagQuery] = useState("");
 
   const fetchSubCategory = async (category) => {
     try {
-      const response = await axios.get(`${api}/api/sub-categories/get-sub-categories/${category}`);
+      const response = await axios.get(`${api}/api/sub-categories/get-sub-categories`,{ 
+        headers : { 
+          categories: category.map((category)=>{ return category.category_name })
+        }
+      });
       if (response.status === 200) {
         setSubCategory(response.data);
       }
@@ -64,6 +69,46 @@ const BasicInformation = ({
     );
   };
 
+  const renderSelectedCategory = () => {
+    return blogpostdata.category?.length === 0 ? (
+      "Select Category"
+    ) : (
+      blogpostdata.category.map((category) => (
+        <div
+          key={category}
+          className={`py-5 px-15 mr-5 rounded-right-4 text-12 lh-16 fw-500 uppercase text-white`}
+          style={{
+            backgroundColor: category.category_color_class, // Apply the category's color
+            width: "fit-content",
+            marginBottom: "2px"
+          }}
+        >
+          {category.category_name}
+        </div>
+      ))
+    );
+  }
+
+  const renderSelectedSubCategory = () => {
+    return blogpostdata.sub_category?.length === 0 ? (
+      "Select Sub Category"
+    ) : (
+      blogpostdata.sub_category.map((subCategory) => (
+        <div
+          key={subCategory}
+          className={`py-5 px-15 mr-5 rounded-right-4 text-12 lh-16 fw-500 uppercase text-white`}
+          style={{
+            backgroundColor: subCategory.category_color, // Apply the category's color
+            width: "fit-content",
+            marginBottom: "2px"
+          }}
+        >
+          {subCategory.sub_category_name}
+        </div>
+      ))
+    );
+  }
+
   const handleOnTagSearch = (e) => {
     const searchString = e.target.value;
       debounce(()=>{
@@ -72,11 +117,6 @@ const BasicInformation = ({
       ,1000)
     (searchString);
   }
-
-  const handleSubCategoryDropDownChange = (subCategory) => {
-    setSubSelectedCategory(subCategory);
-    handleDropDownChange({ name: "sub_category", value: subCategory.sub_category_name });
-  };
 
   const addTag = async (e) => {
     const body = { 
@@ -99,10 +139,8 @@ const BasicInformation = ({
   };
 
   useEffect(() => {
-    if (blogpostdata?.sub_category != selectedSubCategory?.sub_category_name && blogpostdata.category != "") {
-      fetchSubCategory(blogpostdata.category);
-    }
-  }, [blogpostdata]);
+    fetchSubCategory(blogpostdata.category);
+  }, [selectedCategory]);
 
   useEffect(()=>{
     fetchTags(serachTagQuery);
@@ -142,7 +180,7 @@ const BasicInformation = ({
                 data-bs-offset="0,10"
               >
                 <span className="d-flex js-dropdown-title">
-                  {blogpostdata.category === "" ? "Select category" : blogpostdata.category}
+                  {renderSelectedCategory()}
                 </span>
                 <i className="icon icon-chevron-sm-down text-7 ml-10" />
               </div>
@@ -155,7 +193,7 @@ const BasicInformation = ({
                       className={`js-dropdown-link`}
                       style={{flex: "0 0 130px", borderRadius: "0 15px 15px 0"}}
                       onClick={() => {
-                        handleCategoryDropDownChange(category.category_name);
+                        handleCategoryDropDownChange(category);
                       }}
                     >
                       {category.category_name} {category === blogpostdata.category ? "*" : ""}
@@ -183,8 +221,8 @@ const BasicInformation = ({
                   aria-expanded="false"
                   data-bs-offset="0,10"
                 >
-                  <span className="js-dropdown-title">
-                    {blogpostdata.sub_category == "" ? "Select Sub Category" : blogpostdata.sub_category}
+                  <span className="js-dropdown-title d-flex flex-wrap">
+                    {renderSelectedSubCategory()}
                   </span>
                   <i className="icon icon-chevron-sm-down text-7 ml-10" />
                 </div>
@@ -287,7 +325,7 @@ const BasicInformation = ({
 
           {/* Published Date */}
           <div className="form-input">
-            <input type="date" name="published_date" value={blogpostdata?.published_date} onChange={handleChange} />
+            <input type="date" name="published_date" value={formatDate(blogpostdata?.published_date)} onChange={handleChange} />
             <label className="lh-1 text-16 text-light-1">Published Date</label>
           </div>
         </div>

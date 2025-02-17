@@ -38,6 +38,14 @@ const BlogsTable = ({ searchParameter="", refresh }) => {
     }
   };
 
+  const renderCategory = (category) => {
+    return category.map((category)=>{return category.category_name}).join(",");
+  }
+
+  const renderSubCategory = (subCategory) => {
+    return subCategory.map((subCategory)=>{return subCategory.sub_category_name}).join(",")
+  }
+
   useEffect(() => {
     fetchBlogs();
   }, [refresh]);
@@ -90,8 +98,8 @@ const BlogsTable = ({ searchParameter="", refresh }) => {
                     {blogs.results.map((blog, index) => (
                       <tr key={index}>
                         <td>{blog.title}</td>
-                        <td>{blog.category} </td>
-                        <td>{blog.sub_category || "N/A"}</td>
+                        <td>{renderCategory(JSON.parse(blog.category))} </td>
+                        <td>{renderSubCategory(JSON.parse(blog.sub_category)) || "N/A"}</td>
                         <td>{blog.slug || "N/A"}</td>
                         <td>{blog.author || "N/A"}</td>
                         <td

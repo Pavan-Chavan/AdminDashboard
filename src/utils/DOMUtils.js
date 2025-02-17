@@ -226,3 +226,19 @@ export const createSlug = (title) => {
     .replace(/\s+/g, "-") // Replace spaces with hyphens
     .replace(/--+/g, "-"); // Remove multiple hyphens
 };
+
+// export function formatDate(isoString) {
+//   const date = new Date(isoString);
+
+//   // Extract the YYYY-MM-DD part
+//   const formattedDate = date.toISOString().split("T")[0];
+
+//   return formattedDate;
+// }
+
+export function formatDate(utcDate) {
+  const date = new Date(utcDate);
+  
+  // Convert to local timezone and extract YYYY-MM-DD
+  return date.toLocaleDateString("en-CA"); // "en-CA" ensures YYYY-MM-DD format
+}

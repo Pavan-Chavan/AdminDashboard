@@ -14,7 +14,7 @@ const Index = () => {
   const state = useLocation()?.state || null;
   const mode = params.mode;
   const [allCategories, setAllCategories] = useState([]);
-  const [vegDish, setVegDish] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [nonVegDish, setNonVegDish] = useState(null);
   const [errors, setError] = useState([]);
   const navigate = useNavigate();
@@ -37,8 +37,8 @@ const Index = () => {
     twitter_title: "",
     twitter_description: "",
     tags : [],
-    category : "",
-    sub_category : "",
+    category : [],
+    sub_category : [],
     is_enable : false
   });
 
@@ -77,7 +77,7 @@ const Index = () => {
         twitter_title: "",
         twitter_description: "",
         tags : [],
-        category : "",
+        category : [],
         sub_category : [],
         is_enable : false})
     }
@@ -91,6 +91,8 @@ const Index = () => {
         editFormData = {
           ...state,
           tags: JSON.parse(state?.tags),
+          category: JSON.parse(state?.category),
+          sub_category: JSON.parse(state?.sub_category),
         }
         setBlogPostData((prevState) => ({
           ...prevState,
@@ -107,9 +109,33 @@ const Index = () => {
   }, [blogpostdata]);
 
   const handleCategoryDropDownChange = (category)=> {
+    const {category_name, slug,  category_color_class} = category;
+    let new_categories = [];
+    if (blogpostdata.category.some(obj => obj["category_name"] === category_name)) {
+      new_categories = blogpostdata.category.filter((category)=>{return category_name !== category.category_name})
+    } else {
+      new_categories = blogpostdata.category;
+      new_categories.push({category_name: category_name, category_color_class: category_color_class, slug : slug});
+    }
+    setSelectedCategory([...new_categories]);
     setBlogPostData((prevState) => ({
       ...prevState,
-      category: category,
+      category: new_categories,
+    }));
+  }
+
+  const handleSubCategoryDropDownChange = (subCategory)=> {
+    const {sub_category_name, slug,  parent_category_name, category_color} = subCategory;
+    let new_sub_categories = [];
+    if (blogpostdata.sub_category.some(obj => obj["sub_category_name"] === sub_category_name)) {
+      new_sub_categories = blogpostdata.sub_category.filter((subCategory)=>{return sub_category_name !== subCategory.sub_category_name})
+    } else {
+      new_sub_categories = blogpostdata.sub_category;
+      new_sub_categories.push({sub_category_name: sub_category_name, category_color: category_color, parent_category_name: parent_category_name, slug : slug});
+    }
+    setBlogPostData((prevState) => ({
+      ...prevState,
+      sub_category: new_sub_categories,
     }));
   }
 
@@ -156,7 +182,7 @@ const Index = () => {
     {
       label: "Basic Information",
       labelNo: 1,
-      content: <BasicInformation handleTagsDropDownChange={handleTagsDropDownChange} handleCategoryDropDownChange = {handleCategoryDropDownChange} allCategories={allCategories} blogpostdata={blogpostdata} handleChange={handleChange} setBlogPostData={setBlogPostData} handleDropDownChange={handleDropDownChange}/>,
+      content: <BasicInformation selectedCategory={selectedCategory} handleTagsDropDownChange={handleTagsDropDownChange} handleCategoryDropDownChange = {handleCategoryDropDownChange} handleSubCategoryDropDownChange={handleSubCategoryDropDownChange} allCategories={allCategories} blogpostdata={blogpostdata} handleChange={handleChange} setBlogPostData={setBlogPostData} handleDropDownChange={handleDropDownChange}/>,
     },
     {
       label: "Content and Meta",
@@ -214,9 +240,7 @@ const Index = () => {
       console.error("Form validation failed:", errors);
     } else {
       let ApiBody = {
-        ...blogpostdata,
-        tags: blogpostdata.tags,
-        category: blogpostdata.category,
+        ...blogpostdata
       }
       let ImageBodyApi = {
         image : blogpostdata.featured_image_data,

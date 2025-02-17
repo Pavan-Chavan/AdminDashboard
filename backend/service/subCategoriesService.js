@@ -16,19 +16,27 @@ app.post("/add-sub-categories", (req, res) => {
   });
 });
 
-// 🔹 Read (Get all categories)
-app.get("/get-sub-categories/:category", (req, res) => {
-  const {category} = req.params || "";
-  
-  const sql = "SELECT * FROM sub_categories WHERE parent_category_name = ?";
-  
-  db.query(sql, [category], (err, results) => {
+app.get("/get-sub-categories", (req, res) => {
+  const categoriesString = req.headers.categories; // Extract categories from headers
+
+  if (!categoriesString) {
+    return res.status(400).json({ error: "Missing categories parameter" });
+  }
+
+  const categories = categoriesString.split(",").map(category => category.trim()); // Convert to array
+
+  const placeholders = categories.map(() => "?").join(", "); // Generate SQL placeholders
+  const sql = `SELECT * FROM sub_categories WHERE parent_category_name IN (${placeholders})`;
+
+  db.query(sql, categories, (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
     res.json(results);
   });
 });
+
+
 
 // 🔹 Read (Get a category by ID)
 app.get("/get-sub-categories/:id", (req, res) => {
