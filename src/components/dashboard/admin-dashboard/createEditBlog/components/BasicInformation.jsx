@@ -13,7 +13,7 @@ const BasicInformation = ({
   handleTagsDropDownChange = () => {},
   handleCategoryDropDownChange = () => {},
   handleSubCategoryDropDownChange = () => {},
-  handleDropDownChange
+  setBlogPostData = ()=> {}
 }) => {
   const [subCategory, setSubCategory] = useState([]);
   const [tags, setTags] = useState([]);
@@ -140,6 +140,17 @@ const BasicInformation = ({
 
   useEffect(() => {
     fetchSubCategory(blogpostdata.category);
+    setBlogPostData((prevState) => ({
+      ...prevState,
+      sub_category: prevState.sub_category
+      .filter((subCategory)=>{
+        return prevState.category
+          .find((category)=>{
+            return subCategory.parent_category_name === category.category_name
+          })
+        }
+      )
+    }));
   }, [selectedCategory]);
 
   useEffect(()=>{

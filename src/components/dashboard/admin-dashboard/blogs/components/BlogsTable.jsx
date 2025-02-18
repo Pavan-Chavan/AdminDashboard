@@ -39,11 +39,11 @@ const BlogsTable = ({ searchParameter="", refresh }) => {
   };
 
   const renderCategory = (category) => {
-    return category.map((category)=>{return category.category_name}).join(",");
+    return category.map((category)=>{return category.category_name}).join(", ");
   }
 
   const renderSubCategory = (subCategory) => {
-    return subCategory.map((subCategory)=>{return subCategory.sub_category_name}).join(",")
+    return subCategory.map((subCategory)=>{return subCategory.sub_category_name}).join(", ")
   }
 
   useEffect(() => {

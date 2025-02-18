@@ -182,7 +182,7 @@ const Index = () => {
     {
       label: "Basic Information",
       labelNo: 1,
-      content: <BasicInformation selectedCategory={selectedCategory} handleTagsDropDownChange={handleTagsDropDownChange} handleCategoryDropDownChange = {handleCategoryDropDownChange} handleSubCategoryDropDownChange={handleSubCategoryDropDownChange} allCategories={allCategories} blogpostdata={blogpostdata} handleChange={handleChange} setBlogPostData={setBlogPostData} handleDropDownChange={handleDropDownChange}/>,
+      content: <BasicInformation setBlogPostData={setBlogPostData} selectedCategory={selectedCategory} handleTagsDropDownChange={handleTagsDropDownChange} handleCategoryDropDownChange = {handleCategoryDropDownChange} handleSubCategoryDropDownChange={handleSubCategoryDropDownChange} allCategories={allCategories} blogpostdata={blogpostdata} handleChange={handleChange} handleDropDownChange={handleDropDownChange}/>,
     },
     {
       label: "Content and Meta",
