@@ -227,14 +227,20 @@ export const createSlug = (title) => {
     .replace(/--+/g, "-"); // Remove multiple hyphens
 };
 
-// export function formatDate(isoString) {
-//   const date = new Date(isoString);
+export function formatPublishDate(input) {
+  // Check if the input is already in "YYYY-MM-DD" format
+  if (/^\d{4}-\d{2}-\d{2}$/.test(input)) {
+    return input; // Return as is
+  }
 
-//   // Extract the YYYY-MM-DD part
-//   const formattedDate = date.toISOString().split("T")[0];
+  // Convert ISO timestamp to "YYYY-MM-DD"
+  const dateObj = new Date(input);
+  const year = dateObj.getFullYear();
+  const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+  const day = String(dateObj.getDate()).padStart(2, "0");
 
-//   return formattedDate;
-// }
+  return `${year}-${month}-${day}`;
+}
 
 export function formatDate(utcDate) {
   const date = new Date(utcDate);

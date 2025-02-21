@@ -8,6 +8,7 @@ import axios from "axios";
 import { api, krushiMahaDomain } from "@/utils/apiProvider";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { showAlert } from "@/utils/isTextMatched";
+import { formatPublishDate } from "@/utils/DOMUtils";
 
 const Index = () => {
   let params = useParams();
@@ -240,7 +241,8 @@ const Index = () => {
       console.error("Form validation failed:", errors);
     } else {
       let ApiBody = {
-        ...blogpostdata
+        ...blogpostdata,
+        published_date : formatPublishDate(blogpostdata.published_date)
       }
       let ImageBodyApi = {
         image : blogpostdata.featured_image_data,

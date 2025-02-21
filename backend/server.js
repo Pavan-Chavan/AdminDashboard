@@ -5,9 +5,10 @@ const app = express();
 const cors = require('cors');
 const http = require('http');
 const WebSocket = require('ws');
+const checkIfOriginAllow = require('./Utils/utils');
 
 const corsOptions = {
-  origin: process.env.IS_PROD ? process.env.FRONTENT_DOMAIN : process.env.FRONTENT_DOMAIN_LOCAL,  //'https://wedeazzy.com', // Replace with your frontend domain
+  origin: checkIfOriginAllow,
   methods: 'GET,POST,PUT,DELETE',
   credentials: true
 };

@@ -31,11 +31,11 @@ app.get('/get-categories', (req, res) => {
 });
 
 // READ: Get a category by ID
-app.get('/get-categories/:category_id', (req, res) => {
-	const { category_id } = req.params;
+app.get('/get-categories/:slug', (req, res) => {
+	const { slug } = req.params;
 
-	const query = 'SELECT * FROM categories, WHERE category_id = ?';
-	db.query(query, [category_id], (err, result) => {
+	const query = "SELECT * FROM categories WHERE slug = ?";
+	db.query(query, [slug], (err, result) => {
 			if (err) {
 					console.error('Error fetching category:', err);
 					return res.status(500).json({ message: 'Error fetching category' });

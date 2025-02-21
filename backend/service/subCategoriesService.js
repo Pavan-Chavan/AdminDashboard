@@ -39,11 +39,11 @@ app.get("/get-sub-categories", (req, res) => {
 
 
 // 🔹 Read (Get a category by ID)
-app.get("/get-sub-categories/:id", (req, res) => {
-  const { id } = req.params;
-  const sql = "SELECT * FROM sub_categories WHERE sub_category_id = ?";
+app.get("/get-sub-category/:slug", (req, res) => {
+  const { slug } = req.params;
+  const sql = "SELECT * FROM sub_categories WHERE slug = ?";
   
-  db.query(sql, [id], (err, result) => {
+  db.query(sql, [slug], (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
