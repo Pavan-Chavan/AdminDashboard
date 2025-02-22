@@ -25,8 +25,8 @@ DROP TABLE IF EXISTS `blog_posts`;
 CREATE TABLE `blog_posts` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `sub_category` varchar(255) NOT NULL,
+  `category` json NOT NULL,
+  `sub_category` json NOT NULL,
   `content` text NOT NULL,
   `slug` varchar(255) NOT NULL,
   `seo_title` varchar(255) DEFAULT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `blog_posts` (
   `keywords` varchar(500) DEFAULT NULL,
   `featured_image` varchar(500) DEFAULT NULL,
   `author` varchar(100) NOT NULL,
-  `published_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `published_date` date DEFAULT NULL,
   `updated_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `canonical_url` varchar(500) DEFAULT NULL,
   `og_title` varchar(255) DEFAULT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `blog_posts` (
   `tags` json DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `blog_posts` (
 
 LOCK TABLES `blog_posts` WRITE;
 /*!40000 ALTER TABLE `blog_posts` DISABLE KEYS */;
-INSERT INTO `blog_posts` VALUES (8,'this is best blog edite','Shetii','maati','<p>asdfasd</p>','this-is-slug','asdfasdf','asdfasd','asdf','featured_blog_img_17-02-25-00-59-29_qslb4c13.png','manoj','2025-02-14 19:46:35','2025-02-17 00:59:30','asdf','asdf','asdf','asdf','asdf','asdf','[{\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}, {\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"a\", \"tag_name\": \"a\", \"tag_color\": \"#233223\"}, {\"slug\": \"aa\", \"tag_name\": \"aa\", \"tag_color\": \"#233223\"}]');
+INSERT INTO `blog_posts` VALUES (1,'title','[{\"slug\": \"trending\", \"category_name\": \"Shetii\", \"category_color_class\": \"#231243\"}]','[{\"slug\": null, \"category_color\": \"#234323\", \"sub_category_name\": \"maati\", \"parent_category_name\": \"Shetii\"}]','<p>asd</p>','slug','asdf','asdf','asd','featured_blog_img_20-02-25-00-50-47_e4rgkges.jpeg','auther','2025-02-05','2025-02-21 18:00:04','asdf','sdf','asd','asdf','asdf','asdf','[{\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}]'),(2,'डाळिंब लागवड तंत्रज्ञान','[{\"slug\": \"sheti\", \"category_name\": \"Shetii\", \"category_color_class\": \"#231243\"}, {\"slug\": \"bakari\", \"category_name\": \"Bakari\", \"category_color_class\": \"#099878\"}]','[{\"slug\": \"mati\", \"category_color\": \"#234323\", \"sub_category_name\": \"maati\", \"parent_category_name\": \"Shetii\"}, {\"slug\": \"black-bakari\", \"category_color\": \"#233243\", \"sub_category_name\": \"black bakari\", \"parent_category_name\": \"Bakari\"}]','<p>डाळिंब लागवड तंत्रज्ञान</p>','dalimb-mahiti','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','डाळिंब, लागवड, तंत्रज्ञान','featured_blog_img_20-02-25-00-51-14_uvedwgeb.jpeg','Pavan Chavan','2025-02-19','2025-02-20 00:51:16','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','डाळिंब लागवड तंत्रज्ञान','[{\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}, {\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"aa\", \"tag_name\": \"aa\", \"tag_color\": \"#233223\"}, {\"slug\": \"aaa\", \"tag_name\": \"aaa\", \"tag_color\": \"#233223\"}, {\"slug\": \"bajarbhav\", \"tag_name\": \"bajarbhav\", \"tag_color\": \"#233223\"}]'),(3,'सोयाबीन लागवड माहिती','[{\"slug\": \"bakari\", \"category_name\": \"Bakari\", \"category_color_class\": \"#099878\"}]','[{\"slug\": \"black-bakari\", \"category_color\": \"#233243\", \"sub_category_name\": \"black bakari\", \"parent_category_name\": \"Bakari\"}]','<p><strong>सोयाबीन हे महत्वाचे तेलबिया पिक म्हणून सर्वपरिचित आहे. सोयाबीन मध्ये ४० टक्के प्रथिने आणि १९ टक्के खाद्यतेल असल्यामुळे जगतिकस्तरावर महत्वाचे पिक म्हणून गणले जाते. एकूण तेल उत्पादनापैकी जवळजवळ ५८ टक्के सोयाबीन तेलाचा वाटा आहे. तर एकूण प्रथिनांपैकीं जळजवळ ६० टक्के प्रथिने सोयाबीन पासून उपलब्ध होतात. अलीकडे सोयाबीन लागवड फार मोठ्या प्रमाणावर वाढत आहे. त्यापासून साधारणपणे ५ दशलक्ष टन इतकं उत्पादन मिळत . कमी खर्चात जास्तीतजास्त उत्पादन देणारे नगदी पीक म्हणून सोयाबीनच्या क्षेत्रात झपाट्याने वाढ झालेली आहे.</strong></p><p><br></p><p><strong>देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. जनावरांसाठी आणि कुकुटपालनासाठी देखील सोयाबीन पेंडीचा पौष्टिक आहार म्हणून उपयोग केला जातो . याशिवाय सोयाबीनपासून सोयामिल्क ,सोया बिस्कीट ,सोयावाडीसारखे १०० च्या वर वेगवेगळे उपपदार्थ तयार करता येतात . सोयाबीन झाडाच्या मुळांवरील रायझोबियम जीवाणूच्या गाठीद्वारे हेक्टरी १०० किलोपर्यंत नत्र जमिनीत स्थिर होते. तसेच जमिनीतील सेंद्रिय पदार्थांचे प्रमाण वाढल्याने सोयाबीनचा बेवड म्हणून चांगला उपयोग होतो. सोयाबीनच्या झाडाचा पालापाचोळा जमिनीवर पडल्यामुळे जमिनीचा पोत सुधारण्यास मदत होते. सोयाबीनला निसर्गाने मानवाला दिलेली देणगी संबोधले जाते . तर पाश्चात्य देशामध्ये या पिकास कामधेनु तर चीनमध्ये मातीतील सोने म्हणून संबोधले जाते.</strong></p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span>सोयाबीनची कमी उत्पाद्कता असण्याची प्रमुख कारणे</strong></p><ol><li>आधुनिक लगवड़ तंत्रज्ञानाचा अवलंब न करणे</li><li>सुधारीत जातींचा वापर न करणे</li><li>दर हेक्टरी झाडांचीसंख्या न राखणे</li><li>बीजाक्रिया न करण, उगवणशक्तीची तपसणीं न करणे</li><li>योग्य खत मात्रांचा शिफारशीनुसार वापर नकरणे</li><li>तण तसेच कीड व रोगांचा बंदोबस्त वेळेवर न करणे</li><li>आंतरपीक पद्धतींचा वापर नकरणे</li><li>सोयाबीनच्या उत्पाद्न वाढीसाठी महत्वाच्या बाबी</li></ol><p><br></p><p><br></p>','soyabin-lagwad','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','featured_blog_img_20-02-25-00-50-13_f8nyl9o1.jpeg','Pavan Chavan','2019-06-18','2025-02-20 00:50:14','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','देशात सोयाबीनची उत्पादकता (१०० किलो/हेक्टर) निम्मी आहे. ','[{\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"bajarbhav\", \"tag_name\": \"bajarbhav\", \"tag_color\": \"#233223\"}, {\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}, {\"slug\": \"a\", \"tag_name\": \"a\", \"tag_color\": \"#233223\"}]'),(4,'सोयाबीन लागवड माहिती','[{\"slug\": \"bakari\", \"category_name\": \"Bakari\", \"category_color_class\": \"#099878\"}, {\"slug\": \"sheti\", \"category_name\": \"Shetii\", \"category_color_class\": \"#231243\"}]','[{\"slug\": \"black-bakari\", \"category_color\": \"#233243\", \"sub_category_name\": \"black bakari\", \"parent_category_name\": \"Bakari\"}, {\"slug\": \"mati\", \"category_color\": \"#234323\", \"sub_category_name\": \"maati\", \"parent_category_name\": \"Shetii\"}]','<p>सोयाबीन हे महत्वाचे तेलबिया पिक म्हणून सर्वपरिचित आहे. सोयाबीन मध्ये ४० टक्के प्रथिने आणि १९ टक्के खाद्यतेल असल्यामुळे जगतिकस्तरावर महत्वाचे पिक म्हणून गणले जाते. एकूण तेल उत्पादनापैकी जवळजवळ ५८ टक्के सोयाबीन तेलाचा वाटा आहे. तर एकूण प्रथिनांपैकीं जळजवळ ६० टक्के प्रथिने सोयाबीन पासून उपलब्ध होतात. अलीकडे सोयाबीन लागवड फार मोठ्या प्रमाणावर वाढत आहे. त्यापासून साधारणपणे ५ दशलक्ष टन इतकं उत्पादन मिळत . कमी खर्चात जास्तीतजास्त उत्पादन देणारे नगदी पीक म्हणून सोयाबीनच्या क्षेत्रात झपाट्याने वाढ झालेली आहे.</p>','soyabeen-mahiti','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','featured_blog_img_20-02-25-00-50-27_hxpunj6k.jpeg','Pavan Chavan','2013-06-04','2025-02-20 00:50:28','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','सोयाबीन लागवड माहिती','[{\"slug\": \"kolkata\", \"tag_name\": \"kolkata\", \"tag_color\": \"#233223\"}, {\"slug\": \"agri\", \"tag_name\": \"Agree\", \"tag_color\": \"#233223\"}, {\"slug\": \"bajarbhav\", \"tag_name\": \"bajarbhav\", \"tag_color\": \"#233223\"}]');
 /*!40000 ALTER TABLE `blog_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +80,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Shetii','#231243',NULL),(2,'Bakari','#099878',NULL);
+INSERT INTO `categories` VALUES (1,'Shetii','#231243','sheti'),(2,'Bakari','#099878','bakari');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +152,7 @@ CREATE TABLE `sub_categories` (
   `category_img` varchar(255) DEFAULT NULL,
   `slug` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`sub_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +161,7 @@ CREATE TABLE `sub_categories` (
 
 LOCK TABLES `sub_categories` WRITE;
 /*!40000 ALTER TABLE `sub_categories` DISABLE KEYS */;
-INSERT INTO `sub_categories` VALUES (1,'maati','Shetii','#234323',NULL,NULL);
+INSERT INTO `sub_categories` VALUES (1,'maati','Shetii','#234323',NULL,'mati'),(2,'black bakari','Bakari','#233243',NULL,'black-bakari');
 /*!40000 ALTER TABLE `sub_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,7 +179,7 @@ CREATE TABLE `tags` (
   `tag_img` varchar(255) DEFAULT NULL,
   `slug` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +188,7 @@ CREATE TABLE `tags` (
 
 LOCK TABLES `tags` WRITE;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
-INSERT INTO `tags` VALUES (1,'Agree','#233223',NULL,'agri'),(2,'foot','#435421',NULL,'food'),(5,'test','#233223',NULL,'test'),(6,'while','#233223',NULL,'while'),(7,'while','#233223',NULL,'while'),(8,'wh','#233223',NULL,'wh'),(9,'shoock','#233223',NULL,'shoock'),(10,'shoock123','#233223',NULL,'shoock123'),(11,'shoock123','#233223',NULL,'shoock123'),(12,'kolkata','#233223',NULL,'kolkata'),(13,'a','#233223',NULL,'a'),(14,'aa','#233223',NULL,'aa'),(15,'aaa','#233223',NULL,'aaa'),(16,'aaa','#233223',NULL,'aaa');
+INSERT INTO `tags` VALUES (1,'Agree','#233223',NULL,'agri'),(2,'foot','#435421',NULL,'food'),(5,'test','#233223',NULL,'test'),(6,'while','#233223',NULL,'while'),(7,'while','#233223',NULL,'while'),(8,'wh','#233223',NULL,'wh'),(9,'shoock','#233223',NULL,'shoock'),(10,'shoock123','#233223',NULL,'shoock123'),(11,'shoock123','#233223',NULL,'shoock123'),(12,'kolkata','#233223',NULL,'kolkata'),(13,'a','#233223',NULL,'a'),(14,'aa','#233223',NULL,'aa'),(15,'aaa','#233223',NULL,'aaa'),(16,'aaa','#233223',NULL,'aaa'),(17,'bajarbhav','#233223',NULL,'bajarbhav'),(18,'a','#233223',NULL,'a');
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -201,4 +201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-17 11:33:17
+-- Dump completed on 2025-02-22 15:48:21
