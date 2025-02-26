@@ -96,9 +96,9 @@ const scarpingWeb = (marketTypes, ws, marketTypesDetails) => {
 
             if (results.length === 0) {
                 // **No record found, INSERT new row**
-                const insertQuery = `INSERT INTO ${marketTypeData.tableName} (table_data, date, code, last_update) VALUES (?, ?, ?, ?)`;
+                const insertQuery = `INSERT INTO ${marketTypeData.tableName} (table_data, date, code, last_update, slug) VALUES (?, ?, ?, ?, ?)`;
 
-                db.query(insertQuery, [JSON.stringify(data), formattedDate, option.code, today], (err, result) => {
+                db.query(insertQuery, [JSON.stringify(data), formattedDate, option.code, today, option.slug], (err, result) => {
                     if (err) {
                         console.log(err);
                         ws.send(JSON.stringify({status : "error" , message : `Error while inserting into ${marketTypeData.tableName}`, data : {Section :marketTypeData.name, Name : option.name, Code : option.code}}));

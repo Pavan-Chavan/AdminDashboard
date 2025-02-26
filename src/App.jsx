@@ -25,6 +25,7 @@ import Venue from "./pages/dashboard/admin-dashboard/blog";
 import WebSocketComponent from "./pages/bajarbhav-pulling/WebSocketComponent";
 import Blogs from "./pages/dashboard/admin-dashboard/blog";
 import Tags from "./pages/dashboard/admin-dashboard/tags";
+import SubCategory from "./pages/dashboard/admin-dashboard/subCategory";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                 <Route path="bhajarbhav-pulling" element={<WebSocketComponent />} />
                 <Route path="categories" element={<Category />} />
                 <Route path="blog-posts" element={<Blogs />} />  need to modify to list
+                <Route path="subcategory" element={<SubCategory />} />
                 <Route path="blog-posts/:mode" element={<CreateEditBlog />} />
                 <Route path="tags" element={<Tags />} />
                 {/* <Route path="venues" element={<Venue />} />

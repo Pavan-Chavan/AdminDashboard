@@ -36,6 +36,18 @@ app.get("/get-sub-categories", (req, res) => {
   });
 });
 
+app.get("/get-all-sub-categories", (req, res) => {
+  
+  const sql = `SELECT * FROM sub_categories`;
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(results);
+  });
+});
+
 
 
 // 🔹 Read (Get a category by ID)

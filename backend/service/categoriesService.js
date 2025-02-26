@@ -19,16 +19,22 @@ app.post('/create-categories', (req, res) => {
 
 // READ: Get all categories
 app.get('/get-categories', (req, res) => {
-	const query = 'SELECT * FROM categories';
+    const query = `
+        SELECT c.*, 
+               (SELECT COUNT(*) 
+                FROM blog_posts b 
+                WHERE JSON_SEARCH(b.category, 'one', c.slug) IS NOT NULL) AS category_count
+        FROM categories c`;
 
-	db.query(query, (err, results) => {
-			if (err) {
-					console.error('Error fetching categories:', err);
-					return res.status(500).json({ message: 'Error fetching categories' });
-			}
-			res.status(200).json({success : true, results});
-	});
+    db.query(query, (err, results) => {
+        if (err) {
+            console.error('Error fetching categories:', err);
+            return res.status(500).json({ message: 'Error fetching categories' });
+        }
+        res.status(200).json({ success: true, results });
+    });
 });
+
 
 // READ: Get a category by ID
 app.get('/get-categories/:slug', (req, res) => {

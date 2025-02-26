@@ -39,6 +39,16 @@ app.get("/get-tags", (req, res) => {
   });
 });
 
+app.get("/get-all-tags", (req, res) => {
+  let sql = "SELECT * FROM tags";
+  db.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(results);
+  });
+});
+
 // 🔹 Read (Get a tag by ID)
 app.get("/get-tag/:id", (req, res) => {
   const { id } = req.params;

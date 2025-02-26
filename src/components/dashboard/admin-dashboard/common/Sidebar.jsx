@@ -15,6 +15,7 @@ const Sidebar = () => {
         { title: "All Posts", href: "blog-posts", allowedRole: ["admin"] },
         { title: "Add New Post", href: "blog-posts/add", allowedRole: ["admin"] },
         { title: "Categories", href: "categories", allowedRole: ["admin"] },
+        { title: "Sub Category", href: "subcategory", allowedRole: ["admin"] },
         { title: "Tags", href: "tags", allowedRole: ["admin"] },
       ],
     },

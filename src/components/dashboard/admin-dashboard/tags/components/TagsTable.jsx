@@ -24,7 +24,7 @@ const TagsTable = ({ searchParameter, refresh }) => {
     setLoading(true);
     setError(null); // Reset error state
     try {
-      const response = await axios.get(`${api}/api/tags/get-tags`);
+      const response = await axios.get(`${api}/api/tags/get-all-tags`);
       if (response.status === 200) {
         setTags(response.data);
         setFilteredTags(response.data); // Set both main and filtered data
