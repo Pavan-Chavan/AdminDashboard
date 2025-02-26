@@ -9,6 +9,8 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
   const [showModal, setShowModal] = useState(false);
   const [categoryData, setCategoryData] = useState({
     category_name: "",
+    slug: "",
+    description: "",
     category_color_class: "",
   });
 
@@ -26,6 +28,8 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
         showAlert("Category added successfully.", "success");
         setCategoryData({
           category_name: "",
+          slug: "",
+          description: "",
           category_color_class: "",
         });
         setSelectedColor("#007bff"); // Reset color picker
@@ -35,7 +39,7 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
         showAlert("Something went wrong.", "error");
       }
     } catch (error) {
-      showAlert(error.response?.data?.error || "An error occurred.", "error");
+      showAlert(error.response?.data?.message || "An error occurred.", "error");
       console.error("Error:", error);
     }
   };
@@ -54,7 +58,7 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h3>Add Venue Category</h3>
+            <h3>Add Post Category</h3>
             <form onSubmit={handleSubmit}>
               <label>
                 Category Name:
@@ -63,6 +67,28 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
                   value={categoryData.category_name}
                   onChange={(e) =>
                     setCategoryData({ ...categoryData, category_name: e.target.value })
+                  }
+                  required
+                />
+              </label>
+              <label>
+                Category Slug:
+                <input
+                  type="text"
+                  value={categoryData.slug}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, slug : e.target.value })
+                  }
+                  required
+                />
+              </label>
+              <label>
+                Description:
+                <input
+                  type="text"
+                  value={categoryData.description}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, description : e.target.value })
                   }
                   required
                 />

@@ -5,13 +5,13 @@ const app = express();
 
 // CREATE: Add a new category
 app.post('/create-categories', (req, res) => {
-	const { category_name, category_color_class, slug } = req.body;
+	const { category_name, category_color_class, slug, description } = req.body;
 
-	const query = 'INSERT INTO categories (category_name,category_color_class, slug) VALUES (?,?,?)';
-	db.query(query, [category_name, category_color_class, slug], (err, result) => {
+	const query = 'INSERT INTO categories (category_name,category_color_class, slug, description) VALUES (?,?,?,?)';
+	db.query(query, [category_name, category_color_class, slug, description], (err, result) => {
 			if (err) {
 					console.error('Error inserting category:', err);
-					return res.status(500).json({ message: 'Error inserting category' });
+					return res.status(500).json({ message: 'Error creating category' });
 			}
 			res.status(201).json({ success : true, message: 'Category created successfully', category_id: result.insertId, success : true });
 	});
@@ -50,10 +50,10 @@ app.get('/get-categories/:slug', (req, res) => {
 // UPDATE: Update a category by ID
 app.put('/update-categories/:category_id', (req, res) => {
 	const { category_id } = req.params;
-	const { category_name, category_color_class, slug } = req.body;
+	const { category_name, category_color_class, slug, description } = req.body;
 
-	const query = 'UPDATE categories SET category_name = ?, category_color_class=?, slug=? WHERE category_id = ?';
-	db.query(query, [category_name, category_color_class, slug, category_id], (err, result) => {
+	const query = 'UPDATE categories SET category_name = ?, category_color_class=?, slug=?, description=? WHERE category_id = ?';
+	db.query(query, [category_name, category_color_class, slug, description, category_id], (err, result) => {
 			if (err) {
 					console.error('Error updating category:', err);
 					return res.status(500).json({ message: 'Error updating category' });

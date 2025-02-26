@@ -16,6 +16,8 @@ const CategoryTable = ({ searchParameter, refresh }) => {
   const [categoryData, setCategoryData] = useState({
     category_id: null,
     category_name: "",
+    slug: "",
+    description: "",
     category_color_class: "#ffffff", // Default color
   });
 
@@ -57,6 +59,8 @@ const CategoryTable = ({ searchParameter, refresh }) => {
     setCategoryData({
       category_id: category.category_id,
       category_name: category.category_name,
+      slug: category.slug,
+      description: category.description,
       category_color_class: category.category_color_class || "#ffffff", // Default to white if empty
     });
     setEditMode(true);
@@ -120,8 +124,8 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                     {filteredCategories.map((category, index) => (
                       <tr key={index}>
                         <td>{category.category_name || "N/A"}</td>
-                        <td>{category.category_description || "--"}</td>
-                        <td>{category.category_slug || "N/A"}</td>
+                        <td>{category.description || "--"}</td>
+                        <td>{category.slug || "N/A"}</td>
                         <td>{category.category_count || "0"}</td>
                         <td>
                           <div
@@ -141,7 +145,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                                 borderRadius: "4px",
                               }}
                             ></div>
-                            <span>{category.category_color_class || "N/A"}</span>
+                            
                           </div>
                         </td>
                         <td>
@@ -166,7 +170,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h3>{editMode ? "Edit Venue Category" : "Add Category"}</h3>
+            <h3>{editMode ? "Edit Post Category" : "Add Category"}</h3>
             <form onSubmit={handleSubmit}>
               <label>
                 Category Name:
@@ -177,6 +181,34 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                     setCategoryData({
                       ...categoryData,
                       category_name: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </label>
+              <label>
+                Category Slug:
+                <input
+                  type="text"
+                  value={categoryData.slug}
+                  onChange={(e) =>
+                    setCategoryData({
+                      ...categoryData,
+                      slug: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </label>
+              <label>
+                Description:
+                <input
+                  type="text"
+                  value={categoryData.description}
+                  onChange={(e) =>
+                    setCategoryData({
+                      ...categoryData,
+                      description: e.target.value,
                     })
                   }
                   required
