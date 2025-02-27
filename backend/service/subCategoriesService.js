@@ -5,14 +5,53 @@ const app = express();
 
 // 🔹 Create (Insert a new category)
 app.post("/add-sub-categories", (req, res) => {
-  const { sub_category_name, parent_category_name, category_color, category_img, slug } = req.body;
-  const sql = "INSERT INTO sub_categories (sub_category_name, parent_category_name, category_color, category_img, slug) VALUES (?, ?, ?, ?, ?)";
-  
-  db.query(sql, [sub_category_name, parent_category_name, category_color, category_img, slug], (err, result) => {
+  const {
+    sub_category_name,
+    parent_category_name,
+    category_color,
+    category_img,
+    slug,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date,
+    updated_date,
+  } = req.body;
+
+  const sql = `
+    INSERT INTO sub_categories (
+      sub_category_name, parent_category_name, category_color, category_img, slug,
+      seo_title, seo_description, keywords, og_url, canonical_url, featured_image,
+      author, published_date, updated_date
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `;
+
+  const values = [
+    sub_category_name,
+    parent_category_name,
+    category_color,
+    category_img,
+    slug,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date,
+    updated_date,
+  ];
+
+  db.query(sql, values, (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ message: "Category created", id: result.insertId });
+    res.status(201).json({ message: "Subcategory created", id: result.insertId });
   });
 });
 
@@ -69,17 +108,69 @@ app.get("/get-sub-category/:slug", (req, res) => {
 // 🔹 Update (Modify a category)
 app.put("/edit-sub-categories/:id", (req, res) => {
   const { id } = req.params;
-  const { sub_category_name, parent_category_name, category_color, category_img, slug } = req.body;
-  const sql = "UPDATE sub_categories SET sub_category_name = ?, parent_category_name = ?, category_color = ?, category_img = ?, slug = ? WHERE sub_category_id = ?";
-  
-  db.query(sql, [sub_category_name, parent_category_name, category_color, category_img, slug, id], (err, result) => {
+  const {
+    sub_category_name,
+    parent_category_name,
+    category_color,
+    category_img,
+    slug,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date,
+    updated_date,
+  } = req.body;
+
+  const sql = `
+    UPDATE sub_categories 
+    SET 
+      sub_category_name = ?, 
+      parent_category_name = ?, 
+      category_color = ?, 
+      category_img = ?, 
+      slug = ?, 
+      seo_title = ?, 
+      seo_description = ?, 
+      keywords = ?, 
+      og_url = ?, 
+      canonical_url = ?, 
+      featured_image = ?, 
+      author = ?, 
+      published_date = ?, 
+      updated_date = ?
+    WHERE sub_category_id = ?
+  `;
+
+  const values = [
+    sub_category_name,
+    parent_category_name,
+    category_color,
+    category_img,
+    slug,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date,
+    updated_date,
+    id,
+  ];
+
+  db.query(sql, values, (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
     if (result.affectedRows === 0) {
-      return res.status(404).json({ message: "Category not found" });
+      return res.status(404).json({ message: "Subcategory not found" });
     }
-    res.json({ message: "Category updated successfully" });
+    res.json({ message: "Subcategory updated successfully" });
   });
 });
 

@@ -5,16 +5,57 @@ const app = express();
 
 // CREATE: Add a new category
 app.post('/create-categories', (req, res) => {
-	const { category_name, category_color_class, slug, description } = req.body;
+  const {
+    category_name,
+    category_color_class,
+    slug,
+    description,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date,
+    updated_date,
+  } = req.body;
 
-	const query = 'INSERT INTO categories (category_name,category_color_class, slug, description) VALUES (?,?,?,?)';
-	db.query(query, [category_name, category_color_class, slug, description], (err, result) => {
-			if (err) {
-					console.error('Error inserting category:', err);
-					return res.status(500).json({ message: 'Error creating category' });
-			}
-			res.status(201).json({ success : true, message: 'Category created successfully', category_id: result.insertId, success : true });
-	});
+  const query = `
+    INSERT INTO categories (
+      category_name, category_color_class, slug, description,
+      seo_title, seo_description, keywords, og_url, canonical_url,
+      featured_image, author, published_date, updated_date
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `;
+
+  const values = [
+    category_name,
+    category_color_class,
+    slug,
+    description,
+    seo_title,
+    seo_description,
+    keywords,
+    og_url,
+    canonical_url,
+    featured_image,
+    author,
+    published_date || null, // Convert empty string to NULL
+    updated_date || null,   // Convert empty string to NULL
+  ];
+
+  db.query(query, values, (err, result) => {
+    if (err) {
+      console.error('Error inserting category:', err);
+      return res.status(500).json({ success: false, message: 'Error creating category', error: err.message });
+    }
+    res.status(201).json({
+      success: true,
+      message: 'Category created successfully',
+      category_id: result.insertId,
+    });
+  });
 });
 
 // READ: Get all categories
@@ -47,7 +88,7 @@ app.get('/get-categories/:slug', (req, res) => {
 					return res.status(500).json({ message: 'Error fetching category' });
 			}
 			if (!result.length) {
-					return res.status(404).json({ success : true, message: 'Category not found' });
+				return res.status(200).json([]);
 			}
 			res.status(200).json(result[0]);
 	});
@@ -56,18 +97,67 @@ app.get('/get-categories/:slug', (req, res) => {
 // UPDATE: Update a category by ID
 app.put('/update-categories/:category_id', (req, res) => {
 	const { category_id } = req.params;
-	const { category_name, category_color_class, slug, description } = req.body;
-
-	const query = 'UPDATE categories SET category_name = ?, category_color_class=?, slug=?, description=? WHERE category_id = ?';
-	db.query(query, [category_name, category_color_class, slug, description, category_id], (err, result) => {
-			if (err) {
-					console.error('Error updating category:', err);
-					return res.status(500).json({ message: 'Error updating category' });
-			}
-			if (result.affectedRows === 0) {
-					return res.status(404).json({ success : true, message: 'Category not found' });
-			}
-			res.status(200).json({ message: 'Category updated successfully', success : true });
+	const {
+	  category_name,
+	  category_color_class,
+	  slug,
+	  description,
+	  seo_title,
+	  seo_description,
+	  keywords,
+	  og_url,
+	  canonical_url,
+	  featured_image,
+	  author,
+	  published_date,
+	  updated_date,
+	} = req.body;
+  
+	const query = `
+	  UPDATE categories 
+	  SET 
+		category_name = ?, 
+		category_color_class = ?, 
+		slug = ?, 
+		description = ?, 
+		seo_title = ?, 
+		seo_description = ?, 
+		keywords = ?, 
+		og_url = ?, 
+		canonical_url = ?, 
+		featured_image = ?, 
+		author = ?, 
+		published_date = ?, 
+		updated_date = ?
+	  WHERE category_id = ?
+	`;
+  
+	const values = [
+	  category_name,
+	  category_color_class,
+	  slug,
+	  description,
+	  seo_title,
+	  seo_description,
+	  keywords,
+	  og_url,
+	  canonical_url,
+	  featured_image,
+	  author,
+	  published_date || null, // Convert empty string to NULL
+	  updated_date || null,   // Convert empty string to NULL
+	  category_id,
+	];
+  
+	db.query(query, values, (err, result) => {
+	  if (err) {
+		console.error('Error updating category:', err);
+		return res.status(500).json({ success: false, message: 'Error updating category', error: err.message });
+	  }
+	  if (result.affectedRows === 0) {
+		return res.status(404).json({ success: false, message: 'Category not found' });
+	  }
+	  res.status(200).json({ success: true, message: 'Category updated successfully' });
 	});
 });
 

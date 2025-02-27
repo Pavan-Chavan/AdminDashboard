@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../../../../../styles/modals.css";
 import axios from "axios";
-import { SketchPicker } from "react-color"; // Import SketchPicker from react-color
+import { SketchPicker } from "react-color";
 import { api } from "@/utils/apiProvider";
 import { showAlert } from "@/utils/isTextMatched";
 
@@ -11,18 +11,22 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
     category_name: "",
     slug: "",
     description: "",
-    category_color_class: "",
+    category_color_class: "#007bff", // Default color
+    seo_title: "",
+    seo_description: "",
+    keywords: "",
+    og_url: "",
+    canonical_url: "",
+    featured_image: "",
+    author: "",
+    published_date: "",
+    updated_date: "",
   });
-
-  const [selectedColor, setSelectedColor] = useState("#007bff"); // Default color
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${api}/api/categories/create-categories`, {
-        ...categoryData,
-        category_color_class: selectedColor, // Use the selected color
-      });
+      const response = await axios.post(`${api}/api/categories/create-categories`, categoryData);
 
       if (response.data.success === true) {
         showAlert("Category added successfully.", "success");
@@ -30,11 +34,19 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
           category_name: "",
           slug: "",
           description: "",
-          category_color_class: "",
+          category_color_class: "#007bff", // Reset to default color
+          seo_title: "",
+          seo_description: "",
+          keywords: "",
+          og_url: "",
+          canonical_url: "",
+          featured_image: "",
+          author: "",
+          published_date: "",
+          updated_date: "",
         });
-        setSelectedColor("#007bff"); // Reset color picker
         setShowModal(false);
-        refreshCategories(); // Refresh the category list after adding
+        refreshCategories();
       } else {
         showAlert("Something went wrong.", "error");
       }
@@ -57,7 +69,7 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
       {/* Add Category Modal */}
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal-content">
+          <div className="modal-content" style={{height:"90%", overflow:"scroll"}}>
             <h3>Add Post Category</h3>
             <form onSubmit={handleSubmit}>
               <label>
@@ -77,7 +89,7 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
                   type="text"
                   value={categoryData.slug}
                   onChange={(e) =>
-                    setCategoryData({ ...categoryData, slug : e.target.value })
+                    setCategoryData({ ...categoryData, slug: e.target.value })
                   }
                   required
                 />
@@ -88,7 +100,7 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
                   type="text"
                   value={categoryData.description}
                   onChange={(e) =>
-                    setCategoryData({ ...categoryData, description : e.target.value })
+                    setCategoryData({ ...categoryData, description: e.target.value })
                   }
                   required
                 />
@@ -96,12 +108,102 @@ const AddCategory = ({ refreshCategories = () => {} }) => {
               <label>
                 Select Category Badge Color:
                 <div style={{ marginTop: "10px", marginBottom: "20px" }}>
-                  {/* Color Picker */}
                   <SketchPicker
-                    color={selectedColor}
-                    onChangeComplete={(color) => setSelectedColor(color.hex)} // Update selected color
+                    color={categoryData.category_color_class}
+                    onChangeComplete={(color) =>
+                      setCategoryData({ ...categoryData, category_color_class: color.hex })
+                    }
                   />
                 </div>
+              </label>
+              <label>
+                SEO Title:
+                <input
+                  type="text"
+                  value={categoryData.seo_title}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, seo_title: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                SEO Description:
+                <textarea
+                  value={categoryData.seo_description}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, seo_description: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Keywords:
+                <input
+                  type="text"
+                  value={categoryData.keywords}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, keywords: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Open Graph URL:
+                <input
+                  type="url"
+                  value={categoryData.og_url}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, og_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Canonical URL:
+                <input
+                  type="url"
+                  value={categoryData.canonical_url}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, canonical_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Featured Image URL:
+                <input
+                  type="url"
+                  value={categoryData.featured_image}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, featured_image: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Author:
+                <input
+                  type="text"
+                  value={categoryData.author}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, author: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Published Date:
+                <input
+                  type="date"
+                  value={categoryData.published_date}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, published_date: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Updated Date:
+                <input
+                  type="date"
+                  value={categoryData.updated_date}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, updated_date: e.target.value })
+                  }
+                />
               </label>
               <div className="modal-actions">
                 <button type="submit" className="button bg-blue-1 text-white">

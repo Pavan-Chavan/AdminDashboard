@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { SketchPicker } from "react-color"; // Import SketchPicker from react-color
+import { SketchPicker } from "react-color";
 import { api } from "@/utils/apiProvider";
 import { showAlert } from "@/utils/isTextMatched";
 import Pagination from "../../common/Pagination";
 import ActionsButton from "./ActionsButton";
+
+// Utility function to convert ISO date to YYYY-MM-DD
+const formatDateToYYYYMMDD = (isoDate) => {
+  if (!isoDate) return "";
+  return isoDate.split("T")[0]; // Extracts "2025-02-25" from "2025-02-25T18:30:00.000Z"
+};
 
 const CategoryTable = ({ searchParameter, refresh }) => {
   const [categories, setCategories] = useState([]);
@@ -18,18 +24,32 @@ const CategoryTable = ({ searchParameter, refresh }) => {
     category_name: "",
     slug: "",
     description: "",
-    category_color_class: "#ffffff", // Default color
+    category_color_class: "#ffffff",
+    seo_title: "",
+    seo_description: "",
+    keywords: "",
+    og_url: "",
+    canonical_url: "",
+    featured_image: "",
+    author: "",
+    published_date: "",
+    updated_date: "",
   });
 
   // Fetch categories
   const fetchCategories = async () => {
     setLoading(true);
-    setError(null); // Reset error state
+    setError(null);
     try {
       const response = await axios.get(`${api}/api/categories/get-categories`);
       if (response.data.success) {
-        setCategories(response.data.results);
-        setFilteredCategories(response.data.results); // Set both main and filtered data
+        const formattedData = response.data.results.map(item => ({
+          ...item,
+          published_date: formatDateToYYYYMMDD(item.published_date),
+          updated_date: formatDateToYYYYMMDD(item.updated_date),
+        }));
+        setCategories(formattedData);
+        setFilteredCategories(formattedData);
       } else {
         setError("Failed to fetch categories.");
       }
@@ -61,7 +81,16 @@ const CategoryTable = ({ searchParameter, refresh }) => {
       category_name: category.category_name,
       slug: category.slug,
       description: category.description,
-      category_color_class: category.category_color_class || "#ffffff", // Default to white if empty
+      category_color_class: category.category_color_class || "#ffffff",
+      seo_title: category.seo_title || "",
+      seo_description: category.seo_description || "",
+      keywords: category.keywords || "",
+      og_url: category.og_url || "",
+      canonical_url: category.canonical_url || "",
+      featured_image: category.featured_image || "",
+      author: category.author || "",
+      published_date: formatDateToYYYYMMDD(category.published_date),
+      updated_date: formatDateToYYYYMMDD(category.updated_date),
     });
     setEditMode(true);
     setShowModal(true);
@@ -77,7 +106,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
       );
       showAlert("Category updated successfully.", "success");
       setShowModal(false);
-      fetchCategories(); // Refresh categories list
+      fetchCategories();
     } catch (error) {
       console.error("Error updating category:", error);
       showAlert(error.response?.data?.error || "An error occurred.", "error");
@@ -89,7 +118,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
     try {
       await axios.delete(`${api}/api/categories/delete-categories/${id}`);
       showAlert("Category deleted successfully.", "success");
-      fetchCategories(); // Refresh categories list
+      fetchCategories();
     } catch (error) {
       console.error("Error deleting category:", error);
       showAlert(error.response?.data?.error || "An error occurred.", "error");
@@ -117,6 +146,8 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                       <th>Slug</th>
                       <th>Count</th>
                       <th>Badge Color</th>
+                      <th>SEO Title</th>
+                      <th>Keywords</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
@@ -128,31 +159,26 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                         <td>{category.slug || "N/A"}</td>
                         <td>{category.category_count || "0"}</td>
                         <td>
-                          <div
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "10px",
-                            }}
-                          >
+                          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <div
                               style={{
                                 width: "20px",
                                 height: "20px",
-                                backgroundColor:
-                                  category.category_color_class || "#ccc",
+                                backgroundColor: category.category_color_class || "#ccc",
                                 border: "1px solid #ddd",
                                 borderRadius: "4px",
                               }}
                             ></div>
-                            
+                            <span>{category.category_color_class || "N/A"}</span>
                           </div>
                         </td>
+                        <td>{category.seo_title || "N/A"}</td>
+                        <td>{category.keywords || "N/A"}</td>
                         <td>
                           <ActionsButton
-                            category={category} // Passing the category data
-                            onEdit={() => handleEdit(category)} // Handle Edit
-                            onDelete={() => handleDelete(category.category_id)} // Handle Delete
+                            category={category}
+                            onEdit={() => handleEdit(category)}
+                            onDelete={() => handleDelete(category.category_id)}
                           />
                         </td>
                       </tr>
@@ -164,12 +190,11 @@ const CategoryTable = ({ searchParameter, refresh }) => {
           </div>
         </div>
       </div>
-      {/* Pagination can be added here */}
 
       {/* Edit Category Modal */}
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal-content">
+          <div className="modal-content" style={{height:"90%", overflow:"scroll"}}>
             <h3>{editMode ? "Edit Post Category" : "Add Category"}</h3>
             <form onSubmit={handleSubmit}>
               <label>
@@ -178,10 +203,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                   type="text"
                   value={categoryData.category_name}
                   onChange={(e) =>
-                    setCategoryData({
-                      ...categoryData,
-                      category_name: e.target.value,
-                    })
+                    setCategoryData({ ...categoryData, category_name: e.target.value })
                   }
                   required
                 />
@@ -192,10 +214,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                   type="text"
                   value={categoryData.slug}
                   onChange={(e) =>
-                    setCategoryData({
-                      ...categoryData,
-                      slug: e.target.value,
-                    })
+                    setCategoryData({ ...categoryData, slug: e.target.value })
                   }
                   required
                 />
@@ -206,23 +225,106 @@ const CategoryTable = ({ searchParameter, refresh }) => {
                   type="text"
                   value={categoryData.description}
                   onChange={(e) =>
-                    setCategoryData({
-                      ...categoryData,
-                      description: e.target.value,
-                    })
+                    setCategoryData({ ...categoryData, description: e.target.value })
                   }
                   required
                 />
               </label>
               <label>
-              Category Badge Color:
+                Category Badge Color:
                 <SketchPicker
                   color={categoryData.category_color_class}
                   onChangeComplete={(color) =>
-                    setCategoryData({
-                      ...categoryData,
-                      category_color_class: color.hex,
-                    })
+                    setCategoryData({ ...categoryData, category_color_class: color.hex })
+                  }
+                />
+              </label>
+              <label>
+                SEO Title:
+                <input
+                  type="text"
+                  value={categoryData.seo_title}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, seo_title: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                SEO Description:
+                <textarea
+                  value={categoryData.seo_description}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, seo_description: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Keywords:
+                <input
+                  type="text"
+                  value={categoryData.keywords}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, keywords: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Open Graph URL:
+                <input
+                  type="url"
+                  value={categoryData.og_url}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, og_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Canonical URL:
+                <input
+                  type="url"
+                  value={categoryData.canonical_url}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, canonical_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Featured Image URL:
+                <input
+                  type="url"
+                  value={categoryData.featured_image}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, featured_image: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Author:
+                <input
+                  type="text"
+                  value={categoryData.author}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, author: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Published Date:
+                <input
+                  type="date"
+                  value={categoryData.published_date}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, published_date: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Updated Date:
+                <input
+                  type="date"
+                  value={categoryData.updated_date}
+                  onChange={(e) =>
+                    setCategoryData({ ...categoryData, updated_date: e.target.value })
                   }
                 />
               </label>

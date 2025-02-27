@@ -2,7 +2,7 @@ import { api } from "@/utils/apiProvider";
 import { showAlert } from "@/utils/isTextMatched";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { SketchPicker } from "react-color"; // Import SketchPicker from react-color
+import { SketchPicker } from "react-color";
 import "../../../../../../styles/modals.css";
 import { isEmpty } from "lodash";
 
@@ -12,30 +12,44 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
     sub_category_id: null,
     sub_category_name: "",
     slug: "",
-    parent_category_name : "",
+    parent_category_name: "",
     category_color: "#ffffff", // Default color
+    seo_title: "",
+    seo_description: "",
+    keywords: "",
+    og_url: "",
+    canonical_url: "",
+    featured_image: "",
+    author: "",
+    published_date: "",
+    updated_date: "",
   });
-  
+
   const [categories, setCategories] = useState([]);
-  const [selectedColor, setSelectedColor] = useState("#007bff"); // Default color
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${api}/api/sub-categories/add-sub-categories`, {
-        ...subCategoryData,
-        category_color: selectedColor, // Use the selected color
-      });
+      const response = await axios.post(`${api}/api/sub-categories/add-sub-categories`, subCategoryData);
 
       if (response.status === 201) {
-        showAlert("tag added successfully.", "success");
+        showAlert("Subcategory added successfully.", "success");
         setSubCategoryData({
+          sub_category_id: null,
           sub_category_name: "",
+          slug: "",
           parent_category_name: "",
-          slug : "",
-          category_color : ""
+          category_color: "#ffffff",
+          seo_title: "",
+          seo_description: "",
+          keywords: "",
+          og_url: "",
+          canonical_url: "",
+          featured_image: "",
+          author: "",
+          published_date: "",
+          updated_date: "",
         });
-        setSelectedColor("#007bff"); // Reset color picker
         setShowModal(false);
         refreshTags(); // Refresh the tag list after adding
       } else {
@@ -48,7 +62,6 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
   };
 
   const fetchCategories = async () => {
-
     try {
       const response = await axios.get(`${api}/api/categories/get-categories`);
       if (response.data.success) {
@@ -62,13 +75,13 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchCategories();
-  },[]);
+  }, []);
 
   return (
     <div className="col-auto">
-      {/* Add tag Button */}
+      {/* Add Subcategory Button */}
       <button
         className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
         onClick={() => setShowModal(true)}
@@ -76,10 +89,10 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
         Add Sub Category <div className="icon-arrow-top-right ml-15"></div>
       </button>
 
-      {/* Add tag Modal */}
+      {/* Add Subcategory Modal */}
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal-content">
+          <div className="modal-content" style={{height:"90%",overflow:"scroll"}}>
             <h3>Add Sub Category</h3>
             <form onSubmit={handleSubmit}>
               <label>
@@ -120,7 +133,9 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
                     data-bs-offset="0,10"
                   >
                     <span className="d-flex js-dropdown-title">
-                      {isEmpty(subCategoryData.parent_category_name) ? "Select Parent Category" : subCategoryData.parent_category_name }
+                      {isEmpty(subCategoryData.parent_category_name)
+                        ? "Select Parent Category"
+                        : subCategoryData.parent_category_name}
                     </span>
                     <i className="icon icon-chevron-sm-down text-7 ml-10" />
                   </div>
@@ -131,22 +146,24 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
                           key={index}
                           id={category.category_id}
                           className={`js-dropdown-link`}
-                          style={{flex: "0 0 130px", borderRadius: "0 15px 15px 0"}}
-                          onClick={() => { setSubCategoryData({
-                            ...subCategoryData,
-                            parent_category_name: category.category_name,
-                          })}}
+                          style={{ flex: "0 0 130px", borderRadius: "0 15px 15px 0" }}
+                          onClick={() =>
+                            setSubCategoryData({
+                              ...subCategoryData,
+                              parent_category_name: category.category_name,
+                            })
+                          }
                         >
-                          {category.category_name} {category === subCategoryData.parent_category_name ? "*" : ""}
+                          {category.category_name}{" "}
+                          {category.category_name === subCategoryData.parent_category_name ? "*" : ""}
                         </div>
                       ))}
                     </div>
                   </div>
-                </div>    
+                </div>
               </label>
-              
               <label>
-              Sub Category Badge Color:
+                Sub Category Badge Color:
                 <SketchPicker
                   color={subCategoryData.category_color}
                   onChangeComplete={(color) =>
@@ -154,6 +171,95 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
                       ...subCategoryData,
                       category_color: color.hex,
                     })
+                  }
+                />
+              </label>
+              <label>
+                SEO Title:
+                <input
+                  type="text"
+                  value={subCategoryData.seo_title}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, seo_title: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                SEO Description:
+                <textarea
+                  value={subCategoryData.seo_description}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, seo_description: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Keywords:
+                <input
+                  type="text"
+                  value={subCategoryData.keywords}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, keywords: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Open Graph URL:
+                <input
+                  type="url"
+                  value={subCategoryData.og_url}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, og_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Canonical URL:
+                <input
+                  type="url"
+                  value={subCategoryData.canonical_url}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, canonical_url: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Featured Image URL:
+                <input
+                  type="url"
+                  value={subCategoryData.featured_image}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, featured_image: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Author:
+                <input
+                  type="text"
+                  value={subCategoryData.author}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, author: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Published Date:
+                <input
+                  type="date"
+                  value={subCategoryData.published_date}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, published_date: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Updated Date:
+                <input
+                  type="date"
+                  value={subCategoryData.updated_date}
+                  onChange={(e) =>
+                    setSubCategoryData({ ...subCategoryData, updated_date: e.target.value })
                   }
                 />
               </label>
