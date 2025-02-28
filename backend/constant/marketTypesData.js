@@ -5,8 +5,34 @@ const marketTypesDetails = {
 		SelectOptionId : "drpDistrictCommodity",
 		tableName : "DistrictCommodityGird",
 		subTabID : "DistrictCommodityWiseGirdID",
+		seoMeta : {
+			seo_title: "jilhanihay Bhajar Bhav",
+			seo_description: "jilhanihay Bhajar bhav",
+			keywords: "jilhanihay, bajar, bhav",
+			og_url : "some url",
+			canonical_url: "some url",
+			featured_image: "company logo path",
+			author: "Jio Kheti",
+			published_date: "12/12/2012", 
+			updated_date: "12/12/2012"
+		},
 		DropdownOptions : [
-			{ name: "अकोला", code: "32", slug: "akola-bhajarbhav" },
+			{ 
+				name: "अकोला",
+				code: "32", 
+				slug: "akola-bhajarbhav",
+				seoMeta : {
+					seo_title: "Akola Bhajar Bhav",
+					seo_description: "Akola Bhajar bhav",
+					keywords: "akila, bajar, bhav",
+					og_url : "some url",
+					canonical_url: "some url",
+					featured_image: "company logo path",
+					author: "Jio Kheti",
+					published_date: "12/12/2012", 
+					updated_date: "12/12/2012"
+				}
+			},
 			{ name: "अमरावती", code: "33", slug: "amravati-bhajarbhav" },
 			{ name: "अहिल्यानगर", code: "16", slug: "ahilyanagar-bhajarbhav" },
 			{ name: "कोल्हापूर", code: "20", slug: "kolhapur-bhajarbhav" },
@@ -49,8 +75,34 @@ const marketTypesDetails = {
 		SelectOptionId : "drpCommodities",
 		tableName : "CommodityGird",
 		subTabID : "CommodityGirdID",
+		meta : {
+			seo_title: "Akola Bhajar Bhav",
+			seo_description: "Akola Bhajar bhav",
+			keywords: "akila, bajar, bhav",
+			og_url : "some url",
+			canonical_url: "some url",
+			featured_image: "company logo path",
+			author: "Jio Kheti",
+			published_date: "12/12/2012", 
+			updated_date: "12/12/2012"
+		},
 		DropdownOptions : [
-			{ name: "अंजीर", code: "07003", slug: "anjir-bhajarbhav" },
+			{ 
+				name: "अंजीर", 
+				code: "07003", 
+				slug: "anjir-bhajarbhav",
+				seoMeta : {
+					seo_title: "अंजीर Bhajar Bhav",
+					seo_description: "अंजीर Bhajar bhav",
+					keywords: "अंजीर, bajar, bhav",
+					og_url : "some url",
+					canonical_url: "some url",
+					featured_image: "company logo path",
+					author: "Jio Kheti",
+					published_date: "12/12/2012", 
+					updated_date: "12/12/2012"
+				}
+			},
 			{ name: "अंजीर (सुके)", code: "10027", slug: "anjir-suke-bhajarbhav" },
 			{ name: "अंबाडी भाजी", code: "08003" },
 			{ name: "अननस", code: "07002" },
