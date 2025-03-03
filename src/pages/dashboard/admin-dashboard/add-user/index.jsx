@@ -5,8 +5,8 @@ import MetaComponent from "@/components/common/MetaComponent";
 import { useNavigate } from "react-router-dom";
 
 const metadata = {
-  title: "Admin Add User | Krushi Maharashtra - अन्नदाता सुखी भव:",
-  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  title: "Admin Add User | Jio Kheti - अन्नदाता सुखी भव:",
+  description: "Jio Kheti - अन्नदाता सुखी भव:",
 };
 const allowedUser = ["admin"];
 export default function AdminAddUser() {

@@ -4,8 +4,8 @@ import DashboardPage from "../../../../components/dashboard/admin-dashboard/book
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
-  title: "Admin History | Krushi Maharashtra - अन्नदाता सुखी भव:",
-  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  title: "Admin History | Jio Kheti - अन्नदाता सुखी भव:",
+  description: "Jio Kheti - अन्नदाता सुखी भव:",
 };
 
 export default function AdminBooking() {

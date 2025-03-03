@@ -7,8 +7,8 @@ import Header1 from "@/components/header/header-1";
 import { Link } from "react-router-dom";
 
 const metadata = {
-  title: "Login | Krushi Maharashtra - अन्नदाता सुखी भव:",
-  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  title: "Login | Jio Kheti - अन्नदाता सुखी भव:",
+  description: "Jio Kheti - अन्नदाता सुखी भव:",
 };
 
 const LogIn = ({role}) => {

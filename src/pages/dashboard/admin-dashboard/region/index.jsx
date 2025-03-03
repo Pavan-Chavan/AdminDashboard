@@ -5,8 +5,8 @@ import MetaComponent from "@/components/common/MetaComponent";
 import { useNavigate } from "react-router-dom";
 
 const metadata = {
-  title: "Regions | Krushi Maharashtra - अन्नदाता सुखी भव:",
-  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  title: "Regions | Jio Kheti - अन्नदाता सुखी भव:",
+  description: "Jio Kheti - अन्नदाता सुखी भव:",
 };
 
 export default function Regions() {

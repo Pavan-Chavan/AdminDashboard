@@ -6,8 +6,8 @@ import NotFound from "@/components/common/NotFound";
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
-  title: "404 | Krushi Maharashtra - अन्नदाता सुखी भव:",
-  description: "Krushi Maharashtra - अन्नदाता सुखी भव:",
+  title: "404 | Jio Kheti - अन्नदाता सुखी भव:",
+  description: "Jio Kheti - अन्नदाता सुखी भव:",
 };
 
 const NotFoundPage = () => {

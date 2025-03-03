@@ -99,7 +99,7 @@ export const PrivacyPage = () => {
                 <b>Address:</b> Workafella Goregaon, AK Estate, Besides Radisson
                 Blu Hotel, S.V. Rd, Goregaon West, Mumbai, Maharashtra 400062{" "}
                 <br />
-                <b>Email:</b> krushimaharashtra.info@gmail.com
+                <b>Email:</b> info@jiokheti.com
               </p>
             </div>
           </TabPanel>
@@ -209,7 +209,7 @@ export const PrivacyPage = () => {
                 <b>Address:</b> Workafella Goregaon, AK Estate, Besides Radisson
                 Blu Hotel, S.V. Rd, Goregaon West, Mumbai, Maharashtra 400062
                 <br />
-                <b>Email:</b> krushimaharashtra.info@gmail.com
+                <b>Email:</b> info@jiokheti.com
               </p>
             </div>
           </TabPanel>

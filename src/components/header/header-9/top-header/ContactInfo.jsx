@@ -14,8 +14,8 @@ const ContactInfo = () => {
       </div>
       {/* End .col-auto */}
       <div className="col-auto">
-        <a href="mailto:krushimaharashtra.info@gmail.com" className="text-12 text-white">
-          krushimaharashtra.info@gmail.com
+        <a href="mailto:info@jiokheti.com" className="text-12 text-white">
+          info@jiokheti.com
         </a>
       </div>
       {/* End .col-auto */}
