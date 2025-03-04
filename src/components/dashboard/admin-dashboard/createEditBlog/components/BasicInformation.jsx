@@ -21,16 +21,20 @@ const BasicInformation = ({
 
   const fetchSubCategory = async (category) => {
     try {
-      const response = await axios.get(`${api}/api/sub-categories/get-sub-categories`,{ 
-        headers : { 
-          categories: category.map((category)=>{ return category.category_name })
+      const categoryNames = category.map(cat => cat.category_name).join(',');
+  
+      // Send as query parameter
+      const response = await axios.get(`${api}/api/sub-categories/get-sub-categories`, {
+        params: {
+          categories: categoryNames 
         }
       });
+  
       if (response.status === 200) {
         setSubCategory(response.data);
       }
     } catch (error) {
-      console.log("Failed to fetch cities");
+      console.log("Failed to fetch subcategories");
       console.error(error);
     }
   };

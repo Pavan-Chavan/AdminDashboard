@@ -56,20 +56,26 @@ app.post("/add-sub-categories", (req, res) => {
 });
 
 app.get("/get-sub-categories", (req, res) => {
-  const categoriesString = req.headers.categories; // Extract categories from headers
+  const categoriesString = req.query.categories; // Extract from query parameters
 
   if (!categoriesString) {
-    return res.status(400).json({ error: "Missing categories parameter" });
+    return res.status(400).json({ error: "Missing categories query parameter" });
   }
 
-  const categories = categoriesString.split(",").map(category => category.trim()); // Convert to array
+  // Split the comma-separated string and trim whitespace
+  const categories = categoriesString.split(",").map(category => category.trim());
 
-  const placeholders = categories.map(() => "?").join(", "); // Generate SQL placeholders
+  if (categories.length === 0 || categories.some(cat => !cat)) {
+    return res.status(400).json({ error: "Invalid or empty categories provided" });
+  }
+
+  const placeholders = categories.map(() => "?").join(", ");
   const sql = `SELECT * FROM sub_categories WHERE parent_category_name IN (${placeholders})`;
 
   db.query(sql, categories, (err, results) => {
     if (err) {
-      return res.status(500).json({ error: err.message });
+      console.error("Database error:", err);
+      return res.status(500).json({ error: "Internal server error" });
     }
     res.json(results);
   });
