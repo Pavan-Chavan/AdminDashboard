@@ -21,6 +21,7 @@ const WebSocketComponent = () => {
     const [failed, setFailed] = useState([]);
     const [insert, setInsert] = useState([]);
     const [update, setUpdate] = useState([]);
+    const [percentage, setPercentage] = useState(null);
 
     useEffect(() => {
         // if (secretKey !== "550e8400-e29b-41d4-a716-446655440000") {
@@ -34,6 +35,7 @@ const WebSocketComponent = () => {
         // Handle incoming messages
         socket.onmessage = (event) => {
             const data = JSON.parse(event.data);
+            
             setStatusUpdates((prev) => [...prev, `${data.message}`]);
             switch (data.status) {
               case "error":
@@ -44,6 +46,9 @@ const WebSocketComponent = () => {
                 break;
               case "update":
                 setUpdate((prev)=>([...prev,data.data]))
+                break;
+              case "progress":
+                setPercentage(data?.percentage);
                 break;
               default:
                 break;
@@ -215,6 +220,8 @@ const WebSocketComponent = () => {
                 </form>
 
                 <div className="container mt-5">
+                  <h4 className="mb-4">Total Progess in %: {percentage || 0}</h4>
+                
                   <h1 className="mb-4">Script Logs</h1>
                   <div className="card">
                     <div className="card-body" style={{ height: "100px", overflowY: "auto" }} ref={logContainerRef}>

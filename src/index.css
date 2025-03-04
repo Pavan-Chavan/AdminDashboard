@@ -34,15 +34,15 @@
   }
   
   .error {
-    background-color: #ff4d4d;
+    background-color: #ff4d4d !important;
   }
   
   .inserted {
-    background-color: #4caf50;
+    background-color: #4caf50 !important;
   }
   
   .udpated {
-    background-color: #2196f3;
+    background-color: #2196f3 !important;
   }
   
   .tag-search-input {
