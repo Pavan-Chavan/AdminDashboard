@@ -248,15 +248,11 @@ const Index = () => {
       showAlert(currentError[0], "error");
       console.error("Form validation failed:", errors);
     } else {
-      let ApiBody = {
-        ...blogpostdata,
-        published_date : formatPublishDate(blogpostdata.published_date)
-      }
+      
       let ImageBodyApi = {
         image : blogpostdata.featured_image_data,
         imageName : blogpostdata.featured_image
       }
-      delete ApiBody.featured_image_data;
       try {
         const response = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
         if (response.status === 200) {
@@ -268,6 +264,12 @@ const Index = () => {
         showAlert("Failed to upload image", 'error');
       }
       try {
+        let ApiBody = {
+          ...blogpostdata,
+          featured_image : response.data.imageUrl,
+          published_date : formatPublishDate(blogpostdata.published_date)
+        }
+        delete ApiBody.featured_image_data;
         const url = mode === "edit" ? `${api}/api/blogpost/update-blog/${state.id}` : `${api}/api/blogpost/create-blog`;
         const response = await axios.post(url, ApiBody);
         if (response.status === 201) {
