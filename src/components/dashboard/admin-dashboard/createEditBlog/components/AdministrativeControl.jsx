@@ -51,7 +51,7 @@ const AdministrativeControl = ({ blogpostdata = {}, handleChange = () => {}, han
                       <div
                         className={`js-dropdown-link ${blogpostdata.is_enable ? "text-blue-1" : ""}`}
                         onClick={() => {
-                          handleCheckBox({ name: "is_enable", value: true });
+                          handleCheckBox({ name: "is_enable", value: 1 });
                         }}
                       >
                         <div className="ml-10">
@@ -63,7 +63,7 @@ const AdministrativeControl = ({ blogpostdata = {}, handleChange = () => {}, han
                       <div
                         className={`js-dropdown-link ${!blogpostdata.is_enable ? "text-blue-1" : ""}`}
                         onClick={() => {
-                          handleCheckBox({ name: "is_enable", value: false });
+                          handleCheckBox({ name: "is_enable", value: 0 });
                         }}
                       >
                         <div className="ml-10">

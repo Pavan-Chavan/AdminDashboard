@@ -22,16 +22,16 @@ app.post("/create-blog", (req, res) => {
     twitter_title,
     twitter_description,
     tags,
-    published_date
+    published_date,
+    is_enable
   } = req.body;
-
   const sql = `
     INSERT INTO blog_posts (
       title, category, sub_category, content, slug, seo_title, seo_description, keywords, 
       featured_image, author, published_date, updated_date, canonical_url, 
-      og_title, og_description, og_url, twitter_title, twitter_description, tags
+      og_title, og_description, og_url, twitter_title, twitter_description, tags, is_enable
     ) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?, ?)`;
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?, ?, ?)`;
 
   const values = [
     title,
@@ -52,6 +52,7 @@ app.post("/create-blog", (req, res) => {
     twitter_title,
     twitter_description,
     JSON.stringify(tags),
+    is_enable
   ];
 
   db.query(sql, values, (err, result) => {
@@ -64,7 +65,7 @@ app.post("/create-blog", (req, res) => {
 });
 
 app.get("/get-blogs", (req, res) => {
-  let { page = 1, limit = 10, category, subCategory, search, tag } = req.query;
+  let { page = 1, limit = 10, category, subCategory, search, tag, is_enable = 1, get_all = false } = req.query;
 
   page = parseInt(page, 10);
   limit = parseInt(limit, 10);
@@ -92,6 +93,13 @@ app.get("/get-blogs", (req, res) => {
     query += " AND JSON_SEARCH(tags, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
     countQuery += " AND JSON_SEARCH(tags, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
     queryParams.push(tag);
+  }
+
+  // check only published blog
+  if (is_enable && get_all == false) {
+    query += " AND is_enable = ?";
+    countQuery += " AND is_enable = ?";
+    queryParams.push(is_enable);
   }
 
   // 🔎 Apply search across all columns
@@ -178,6 +186,7 @@ app.post("/update-blog/:id", (req, res) => {
     twitter_title,
     twitter_description,
     tags,
+    is_enable
   } = req.body;
 
   const sql = `
@@ -185,7 +194,7 @@ app.post("/update-blog/:id", (req, res) => {
       title = ?, category = ?, sub_category = ?, content = ?, slug = ?, seo_title = ?, 
       seo_description = ?, keywords = ?, featured_image = ?, author = ?, updated_date = NOW(), 
       canonical_url = ?, og_title = ?, og_description = ?, og_url = ?, 
-      twitter_title = ?, twitter_description = ?, tags = ?, published_date = ?
+      twitter_title = ?, twitter_description = ?, tags = ?, published_date = ?, is_enable = ?
     WHERE id = ?`;
 
   const values = [
@@ -207,6 +216,7 @@ app.post("/update-blog/:id", (req, res) => {
     twitter_description,
     JSON.stringify(tags),
     published_date,
+    is_enable,
     req.params.id,
   ];
 

@@ -40,7 +40,7 @@ const Index = () => {
     tags : [],
     category : [],
     sub_category : [],
-    is_enable : false
+    is_enable : 0
   });
 
   const [isSaveDisabled, setIsSaveDisabled] = useState(true);
@@ -80,7 +80,7 @@ const Index = () => {
         tags : [],
         category : [],
         sub_category : [],
-        is_enable : false})
+        is_enable : 0})
     }
   },[mode]);
 
@@ -95,17 +95,25 @@ const Index = () => {
           category: JSON.parse(state?.category),
           sub_category: JSON.parse(state?.sub_category),
         }
-        setBlogPostData((prevState) => ({
+        delete editFormData.featured_image_data;
+        setBlogPostData((prevState) => {
+          delete prevState?.featured_image_data;
+          return {
           ...prevState,
           ...editFormData
-        }));
+          }
+        });
       }
     }
   },[]);
 
   useEffect(() => {
-    const isFormIncomplete = Object.values(blogpostdata).some(value => value === "" || (Array.isArray(value) && value.length === 0));
-    setIsSaveDisabled(isFormIncomplete);
+    if (blogpostdata.is_enable) {
+      const isFormIncomplete = Object.values(blogpostdata).some(value => value === "" || (Array.isArray(value) && value.length === 0));
+      setIsSaveDisabled(isFormIncomplete);
+    } else {
+      setIsSaveDisabled(false);
+    }
     setIsNextDisabled(false);  // Adjust this based on specific step validation if needed
   }, [blogpostdata]);
 
@@ -236,7 +244,7 @@ const Index = () => {
     e.preventDefault(); 
     const currentError = validateFormData(blogpostdata);
     setError(currentError);
-    if (currentError.length > 0) {
+    if (blogpostdata.is_enable && currentError.length > 0) {
       showAlert(currentError[0], "error");
       console.error("Form validation failed:", errors);
     } else {

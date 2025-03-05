@@ -19,9 +19,10 @@ const BlogsTable = ({ searchParameter="", refresh }) => {
     setLoading(true);
     setError(null); // Reset error state
     try {
-      const response = await axios.get(`${api}/api/blogpost/get-blogs`,{
+      const response = await axios.get(`${api}/api/blogpost/get-blogs`, {
         params : {
           ...searchParams,
+          get_all : true,
           search : searchParameter
         }
       });
