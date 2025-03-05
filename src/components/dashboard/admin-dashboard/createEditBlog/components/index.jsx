@@ -254,7 +254,7 @@ const Index = () => {
         imageName : blogpostdata.featured_image
       }
       try {
-        ImageUploaderResponse = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
+        const ImageUploaderResponse = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
         if (ImageUploaderResponse.status === 200) {
           showAlert(ImageUploaderResponse.message, 'sucess');
           try {
