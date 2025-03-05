@@ -59,7 +59,7 @@ const GalleryUploader = ({blogpostdata, setBlogPostData, image, title}) => {
     if(blogpostdata.featured_image_data) {
       return blogpostdata.featured_image_data;
     } else if (blogpostdata.featured_image != "") {
-      return `${krushiMahaDomain}/images/blog-thumbnail/${blogpostdata.featured_image}`;
+      return blogpostdata.featured_image;
     } else {
       return ""
     }
