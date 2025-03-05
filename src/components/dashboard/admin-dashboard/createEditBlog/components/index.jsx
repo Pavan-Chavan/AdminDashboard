@@ -254,54 +254,55 @@ const Index = () => {
         imageName : blogpostdata.featured_image
       }
       try {
-        const response = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
-        if (response.status === 200) {
-          showAlert(response.message, 'sucess');
+        ImageUploaderResponse = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
+        if (ImageUploaderResponse.status === 200) {
+          showAlert(ImageUploaderResponse.message, 'sucess');
+          try {
+            let ApiBody = {
+              ...blogpostdata,
+              featured_image : ImageUploaderResponse.data.imageUrl,
+              published_date : formatPublishDate(blogpostdata.published_date)
+            }
+            delete ApiBody.featured_image_data;
+            const url = mode === "edit" ? `${api}/api/blogpost/update-blog/${state.id}` : `${api}/api/blogpost/create-blog`;
+            const response = await axios.post(url, ApiBody);
+            if (response.status === 201) {
+              setBlogPostData({
+                title: "",
+                content: "",
+                slug: "",
+                author: "",
+                published_date: "",
+                seo_title: "",
+                seo_description: "",
+                keywords: "",  
+                canonical_url: "",
+                featured_image: "",
+                og_title: "",
+                og_description: "",
+                og_url: "",
+                twitter_title: "",
+                twitter_description: "",
+                tags : [],
+                category : [],
+                sub_category : []
+              });
+              showAlert(response.message, 'sucess');
+              navigate("/");
+            } else {
+              showAlert('something went wrong', 'error');
+            }
+          } catch (error) {
+            if (error) window.alert(error.response.data.error);
+            console.error('Error:', error);
+          }
         } else {
           showAlert("Failed to upload image", 'error');
         }
       } catch (error) {
         showAlert("Failed to upload image", 'error');
       }
-      try {
-        let ApiBody = {
-          ...blogpostdata,
-          featured_image : response.data.imageUrl,
-          published_date : formatPublishDate(blogpostdata.published_date)
-        }
-        delete ApiBody.featured_image_data;
-        const url = mode === "edit" ? `${api}/api/blogpost/update-blog/${state.id}` : `${api}/api/blogpost/create-blog`;
-        const response = await axios.post(url, ApiBody);
-        if (response.status === 201) {
-          setBlogPostData({
-            title: "",
-            content: "",
-            slug: "",
-            author: "",
-            published_date: "",
-            seo_title: "",
-            seo_description: "",
-            keywords: "",  
-            canonical_url: "",
-            featured_image: "",
-            og_title: "",
-            og_description: "",
-            og_url: "",
-            twitter_title: "",
-            twitter_description: "",
-            tags : [],
-            category : [],
-            sub_category : []
-          });
-          showAlert(response.message, 'sucess');
-          navigate("/");
-        } else {
-          showAlert('something went wrong', 'error');
-        }
-      } catch (error) {
-        if (error) window.alert(error.response.data.error);
-        console.error('Error:', error);
-      }
+      
       console.log("Form is valid, submitting data...");
     }
   };
