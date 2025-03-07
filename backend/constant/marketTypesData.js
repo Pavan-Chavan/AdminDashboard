@@ -21,6 +21,7 @@ const marketTypesDetails = {
 				name: "अकोला",
 				code: "32", 
 				slug: "akola-bajarbhav",
+				subType : "district",
 				seoMeta : {
 					seo_title: "Akola Bajarbhav",
 					seo_description: "Akola Bajar bhav",
@@ -91,6 +92,7 @@ const marketTypesDetails = {
 				name: "अंजीर", 
 				code: "07003", 
 				slug: "anjir-bajarbhav",
+				subType : "crop",
 				seoMeta : {
 					seo_title: "अंजीर Bhajar Bhav",
 					seo_description: "अंजीर Bhajar bhav",
