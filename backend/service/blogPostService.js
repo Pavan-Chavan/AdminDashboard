@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const db = require("../db");
+const marketTypesDetails = require('../constant/marketTypesData');
 const app = express();
 
 app.post("/create-blog", (req, res) => {
@@ -330,5 +331,96 @@ app.get("/get-blog", (req, res) => {
   });
 });
 
+app.get("/search", (req, res) => {
+  const { query = "", page = 1, limit = 10 } = req.query;
+
+  // // Validate query
+  // if (!query || query.trim() === "") {
+  //   return res.status(400).json({ error: "Query parameter is required" });
+  // }
+
+  const pageNum = parseInt(page, 10);
+  const limitNum = parseInt(limit, 10);
+  const offset = (pageNum - 1) * limitNum;
+  const searchTerm = `%${query}%`;
+
+  // 1. Search blog_posts table
+  const blogPostsSql = `
+    SELECT title, featured_image, slug
+    FROM blog_posts
+    WHERE title LIKE ? OR content LIKE ?
+    LIMIT ? OFFSET ?
+  `;
+
+  db.query(blogPostsSql, [searchTerm, searchTerm, limitNum, offset], (err, blogPosts) => {
+    if (err) {
+      console.error("Blog Posts Search Error:", err);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+
+    // Count total blog posts for pagination
+    db.query(
+      "SELECT COUNT(*) as count FROM blog_posts WHERE title LIKE ? OR content LIKE ?",
+      [searchTerm, searchTerm],
+      (err, totalBlogPosts) => {
+        if (err) {
+          console.error("Count Query Error:", err);
+          return res.status(500).json({ error: "Internal server error" });
+        }
+
+        const totalBlogPostsCount = totalBlogPosts[0].count;
+
+        // Format blog post results
+        const blogPostResults = blogPosts.map((post) => ({
+          title: post.title,
+          featured_image: post.featured_image,
+          slug: post.slug
+        }));
+
+        // 2. Search marketTypesDetails
+        const marketTypeResults = [];
+        Object.values(marketTypesDetails).forEach((marketType) => {
+          const matches = marketType.DropdownOptions.filter((option) => {
+            // Convert the entire option object to a string and search
+            const optionString = JSON.stringify(option).toLowerCase();
+            return optionString.includes(query.toLowerCase());
+          });
+          matches.forEach((match) => {
+            marketTypeResults.push({
+              title: match?.name ? match?.name + " बाजार दर" : match.seoMeta?.seo_title,
+              featured_image: match.seoMeta?.featured_image || "default-image.jpg", // TODO : add default image
+              slug: match.slug,
+              subType : match.subType,
+              type : "bajarbhav"
+            });
+          });
+        });
+
+        // 3. Combine results
+        const combinedResults = [...blogPostResults, ...marketTypeResults];
+
+        // Apply pagination to combined results
+        const paginatedResults = combinedResults.slice(offset, offset + limitNum);
+        const totalItems = combinedResults.length;
+
+        // Pagination metadata
+        const totalPages = Math.ceil(totalItems / limitNum);
+
+        // Response
+        res.status(200).json({
+          success: true,
+          data: paginatedResults,
+          pagination: {
+            currentPage: pageNum,
+            itemsPerPage: limitNum,
+            totalItems,
+            totalPages,
+            totalBlogPosts: totalBlogPostsCount,
+          },
+        });
+      }
+    );
+  });
+});
 
 module.exports = app;

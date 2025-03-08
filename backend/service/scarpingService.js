@@ -127,7 +127,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
                 }
               }));
             } catch (apiError) {
-              console.log(apiError)
+              console.log(apiError);
               ws.send(JSON.stringify({
                 status: "error",
                 message: `API call failed: ${apiError.message}`,
