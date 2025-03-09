@@ -24,8 +24,8 @@ const Index = () => {
     title: "",
     content: "",
     slug: "",
-    author: "",
-    published_date: "",
+    author: "Jio Kheti",
+    published_date: new Date().toISOString(),
     seo_title: "",
     seo_description: "",
     keywords: "",  
@@ -64,8 +64,8 @@ const Index = () => {
         title: "",
         content: "",
         slug: "",
-        author: "",
-        published_date: "",
+        author: "Jio Kheti",
+        published_date: new Date().toISOString(),
         seo_title: "",
         seo_description: "",
         keywords: "",  
@@ -170,12 +170,41 @@ const Index = () => {
     }));
   }
 
+  const generateCanonicalUrl = (url) => {
+    return `${krushiMahaDomain}/blog/${url}`;
+  }
+
   const handleChange = (event)=> {
-    const {name,value} = event.target;
-    setBlogPostData((prevState) => ({
+    const {name,value} = event.target; 
+    if (name === "title") {
+      setBlogPostData((prevState) => ({
+          ...prevState,
+          "title": value,
+          "seo_title" : value,
+          "og_title" :value,
+          "twitter_title" : value
+       })); 
+    } else if (name === "seo_description") {
+      setBlogPostData((prevState) => ({
+          ...prevState,
+          "seo_description": value,
+          "og_description" : value,
+          "twitter_description" :value,
+       }));
+    }else if (name === "slug") {
+      setBlogPostData((prevState) => ({
+          ...prevState,
+          "slug": value,
+          "canonical_url" : generateCanonicalUrl(value),
+          "og_url" : generateCanonicalUrl(value)
+       }));
+    } else {
+      setBlogPostData((prevState) => ({
         ...prevState,
         [name]: value,
-    }));
+      }));
+    }
+    
   }
 
   const handleCheckBox = (checkbox)=>{
@@ -241,70 +270,98 @@ const Index = () => {
   } 
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-    const currentError = validateFormData(blogpostdata);
-    setError(currentError);
-    if (blogpostdata.is_enable && currentError.length > 0) {
-      showAlert(currentError[0], "error");
-      console.error("Form validation failed:", errors);
-    } else {
-      
-      let ImageBodyApi = {
-        image : blogpostdata.featured_image_data,
-        imageName : blogpostdata.featured_image
-      }
-      try {
-        const ImageUploaderResponse = await axios.post(...getURLAndBodyForUploadImage(mode, ImageBodyApi))
-        if (ImageUploaderResponse.status === 200) {
-          showAlert(ImageUploaderResponse.message, 'sucess');
-          try {
-            let ApiBody = {
-              ...blogpostdata,
-              featured_image : ImageUploaderResponse.data.imageUrl,
-              published_date : formatPublishDate(blogpostdata.published_date)
-            }
-            delete ApiBody.featured_image_data;
-            const url = mode === "edit" ? `${api}/api/blogpost/update-blog/${state.id}` : `${api}/api/blogpost/create-blog`;
-            const response = await axios.post(url, ApiBody);
-            if (response.status === 201) {
-              setBlogPostData({
-                title: "",
-                content: "",
-                slug: "",
-                author: "",
-                published_date: "",
-                seo_title: "",
-                seo_description: "",
-                keywords: "",  
-                canonical_url: "",
-                featured_image: "",
-                og_title: "",
-                og_description: "",
-                og_url: "",
-                twitter_title: "",
-                twitter_description: "",
-                tags : [],
-                category : [],
-                sub_category : []
-              });
-              showAlert(response.message, 'sucess');
-              navigate("/");
-            } else {
-              showAlert('something went wrong', 'error');
-            }
-          } catch (error) {
-            if (error) window.alert(error.response.data.error);
-            console.error('Error:', error);
-          }
-        } else {
-          showAlert("Failed to upload image", 'error');
-        }
-      } catch (error) {
-        showAlert("Failed to upload image", 'error');
-      }
-      
-      console.log("Form is valid, submitting data...");
+    e.preventDefault();
+  
+    // Validate form data
+    const currentErrors = validateFormData(blogpostdata);
+    setError(currentErrors);
+  
+    if (blogpostdata.is_enable && currentErrors.length > 0) {
+      showAlert(currentErrors[0], "error");
+      console.error("Form validation failed:", currentErrors);
+      return; // Exit early if validation fails
     }
+  
+    try {
+      let ApiBody = { ...blogpostdata }; // Clone blogpostdata to modify
+      ApiBody.published_date = formatPublishDate(blogpostdata.published_date); // Format date early
+  
+      // Check if image needs to be updated
+      const shouldUpdateImage = state?.featured_image !== blogpostdata.featured_image;
+  
+      if (shouldUpdateImage && blogpostdata.featured_image_data) {
+        // Prepare image upload payload
+        const ImageBodyApi = {
+          image: blogpostdata.featured_image_data,
+          imageName: blogpostdata.featured_image,
+        };
+  
+        // Upload image
+        const [imageUploadUrl, imageUploadBody] = getURLAndBodyForUploadImage(mode, ImageBodyApi);
+        const ImageUploaderResponse = await axios.post(imageUploadUrl, imageUploadBody);
+  
+        if (ImageUploaderResponse.status === 200) {
+          showAlert(ImageUploaderResponse.data.message || "Image uploaded successfully", "success");
+          ApiBody.featured_image = ImageUploaderResponse.data.imageUrl; // Update with new image URL
+        } else {
+          showAlert("Failed to upload image", "error");
+          return; // Exit if image upload fails
+        }
+      } else if (!shouldUpdateImage) {
+        // Use existing image if no update is needed
+        ApiBody.featured_image = state.featured_image;
+      }
+  
+      // Remove temporary image data from payload
+      delete ApiBody.featured_image_data;
+  
+      // Determine API endpoint based on mode
+      const url = mode === "edit" 
+        ? `${api}/api/blogpost/update-blog/${state.id}` 
+        : `${api}/api/blogpost/create-blog`;
+  
+      // Submit blog post data
+      const response = await axios.post(url, ApiBody);
+  
+      if (response.status === 201 || response.status === 200) { // Handle both create (201) and update (200) success
+        // Reset form
+        setBlogPostData({
+          title: "",
+          content: "",
+          slug: "",
+          author: "Jio Kheti",
+          published_date: new Date().toISOString(),
+          seo_title: "",
+          seo_description: "",
+          keywords: "",
+          canonical_url: "",
+          featured_image: "",
+          og_title: "",
+          og_description: "",
+          og_url: "",
+          twitter_title: "",
+          twitter_description: "",
+          tags: [],
+          category: [],
+          sub_category: []
+        });
+        showAlert(response.data.message || "Blog post saved successfully", "success");
+        navigate("/"); // Redirect to home
+      } else {
+        showAlert("Something went wrong", "error");
+      }
+    } catch (error) {
+      // Handle specific error responses
+      if (error.response) {
+        const errorMessage = error.response.data?.error || "An error occurred";
+        showAlert(errorMessage, "error");
+      } else {
+        showAlert("Network error or server unreachable", "error");
+      }
+      console.error("Error submitting form:", error);
+    }
+  
+    console.log("Form submission completed");
   };
 
   const handleNextStep = () => {

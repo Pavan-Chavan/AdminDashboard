@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const axios = require('axios');
 const baseURL = 'https://www.msamb.com/ApmcDetail/APMCPriceInformation';
+const https = require('https'); 
 
 const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
   try {
@@ -115,7 +116,15 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
 
             // Call the endpoint
             try {
-              const response = await axios.post(`${process.env.ADMIN_BACKEND_DOMAIN}/api/insert-market-data`, payload);
+              const response = await axios.post(
+                `${process.env.ADMIN_BACKEND_DOMAIN}/api/insert-market-data`,
+                payload,
+                {
+                  httpsAgent: new https.Agent({
+                    rejectUnauthorized: false // Bypasses SSL verification
+                  })
+                }
+              );
               ws.send(JSON.stringify({
                 status: response.data.status,
                 message: response.data.message,
