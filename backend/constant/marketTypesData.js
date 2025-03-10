@@ -146,12 +146,12 @@ const marketTypesDetails = {
 			{
 				name: "छत्रपती संभाजीनगर",
 				code: "25",
-				slug: "sambhaji-nagar-bajarbhav",
+				slug: "sambhajinagar-bajarbhav",
 				subType: "district",
 				seoMeta: {
-					seo_title: "Sambhaji Nagar Bajarbhav",
-					seo_description: "Sambhaji Nagar Bajarbhav",
-					keywords: "sambhaji nagar bajarbhav, bajarbhav",
+					seo_title: "Sambhajinagar Bajarbhav",
+					seo_description: "Sambhajinagar Bajarbhav",
+					keywords: "sambhajinagar bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "banner-img-path-of-vercel-storage",
@@ -164,7 +164,7 @@ const marketTypesDetails = {
 			{
 				name: "जळगाव",
 				code: "18",
-				slug: "jalgoan-bajarbhav",
+				slug: "jalgaon-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Jalgaon Bajarbhav",
@@ -182,7 +182,7 @@ const marketTypesDetails = {
 			{
 				name: "जालना",
 				code: "27",
-				slug: "jalana-bajarbhav",
+				slug: "jalna-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Jalana Bajarbhav",
@@ -254,7 +254,7 @@ const marketTypesDetails = {
 			{
 				name: "नंदुरबार",
 				code: "41",
-				slug: "nadurbar-bajarbhav",
+				slug: "nandurbar-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Nandurbar Bajarbhav",
@@ -326,7 +326,7 @@ const marketTypesDetails = {
 			{
 				name: "परभणी",
 				code: "31",
-				slug: "parabhani-bajarbhav",
+				slug: "parbhani-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Parbhani Bajarbhav",
@@ -398,7 +398,7 @@ const marketTypesDetails = {
 			{
 				name: "बुलढाणा",
 				code: "34",
-				slug: "buladhana-bajarbhav",
+				slug: "buldhana-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Buldhana Bajarbhav",
@@ -452,7 +452,7 @@ const marketTypesDetails = {
 			{
 				name: "यवतमाळ",
 				code: "35",
-				slug: "yavatmaal-bajarbhav",
+				slug: "yavatmal-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Yavatmal Bajarbhav",
@@ -542,7 +542,7 @@ const marketTypesDetails = {
 			{
 				name: "वाशिम",
 				code: "42",
-				slug: "vashim-bajarbhav",
+				slug: "washim-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Washim Bajarbhav",
@@ -560,7 +560,7 @@ const marketTypesDetails = {
 			{
 				name: "सांगली",
 				code: "22",
-				slug: "sangali-bajarbhav",
+				slug: "sangli-bajarbhav",
 				subType: "district",
 				seoMeta: {
 					seo_title: "Sangli Bajarbhav",
@@ -834,24 +834,6 @@ const marketTypesDetails = {
 				name: "आवळा",
 				code: "07042",
 				slug: "aavla-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Aavla BajarBhav",
-					seo_description: "Aavla Bajarbhav",
-					keywords: "आवळा, bajarbhav",
-					og_url: "some url",
-					canonical_url: "some url",
-					banner_img: "banner-img-path-of-vercel-storage",
-					featured_image: "company logo path",
-					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
-				}
-			},
-			{
-				name: "आवळा",
-				code: "08006",
-				slug: "aavla2-bajarbhav",
 				subType: "crop",
 				seoMeta: {
 					seo_title: "Aavla BajarBhav",
