@@ -387,7 +387,7 @@ app.get("/search", (req, res) => {
           });
           matches.forEach((match) => {
             marketTypeResults.push({
-              title: match?.name ? match?.name + " बाजार दर" : match.seoMeta?.seo_title,
+              title: match?.name ? match?.name + " बाजारभाव" : match.seoMeta?.seo_title,
               featured_image: match.seoMeta?.banner_img || "default-image.jpg", // TODO : add default image
               slug: match.slug,
               subType : match.subType,
