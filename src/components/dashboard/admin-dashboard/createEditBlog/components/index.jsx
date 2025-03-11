@@ -244,6 +244,7 @@ const Index = () => {
   }
 
   const validateFormData = (formData) => {
+    delete formData.sub_category;
     const errors = [];
     Object.keys(formData).forEach((key) => {
       if (key === "is_featured") return;
@@ -314,7 +315,6 @@ const Index = () => {
   
       // Remove temporary image data from payload
       delete ApiBody.featured_image_data;
-      delete ApiBody.sub_category;
   
       // Determine API endpoint based on mode
       const url = mode === "edit" 
