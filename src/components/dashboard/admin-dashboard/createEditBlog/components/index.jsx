@@ -314,6 +314,7 @@ const Index = () => {
   
       // Remove temporary image data from payload
       delete ApiBody.featured_image_data;
+      delete ApiBody.sub_category;
   
       // Determine API endpoint based on mode
       const url = mode === "edit" 
