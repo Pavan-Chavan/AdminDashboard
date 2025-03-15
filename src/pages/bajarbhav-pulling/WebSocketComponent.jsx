@@ -224,7 +224,7 @@ const WebSocketComponent = () => {
                 
                   <h1 className="mb-4">Script Logs</h1>
                   <div className="card">
-                    <div className="card-body" style={{ height: "auto", overflowY: "auto" }} ref={logContainerRef}>
+                    <div className="card-body" style={{ height: "100px", overflowY: "auto" }} ref={logContainerRef}>
                       {statusUpdates.length === 0 ? (
                         <p className="text-muted">Waiting for logs...</p>
                       ) : (

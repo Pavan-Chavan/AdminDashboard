@@ -144,7 +144,7 @@ const marketTypesDetails = {
 				}
 			},
 			{
-				name: "छत्रपती संभाजीनगर",
+				name: "छ. संभाजीनगर",
 				code: "25",
 				slug: "sambhajinagar-bajarbhav",
 				subType: "district",
