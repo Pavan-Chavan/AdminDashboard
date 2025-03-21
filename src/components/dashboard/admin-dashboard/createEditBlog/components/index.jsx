@@ -244,10 +244,10 @@ const Index = () => {
   }
 
   const validateFormData = (formData) => {
-    delete formData.sub_category;
     const errors = [];
     Object.keys(formData).forEach((key) => {
       if (key === "is_featured") return;
+      if (key === "sub_category") return;
       const value = formData[key];
       if (Array.isArray(value) && value.length === 0) {
         errors.push(`${key.replace(/_/g, ' ')} is required.`);
