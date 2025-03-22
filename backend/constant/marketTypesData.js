@@ -1,4 +1,4 @@
-export const marketTypesDetails = {
+const marketTypesDetails = {
 	DistrictCommodityGird : {
 		name : "जिल्हा शेतमाल निहाय/DistrictCommodityGird",
 		tableId : "DistrictCommodityGird",
@@ -1501,3 +1501,5 @@ export const marketTypesDetails = {
 		] 
 	}
 }
+
+module.exports = marketTypesDetails;
