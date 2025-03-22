@@ -154,7 +154,12 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
         } catch (error) {
           ws.send(JSON.stringify({
             status: "error",
-            message: `Error processing ${marketType} - ${option.name}: ${error.message}`
+            message: `Error processing ${marketType} - ${option.name}: ${error.message}`,
+            data: {
+              Section: marketType,
+              Name: option.name,
+              Code: option.code
+            }
           }));
           console.error(`Error processing ${marketType} - ${option.name}:`, error);
           if (typeof browser !== 'undefined') {
