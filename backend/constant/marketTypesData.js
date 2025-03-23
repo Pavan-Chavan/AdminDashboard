@@ -6,15 +6,15 @@ const marketTypesDetails = {
 		tableName : "DistrictCommodityGird",
 		subTabID : "DistrictCommodityWiseGirdID",
 		seoMeta : {
-			seo_title: "jilhanihay Bajarbhav",
-			seo_description: "jilhanihay Bajarbhav",
-			keywords: "jilhanihay, bajar, bhav",
+			seo_title: "District Bajarbhav",
+			seo_description: "District Bajarbhav",
+			keywords: "District, bajarbhav",
 			og_url : "some url",
 			canonical_url: "some url",
-			featured_image: "company logo path",
+			featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 			author: "Jio Kheti",
-			published_date: "12/12/2012", 
-			updated_date: "12/12/2012"
+			published_date: "01/03/2025", 
+			updated_date: "01/03/2025"
 		},
 		DropdownOptions : [
 			{ 
@@ -29,11 +29,11 @@ const marketTypesDetails = {
 					keywords: "akola bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/1.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{ 
@@ -47,11 +47,11 @@ const marketTypesDetails = {
 					keywords: "amravati bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/2.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{ 
@@ -65,11 +65,11 @@ const marketTypesDetails = {
 					keywords: "ahilyanagar bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/3.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{ 
@@ -83,11 +83,11 @@ const marketTypesDetails = {
 					keywords: "kolhapur bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/4.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{ 
@@ -101,11 +101,11 @@ const marketTypesDetails = {
 					keywords: "gadchiroli bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/5.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{ 
@@ -119,11 +119,11 @@ const marketTypesDetails = {
 					keywords: "gondia bajarbhav, bajarbhav",
 					og_url : "some url",
 					canonical_url: "some url",
-					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img : "/images/blog-thumbnail/6.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -137,11 +137,11 @@ const marketTypesDetails = {
 					keywords: "chandrapur bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/7.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -155,11 +155,11 @@ const marketTypesDetails = {
 					keywords: "sambhajinagar bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/8.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -173,11 +173,11 @@ const marketTypesDetails = {
 					keywords: "jalgaon bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/9.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -191,11 +191,11 @@ const marketTypesDetails = {
 					keywords: "jalana bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/10.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -209,11 +209,11 @@ const marketTypesDetails = {
 					keywords: "thane bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/11.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -227,11 +227,11 @@ const marketTypesDetails = {
 					keywords: "dharashiv bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/12.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -245,11 +245,11 @@ const marketTypesDetails = {
 					keywords: "dhule bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/13.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -263,11 +263,11 @@ const marketTypesDetails = {
 					keywords: "nandurbar bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/14.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -281,11 +281,11 @@ const marketTypesDetails = {
 					keywords: "nanded bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/15.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -299,11 +299,11 @@ const marketTypesDetails = {
 					keywords: "nagpur bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/16.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -317,11 +317,11 @@ const marketTypesDetails = {
 					keywords: "nashik bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/17.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -335,11 +335,11 @@ const marketTypesDetails = {
 					keywords: "parbhani bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/18.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -353,11 +353,11 @@ const marketTypesDetails = {
 					keywords: "palghar bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/19.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -371,11 +371,11 @@ const marketTypesDetails = {
 					keywords: "pune bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/20.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -389,11 +389,11 @@ const marketTypesDetails = {
 					keywords: "beed bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/21.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -407,11 +407,11 @@ const marketTypesDetails = {
 					keywords: "buldhana bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/22.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -425,11 +425,11 @@ const marketTypesDetails = {
 					keywords: "bhandara bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/23.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -443,11 +443,11 @@ const marketTypesDetails = {
 					keywords: "mumbai bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/24.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -461,11 +461,11 @@ const marketTypesDetails = {
 					keywords: "yavatmal bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/25.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -479,11 +479,11 @@ const marketTypesDetails = {
 					keywords: "ratnagiri bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/26.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -497,11 +497,11 @@ const marketTypesDetails = {
 					keywords: "raigad bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/27.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -515,11 +515,11 @@ const marketTypesDetails = {
 					keywords: "latur bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/28.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -533,11 +533,11 @@ const marketTypesDetails = {
 					keywords: "wardha bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/29.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -551,11 +551,11 @@ const marketTypesDetails = {
 					keywords: "washim bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/30.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -569,11 +569,11 @@ const marketTypesDetails = {
 					keywords: "sangli bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/31.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -587,11 +587,11 @@ const marketTypesDetails = {
 					keywords: "satara bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/32.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -605,11 +605,11 @@ const marketTypesDetails = {
 					keywords: "solapur bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/33.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -623,11 +623,11 @@ const marketTypesDetails = {
 					keywords: "hingoli bajarbhav, bajarbhav",
 					og_url: "some url",
 					canonical_url: "some url",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					banner_img: "/images/blog-thumbnail/34.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			}
 		  ]
@@ -645,10 +645,10 @@ const marketTypesDetails = {
 			keywords: "Piknihay BajarBhav, BajarBhav",
 			og_url : "some url",
 			canonical_url: "some url",
-			featured_image: "company logo path",
+			featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 			author: "Jio Kheti",
-			published_date: "12/12/2012", 
-			updated_date: "12/12/2012"
+			published_date: "01/03/2025", 
+			updated_date: "01/03/2025"
 		},
 		DropdownOptions : [
 			{ 
@@ -663,10 +663,10 @@ const marketTypesDetails = {
 					og_url : "some url",
 					canonical_url: "some url",
 					banner_img : "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012", 
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025", 
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -681,10 +681,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -699,10 +699,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -717,10 +717,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -735,10 +735,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -753,10 +753,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -771,10 +771,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -789,10 +789,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -807,10 +807,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -825,10 +825,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -843,10 +843,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -861,10 +861,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -879,10 +879,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -897,10 +897,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},{
 				name: "ओवा",
@@ -914,10 +914,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -932,10 +932,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -950,10 +950,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -968,10 +968,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -986,10 +986,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1005,10 +1005,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1023,10 +1023,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1041,10 +1041,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1059,10 +1059,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1077,10 +1077,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1095,10 +1095,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1113,10 +1113,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1131,10 +1131,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1149,10 +1149,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1167,10 +1167,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1185,10 +1185,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1203,10 +1203,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1221,10 +1221,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1239,10 +1239,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1257,10 +1257,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1275,10 +1275,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1293,10 +1293,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1312,10 +1312,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1330,10 +1330,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1348,10 +1348,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1366,10 +1366,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1384,10 +1384,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1402,10 +1402,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1420,10 +1420,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1438,10 +1438,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1456,10 +1456,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1474,10 +1474,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			},
 			{
@@ -1492,10 +1492,10 @@ const marketTypesDetails = {
 					og_url: "some url",
 					canonical_url: "some url",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "company logo path",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
-					published_date: "12/12/2012",
-					updated_date: "12/12/2012"
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
 				}
 			}
 		] 
