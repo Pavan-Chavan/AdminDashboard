@@ -1,4 +1,5 @@
 import { getMenuList } from "./JSXUtils";
+import { transliterate } from 'i18n-transliterate';
 
 export function objectToQueryString(obj, prefix = '') {
 	const queryStringParts = [];
@@ -219,12 +220,19 @@ export const getImageName = (file) => {
 };
 
 export const createSlug = (title) => {
-  return title
-    .toLowerCase() // Convert to lowercase
-    .trim() // Remove leading/trailing spaces
-    .replace(/[^\w\s-]/g, "") // Remove special characters
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/--+/g, "-"); // Remove multiple hyphens
+  // Transliterate Marathi (Devanagari) to Latin script
+  const transliteratedTitle = transliterate(title, {
+    locale: 'mr', // Marathi locale
+    unknown: '[?]', // Replace unknown characters with [?]
+  });
+
+  // Apply slugification
+  return transliteratedTitle
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/--+/g, '-');
 };
 
 export function formatPublishDate(input) {
