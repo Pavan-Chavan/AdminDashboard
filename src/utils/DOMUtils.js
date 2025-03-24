@@ -1,5 +1,5 @@
 import { getMenuList } from "./JSXUtils";
-import { transliterate } from 'i18n-transliterate';
+import { transliterate as tr } from 'transliteration';
 
 export function objectToQueryString(obj, prefix = '') {
 	const queryStringParts = [];
@@ -221,18 +221,15 @@ export const getImageName = (file) => {
 
 export const createSlug = (title) => {
   // Transliterate Marathi (Devanagari) to Latin script
-  const transliteratedTitle = transliterate(title, {
-    locale: 'mr', // Marathi locale
-    unknown: '[?]', // Replace unknown characters with [?]
-  });
+  const transliteratedTitle = tr(title);
 
   // Apply slugification
   return transliteratedTitle
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/--+/g, '-');
+    .replace(/[^\w\s-]/g, '') // Remove invalid characters
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/--+/g, '-'); // Remove consecutive hyphens
 };
 
 export function formatPublishDate(input) {
