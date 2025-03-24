@@ -670,6 +670,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "अंजीर (सुके)",
+				code: "10027",
+				slug: "anjir-suke-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Anjir Suke BajarBhav",
+					seo_description: "Anjir Suke Bajarbhav",
+					keywords: "अंजीर (सुके), bajarbhav",
+					og_url: "www.jiokheti.com/anjir-suke-bajarbhav",
+					canonical_url: "www.jiokheti.com/anjir-suke-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "अंबाडी भाजी",
 				code: "08003",
 				slug: "ambadi-bhaji-bajarbhav",
@@ -734,6 +752,24 @@ const marketTypesDetails = {
 					keywords: "अवाकाडो, bajarbhav",
 					og_url: "www.jiokheti.com/avocado-bajarbhav",
 					canonical_url: "www.jiokheti.com/avocado-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "अस्टर",
+				code: "16001",
+				slug: "aster-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Aster BajarBhav",
+					seo_description: "Aster Bajarbhav",
+					keywords: "अस्टर, bajarbhav",
+					og_url: "www.jiokheti.com/aster-bajarbhav",
+					canonical_url: "www.jiokheti.com/aster-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -850,6 +886,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "आवळा",
+				code: "08006",
+				slug: "aavla-08006-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Aavla (08006) BajarBhav",
+					seo_description: "Aavla (08006) Bajarbhav",
+					keywords: "आवळा, bajarbhav",
+					og_url: "www.jiokheti.com/aavla-08006-bajarbhav",
+					canonical_url: "www.jiokheti.com/aavla-08006-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "उडीद",
 				code: "03022",
 				slug: "udid-bajarbhav",
@@ -878,6 +932,24 @@ const marketTypesDetails = {
 					keywords: "उडीद डाळ, bajarbhav",
 					og_url: "www.jiokheti.com/udid-dal-bajarbhav",
 					canonical_url: "www.jiokheti.com/udid-dal-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "उस",
+				code: "06003",
+				slug: "us-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Us BajarBhav",
+					seo_description: "Us Bajarbhav",
+					keywords: "उस, bajarbhav",
+					og_url: "www.jiokheti.com/us-bajarbhav",
+					canonical_url: "www.jiokheti.com/us-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -1084,6 +1156,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "कागडा",
+				code: "16015",
+				slug: "kagda-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Kagda BajarBhav",
+					seo_description: "Kagda Bajarbhav",
+					keywords: "कागडा, bajarbhav",
+					og_url: "www.jiokheti.com/kagda-bajarbhav",
+					canonical_url: "www.jiokheti.com/kagda-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "काजू",
 				code: "10010",
 				slug: "kaju-bajarbhav",
@@ -1130,6 +1220,24 @@ const marketTypesDetails = {
 					keywords: "कारली, bajarbhav",
 					og_url: "www.jiokheti.com/karli-bajarbhav",
 					canonical_url: "www.jiokheti.com/karli-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "कार्नेशन",
+				code: "16035",
+				slug: "carnation-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Carnation BajarBhav",
+					seo_description: "Carnation Bajarbhav",
+					keywords: "कार्नेशन, bajarbhav",
+					og_url: "www.jiokheti.com/carnation-bajarbhav",
+					canonical_url: "www.jiokheti.com/carnation-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -1300,6 +1408,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "खपली",
+				code: "02012",
+				slug: "khapli-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Khapli BajarBhav",
+					seo_description: "Khapli Bajarbhav",
+					keywords: "खपली, bajarbhav",
+					og_url: "www.jiokheti.com/khapli-bajarbhav",
+					canonical_url: "www.jiokheti.com/khapli-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "खरबुज",
 				code: "07044",
 				slug: "kharbuja-bajarbhav",
@@ -1390,6 +1516,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "गुलछडी/निशिगंध",
+				code: "16004",
+				slug: "gulchhadi-nishigandh-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Gulchhadi/Nishigandh BajarBhav",
+					seo_description: "Gulchhadi/Nishigandh Bajarbhav",
+					keywords: "गुलछडी/निशिगंध, bajarbhav",
+					og_url: "www.jiokheti.com/gulchhadi-nishigandh-bajarbhav",
+					canonical_url: "www.jiokheti.com/gulchhadi-nishigandh-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "गुलाब",
 				code: "16003",
 				slug: "gulab-bajarbhav",
@@ -1418,6 +1562,42 @@ const marketTypesDetails = {
 					keywords: "गुळ, bajarbhav",
 					og_url: "www.jiokheti.com/gul-bajarbhav",
 					canonical_url: "www.jiokheti.com/gul-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "गोल्डन / डि.जी",
+				code: "16024",
+				slug: "golden-dg-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Golden/DG BajarBhav",
+					seo_description: "Golden/DG Bajarbhav",
+					keywords: "गोल्डन / डि.जी, bajarbhav",
+					og_url: "www.jiokheti.com/golden-dg-bajarbhav",
+					canonical_url: "www.jiokheti.com/golden-dg-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "ग्लॅडीओ",
+				code: "16025",
+				slug: "gladio-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Gladio BajarBhav",
+					seo_description: "Gladio Bajarbhav",
+					keywords: "ग्लॅडीओ, bajarbhav",
+					og_url: "www.jiokheti.com/gladio-bajarbhav",
+					canonical_url: "www.jiokheti.com/gladio-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -1498,600 +1678,6 @@ const marketTypesDetails = {
 				}
 			},
 			{
-				name: "सोयाबीन",
-				code: "04017",
-				slug: "soyabean-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Soyabean BajarBhav",
-					seo_description: "Soyabean Bajarbhav",
-					keywords: "सोयाबीन, bajarbhav",
-					og_url: "www.jiokheti.com/soyabean-bajarbhav",
-					canonical_url: "www.jiokheti.com/soyabean-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "तूर",
-				code: "03020",
-				slug: "tur-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Tur BajarBhav",
-					seo_description: "Tur Bajarbhav",
-					keywords: "तूर, bajarbhav",
-					og_url: "www.jiokheti.com/tur-bajarbhav",
-					canonical_url: "www.jiokheti.com/tur-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "हरभरा",
-				code: "03006",
-				slug: "harbhara-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Harbhara BajarBhav",
-					seo_description: "Harbhara Bajarbhav",
-					keywords: "हरभरा, bajarbhav",
-					og_url: "www.jiokheti.com/harbhara-bajarbhav",
-					canonical_url: "www.jiokheti.com/harbhara-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मिरची",
-				code: "08001",
-				slug: "mirchi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Mirchi BajarBhav",
-					seo_description: "Mirchi Bajarbhav",
-					keywords: "मिरची, bajarbhav",
-					og_url: "www.jiokheti.com/mirchi-bajarbhav",
-					canonical_url: "www.jiokheti.com/mirchi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मका",
-				code: "02015",
-				slug: "maka-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Maka BajarBhav",
-					seo_description: "Maka Bajarbhav",
-					keywords: "मका, bajarbhav",
-					og_url: "www.jiokheti.com/maka-bajarbhav",
-					canonical_url: "www.jiokheti.com/maka-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मेथी भाजी",
-				code: "08048",
-				slug: "methi-bhaji-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Methi Bhaji BajarBhav",
-					seo_description: "Methi Bhaji Bajarbhav",
-					keywords: "मेथी,मेथी भाजी,  bajarbhav",
-					og_url: "www.jiokheti.com/methi-bhaji-bajarbhav",
-					canonical_url: "www.jiokheti.com/methi-bhaji-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "वांगी",
-				code: "08078",
-				slug: "vangi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Vangi BajarBhav",
-					seo_description: "Vangi Bajarbhav",
-					keywords: "वांगी, bajarbhav",
-					og_url: "www.jiokheti.com/vangi-bajarbhav",
-					canonical_url: "www.jiokheti.com/vangi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "ज्वारी",
-				code: "02011",
-				slug: "jwari-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Jwari BajarBhav",
-					seo_description: "Jwari Bajarbhav",
-					keywords: "ज्वारी, bajarbhav",
-					og_url: "www.jiokheti.com/jwari-bajarbhav",
-					canonical_url: "www.jiokheti.com/jwari-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "डाळिंब",
-				code: "07007",
-				slug: "dalimb-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dalimb BajarBhav",
-					seo_description: "Dalimb Bajarbhav",
-					keywords: "डाळिंब, bajarbhav",
-					og_url: "www.jiokheti.com/dalimb-bajarbhav",
-					canonical_url: "www.jiokheti.com/dalimb-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "लिंबू",
-				code: "07015",
-				slug: "limbu-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Limbu BajarBhav",
-					seo_description: "Limbu Bajarbhav",
-					keywords: "लिंबू, bajarbhav",
-					og_url: "www.jiokheti.com/limbu-bajarbhav",
-					canonical_url: "www.jiokheti.com/limbu-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "संत्रा",
-				code: "07027",
-				slug: "santra-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Santra BajarBhav",
-					seo_description: "Santra Bajarbhav",
-					keywords: "संत्रा, bajarbhav",
-					og_url: "www.jiokheti.com/santra-bajarbhav",
-					canonical_url: "www.jiokheti.com/santra-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "टोमॅटो",
-				code: "08071",
-				slug: "tomato-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Tomato BajarBhav",
-					seo_description: "Tomato Bajarbhav",
-					keywords: "टोमॅटो, bajarbhav",
-					og_url: "www.jiokheti.com/tomato-bajarbhav",
-					canonical_url: "www.jiokheti.com/tomato-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मोसंबी",
-				code: "07016",
-				slug: "mosambi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Mosambi BajarBhav",
-					seo_description: "Mosambi Bajarbhav",
-					keywords: "मोसंबी, bajarbhav",
-					og_url: "www.jiokheti.com/mosambi-bajarbhav",
-					canonical_url: "www.jiokheti.com/mosambi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "बटाटा",
-				code: "08007",
-				slug: "batata-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Batata BajarBhav",
-					seo_description: "Batata Bajarbhav",
-					keywords: "बटाटा, bajarbhav",
-					og_url: "www.jiokheti.com/batata-bajarbhav",
-					canonical_url: "www.jiokheti.com/batata-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "शेवगा",
-				code: "08067",
-				slug: "shevga-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Shevga BajarBhav",
-					seo_description: "Shevga Bajarbhav",
-					keywords: "शेवगा, bajarbhav",
-					og_url: "www.jiokheti.com/shevga-bajarbhav",
-					canonical_url: "www.jiokheti.com/shevga-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "फुलकोबी",
-				code: "08021",
-				slug: "phulkobi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Phulkobi BajarBhav",
-					seo_description: "Phulkobi Bajarbhav",
-					keywords: "फुलकोबी, bajarbhav",
-					og_url: "www.jiokheti.com/phulkobi-bajarbhav",
-					canonical_url: "www.jiokheti.com/phulkobi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "सीताफळ",
-				code: "07028",
-				slug: "sitaphal-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Sitaphal BajarBhav",
-					seo_description: "Sitaphal Bajarbhav",
-					keywords: "सीताफळ, bajarbhav",
-					og_url: "www.jiokheti.com/sitaphal-bajarbhav",
-					canonical_url: "www.jiokheti.com/sitaphal-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "पपई",
-				code: "07018",
-				slug: "papai-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Papai BajarBhav",
-					seo_description: "Papai Bajarbhav",
-					keywords: "पपई, bajarbhav",
-					og_url: "www.jiokheti.com/papai-bajarbhav",
-					canonical_url: "www.jiokheti.com/papai-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मूग",
-				code: "03016",
-				slug: "moog-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Moog BajarBhav",
-					seo_description: "Moog Bajarbhav",
-					keywords: "मूग, bajarbhav",
-					og_url: "www.jiokheti.com/moog-bajarbhav",
-					canonical_url: "www.jiokheti.com/moog-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "शेपू",
-				code: "08066",
-				slug: "shepu-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Shepu BajarBhav",
-					seo_description: "Shepu Bajarbhav",
-					keywords: "शेपू, bajarbhav",
-					og_url: "www.jiokheti.com/shepu-bajarbhav",
-					canonical_url: "www.jiokheti.com/shepu-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "पालक",
-				code: "08055",
-				slug: "palak-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Palak BajarBhav",
-					seo_description: "Palak Bajarbhav",
-					keywords: "पालक, bajarbhav",
-					og_url: "www.jiokheti.com/palak-bajarbhav",
-					canonical_url: "www.jiokheti.com/palak-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "वाल पापडी",
-				code: "08076",
-				slug: "val-papdi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Val Papdi BajarBhav",
-					seo_description: "Val Papdi Bajarbhav",
-					keywords: "वाल पापडी, bajarbhav",
-					og_url: "www.jiokheti.com/val-papdi-bajarbhav",
-					canonical_url: "www.jiokheti.com/val-papdi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "दुधी भोपळा",
-				code: "08012",
-				slug: "dudhi-bhopla-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dudhi Bhopla BajarBhav",
-					seo_description: "Dudhi Bhopla Bajarbhav",
-					keywords: "दुधी भोपळा, bajarbhav",
-					og_url: "www.jiokheti.com/dudhi-bhopla-bajarbhav",
-					canonical_url: "www.jiokheti.com/dudhi-bhopla-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "द्राक्ष",
-				code: "07008",
-				slug: "draksha-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Draksha BajarBhav",
-					seo_description: "Draksha Bajarbhav",
-					keywords: "द्राक्ष, bajarbhav",
-					og_url: "www.jiokheti.com/draksha-bajarbhav",
-					canonical_url: "www.jiokheti.com/draksha-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "पेरू",
-				code: "07020",
-				slug: "peru-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Peru BajarBhav",
-					seo_description: "Peru Bajarbhav",
-					keywords: "पेरू, bajarbhav",
-					og_url: "www.jiokheti.com/peru-bajarbhav",
-					canonical_url: "www.jiokheti.com/peru-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "बाजरी",
-				code: "02002",
-				slug: "bajri-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Bajri BajarBhav",
-					seo_description: "Bajri Bajarbhav",
-					keywords: "बाजरी, bajarbhav",
-					og_url: "www.jiokheti.com/bajri-bajarbhav",
-					canonical_url: "www.jiokheti.com/bajri-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "दोडका",
-				code: "08068",
-				slug: "dodka-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dodka BajarBhav",
-					seo_description: "Dodka Bajarbhav",
-					keywords: "दोडका, bajarbhav",
-					og_url: "www.jiokheti.com/dodka-bajarbhav",
-					canonical_url: "www.jiokheti.com/dodka-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "बिट",
-				code: "08008",
-				slug: "beet-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Beet BajarBhav",
-					seo_description: "Beet Bajarbhav",
-					keywords: "बिट, bajarbhav",
-					og_url: "www.jiokheti.com/beet-bajarbhav",
-					canonical_url: "www.jiokheti.com/beet-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "ढोबळी मिरची",
-				code: "08049",
-				slug: "dhobli-mirchi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dhobli Mirchi BajarBhav",
-					seo_description: "Dhobli Mirchi Bajarbhav",
-					keywords: "ढोबळी मिरची, bajarbhav",
-					og_url: "www.jiokheti.com/dhobli-mirchi-bajarbhav",
-					canonical_url: "www.jiokheti.com/dhobli-mirchi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "भेंडी",
-				code: "08009",
-				slug: "bhendi-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Bhendi BajarBhav",
-					seo_description: "Bhendi Bajarbhav",
-					keywords: "भेंडी, bajarbhav",
-					og_url: "www.jiokheti.com/bhendi-bajarbhav",
-					canonical_url: "www.jiokheti.com/bhendi-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मुळा",
-				code: "08051",
-				slug: "mula-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Mula BajarBhav",
-					seo_description: "Mula Bajarbhav",
-					keywords: "मुळा, bajarbhav",
-					og_url: "www.jiokheti.com/mula-bajarbhav",
-					canonical_url: "www.jiokheti.com/mula-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "सूर्यफूल",
-				code: "04018",
-				slug: "suryaphool-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Suryaphool BajarBhav",
-					seo_description: "Suryaphool Bajarbhav",
-					keywords: "सूर्यफूल, bajarbhav",
-					og_url: "www.jiokheti.com/suryaphool-bajarbhav",
-					canonical_url: "www.jiokheti.com/suryaphool-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "चिकू",
-				code: "07006",
-				slug: "chiku-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Chiku BajarBhav",
-					seo_description: "Chiku Bajarbhav",
-					keywords: "चिकू, bajarbhav",
-					og_url: "www.jiokheti.com/chiku-bajarbhav",
-					canonical_url: "www.jiokheti.com/chiku-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
 				name: "चवळी",
 				code: "03003",
 				slug: "chavli-bajarbhav",
@@ -2102,528 +1688,6 @@ const marketTypesDetails = {
 					keywords: "चवळी, bajarbhav",
 					og_url: "www.jiokheti.com/chavli-bajarbhav",
 					canonical_url: "www.jiokheti.com/chavli-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "लसूण",
-				code: "08045",
-				slug: "lasun-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Lasun BajarBhav",
-					seo_description: "Lasun Bajarbhav",
-					keywords: "लसूण, bajarbhav",
-					og_url: "www.jiokheti.com/lasun-bajarbhav",
-					canonical_url: "www.jiokheti.com/lasun-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "तांदूळ",
-				code: "02023",
-				slug: "tandul-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Tandul BajarBhav",
-					seo_description: "Tandul Bajarbhav",
-					keywords: "तांदूळ, bajarbhav",
-					og_url: "www.jiokheti.com/tandul-bajarbhav",
-					canonical_url: "www.jiokheti.com/tandul-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "वाटाणा",
-				code: "03025",
-				slug: "vatana-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Vatana BajarBhav",
-					seo_description: "Vatana Bajarbhav",
-					keywords: "वाटाणा, bajarbhav",
-					og_url: "www.jiokheti.com/vatana-bajarbhav",
-					canonical_url: "www.jiokheti.com/vatana-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "चिंच",
-				code: "10003",
-				slug: "chinch-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Chinch BajarBhav",
-					seo_description: "Chinch Bajarbhav",
-					keywords: "चिंच, bajarbhav",
-					og_url: "www.jiokheti.com/chinch-bajarbhav",
-					canonical_url: "www.jiokheti.com/chinch-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "सफरचंद",
-				code: "07026",
-				slug: "safarchand-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Safarchand BajarBhav",
-					seo_description: "Safarchand Bajarbhav",
-					keywords: "सफरचंद, bajarbhav",
-					og_url: "www.jiokheti.com/safarchand-bajarbhav",
-					canonical_url: "www.jiokheti.com/safarchand-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "रताळे",
-				code: "08063",
-				slug: "ratale-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Ratale BajarBhav",
-					seo_description: "Ratale Bajarbhav",
-					keywords: "रताळे, bajarbhav",
-					og_url: "www.jiokheti.com/ratale-bajarbhav",
-					canonical_url: "www.jiokheti.com/ratale-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "तोंडली",
-				code: "08072",
-				slug: "tondli-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Tondli BajarBhav",
-					seo_description: "Tondli Bajarbhav",
-					keywords: "तोंडली, bajarbhav",
-					og_url: "www.jiokheti.com/tondli-bajarbhav",
-					canonical_url: "www.jiokheti.com/tondli-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "भुईमूग",
-				code: "04003",
-				slug: "bhuimug-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Bhuimug BajarBhav",
-					seo_description: "Bhuimug Bajarbhav",
-					keywords: "भुईमूग, bajarbhav",
-					og_url: "www.jiokheti.com/bhuimug-bajarbhav",
-					canonical_url: "www.jiokheti.com/bhuimug-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "धने",
-				code: "10005",
-				slug: "dhane-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dhane BajarBhav",
-					seo_description: "Dhane Bajarbhav",
-					keywords: "धने, bajarbhav",
-					og_url: "www.jiokheti.com/dhane-bajarbhav",
-					canonical_url: "www.jiokheti.com/dhane-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मूग डाळ",
-				code: "03017",
-				slug: "moog-dal-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Moog Dal BajarBhav",
-					seo_description: "Moog Dal Bajarbhav",
-					keywords: "मूग डाळ, bajarbhav",
-					og_url: "www.jiokheti.com/moog-dal-bajarbhav",
-					canonical_url: "www.jiokheti.com/moog-dal-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "झेंडू",
-				code: "16009",
-				slug: "zhendu-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Zhendu BajarBhav",
-					seo_description: "Zhendu Bajarbhav",
-					keywords: "झेंडू, bajarbhav",
-					og_url: "www.jiokheti.com/zhendu-bajarbhav",
-					canonical_url: "www.jiokheti.com/zhendu-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "जिरे",
-				code: "10009",
-				slug: "jira-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Jira BajarBhav",
-					seo_description: "Jira Bajarbhav",
-					keywords: "जिरा, bajarbhav",
-					og_url: "www.jiokheti.com/jira-bajarbhav",
-					canonical_url: "www.jiokheti.com/jira-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "मोहरी",
-				code: "10015",
-				slug: "mohri-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Mohri BajarBhav",
-					seo_description: "Mohri Bajarbhav",
-					keywords: "मोहरी, bajarbhav",
-					og_url: "www.jiokheti.com/mohri-bajarbhav",
-					canonical_url: "www.jiokheti.com/mohri-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "तीळ",
-				code: "04019",
-				slug: "til-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Til BajarBhav",
-					seo_description: "Til Bajarbhav",
-					keywords: "तीळ, bajarbhav",
-					og_url: "www.jiokheti.com/til-bajarbhav",
-					canonical_url: "www.jiokheti.com/til-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "ढेमसे",
-				code: "08019",
-				slug: "dhemse-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Dhemse BajarBhav",
-					seo_description: "Dhemse Bajarbhav",
-					keywords: "ढेमसे, bajarbhav",
-					og_url: "www.jiokheti.com/dhemse-bajarbhav",
-					canonical_url: "www.jiokheti.com/dhemse-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "शेवंती",
-				code: "16007",
-				slug: "shevanti-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Shevanti BajarBhav",
-					seo_description: "Shevanti Bajarbhav",
-					keywords: "शेवंती, bajarbhav",
-					og_url: "www.jiokheti.com/shevanti-bajarbhav",
-					canonical_url: "www.jiokheti.com/shevanti-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "चाफा",
-				code: "16022",
-				slug: "chafa-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Chafa BajarBhav",
-					seo_description: "Chafa Bajarbhav",
-					keywords: "चाफा, bajarbhav",
-					og_url: "www.jiokheti.com/chafa-bajarbhav",
-					canonical_url: "www.jiokheti.com/chafa-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "टरबूज",
-				code: "07030",
-				slug: "tarbuj-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Tarbuj BajarBhav",
-					seo_description: "Tarbuj Bajarbhav",
-					keywords: "टरबूज, bajarbhav",
-					og_url: "www.jiokheti.com/tarbuj-bajarbhav",
-					canonical_url: "www.jiokheti.com/tarbuj-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "झुकीनी",
-				code: "18010",
-				slug: "zucchini-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Zucchini BajarBhav",
-					seo_description: "Zucchini Bajarbhav",
-					keywords: "झुकीनी, bajarbhav",
-					og_url: "www.jiokheti.com/zucchini-bajarbhav",
-					canonical_url: "www.jiokheti.com/zucchini-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "अंजीर (सुके)",
-				code: "10027",
-				slug: "anjir-suke-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Anjir Suke BajarBhav",
-					seo_description: "Anjir Suke Bajarbhav",
-					keywords: "अंजीर (सुके), bajarbhav",
-					og_url: "www.jiokheti.com/anjir-suke-bajarbhav",
-					canonical_url: "www.jiokheti.com/anjir-suke-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "अस्टर",
-				code: "16001",
-				slug: "aster-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Aster BajarBhav",
-					seo_description: "Aster Bajarbhav",
-					keywords: "अस्टर, bajarbhav",
-					og_url: "www.jiokheti.com/aster-bajarbhav",
-					canonical_url: "www.jiokheti.com/aster-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "आवळा",
-				code: "08006",
-				slug: "aavla-08006-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Aavla (08006) BajarBhav",
-					seo_description: "Aavla (08006) Bajarbhav",
-					keywords: "आवळा, bajarbhav",
-					og_url: "www.jiokheti.com/aavla-08006-bajarbhav",
-					canonical_url: "www.jiokheti.com/aavla-08006-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "उस",
-				code: "06003",
-				slug: "us-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Us BajarBhav",
-					seo_description: "Us Bajarbhav",
-					keywords: "उस, bajarbhav",
-					og_url: "www.jiokheti.com/us-bajarbhav",
-					canonical_url: "www.jiokheti.com/us-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "कागडा",
-				code: "16015",
-				slug: "kagda-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Kagda BajarBhav",
-					seo_description: "Kagda Bajarbhav",
-					keywords: "कागडा, bajarbhav",
-					og_url: "www.jiokheti.com/kagda-bajarbhav",
-					canonical_url: "www.jiokheti.com/kagda-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "कार्नेशन",
-				code: "16035",
-				slug: "carnation-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Carnation BajarBhav",
-					seo_description: "Carnation Bajarbhav",
-					keywords: "कार्नेशन, bajarbhav",
-					og_url: "www.jiokheti.com/carnation-bajarbhav",
-					canonical_url: "www.jiokheti.com/carnation-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "खपली",
-				code: "02012",
-				slug: "khapli-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Khapli BajarBhav",
-					seo_description: "Khapli Bajarbhav",
-					keywords: "खपली, bajarbhav",
-					og_url: "www.jiokheti.com/khapli-bajarbhav",
-					canonical_url: "www.jiokheti.com/khapli-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "गुलछडी/निशिगंध",
-				code: "16004",
-				slug: "gulchhadi-nishigandh-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Gulchhadi/Nishigandh BajarBhav",
-					seo_description: "Gulchhadi/Nishigandh Bajarbhav",
-					keywords: "गुलछडी/निशिगंध, bajarbhav",
-					og_url: "www.jiokheti.com/gulchhadi-nishigandh-bajarbhav",
-					canonical_url: "www.jiokheti.com/gulchhadi-nishigandh-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "गोल्डन / डि.जी",
-				code: "16024",
-				slug: "golden-dg-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Golden/DG BajarBhav",
-					seo_description: "Golden/DG Bajarbhav",
-					keywords: "गोल्डन / डि.जी, bajarbhav",
-					og_url: "www.jiokheti.com/golden-dg-bajarbhav",
-					canonical_url: "www.jiokheti.com/golden-dg-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "ग्लॅडीओ",
-				code: "16025",
-				slug: "gladio-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "Gladio BajarBhav",
-					seo_description: "Gladio Bajarbhav",
-					keywords: "ग्लॅडीओ, bajarbhav",
-					og_url: "www.jiokheti.com/gladio-bajarbhav",
-					canonical_url: "www.jiokheti.com/gladio-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -2686,6 +1750,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "चाफा",
+				code: "16022",
+				slug: "chafa-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Chafa BajarBhav",
+					seo_description: "Chafa Bajarbhav",
+					keywords: "चाफा, bajarbhav",
+					og_url: "www.jiokheti.com/chafa-bajarbhav",
+					canonical_url: "www.jiokheti.com/chafa-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "चायना कोबी",
 				code: "18006",
 				slug: "china-kobi-bajarbhav",
@@ -2722,6 +1804,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "चिंच",
+				code: "10003",
+				slug: "chinch-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Chinch BajarBhav",
+					seo_description: "Chinch Bajarbhav",
+					keywords: "चिंच, bajarbhav",
+					og_url: "www.jiokheti.com/chinch-bajarbhav",
+					canonical_url: "www.jiokheti.com/chinch-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "चिंचोका",
 				code: "10004",
 				slug: "chinchoka-bajarbhav",
@@ -2732,6 +1832,24 @@ const marketTypesDetails = {
 					keywords: "चिंचोका, bajarbhav",
 					og_url: "www.jiokheti.com/chinchoka-bajarbhav",
 					canonical_url: "www.jiokheti.com/chinchoka-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "चिकू",
+				code: "07006",
+				slug: "chiku-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Chiku BajarBhav",
+					seo_description: "Chiku Bajarbhav",
+					keywords: "चिकू, bajarbhav",
+					og_url: "www.jiokheti.com/chiku-bajarbhav",
+					canonical_url: "www.jiokheti.com/chiku-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -2848,6 +1966,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "जिरे",
+				code: "10009",
+				slug: "jira-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Jira BajarBhav",
+					seo_description: "Jira Bajarbhav",
+					keywords: "जिरा, bajarbhav",
+					og_url: "www.jiokheti.com/jira-bajarbhav",
+					canonical_url: "www.jiokheti.com/jira-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "जुई",
 				code: "16012",
 				slug: "jui-bajarbhav",
@@ -2866,6 +2002,78 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "ज्वारी",
+				code: "02011",
+				slug: "jwari-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Jwari BajarBhav",
+					seo_description: "Jwari Bajarbhav",
+					keywords: "ज्वारी, bajarbhav",
+					og_url: "www.jiokheti.com/jwari-bajarbhav",
+					canonical_url: "www.jiokheti.com/jwari-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "झुकीनी",
+				code: "18010",
+				slug: "zucchini-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Zucchini BajarBhav",
+					seo_description: "Zucchini Bajarbhav",
+					keywords: "झुकीनी, bajarbhav",
+					og_url: "www.jiokheti.com/zucchini-bajarbhav",
+					canonical_url: "www.jiokheti.com/zucchini-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "झेंडू",
+				code: "16009",
+				slug: "zhendu-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Zhendu BajarBhav",
+					seo_description: "Zhendu Bajarbhav",
+					keywords: "झेंडू, bajarbhav",
+					og_url: "www.jiokheti.com/zhendu-bajarbhav",
+					canonical_url: "www.jiokheti.com/zhendu-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "टरबूज",
+				code: "07030",
+				slug: "tarbuj-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Tarbuj BajarBhav",
+					seo_description: "Tarbuj Bajarbhav",
+					keywords: "टरबूज, bajarbhav",
+					og_url: "www.jiokheti.com/tarbuj-bajarbhav",
+					canonical_url: "www.jiokheti.com/tarbuj-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "टॅटस",
 				code: "16030",
 				slug: "tatas-bajarbhav",
@@ -2876,6 +2084,78 @@ const marketTypesDetails = {
 					keywords: "टॅटस, bajarbhav",
 					og_url: "www.jiokheti.com/tatas-bajarbhav",
 					canonical_url: "www.jiokheti.com/tatas-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "टोमॅटो",
+				code: "08071",
+				slug: "tomato-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Tomato BajarBhav",
+					seo_description: "Tomato Bajarbhav",
+					keywords: "टोमॅटो, bajarbhav",
+					og_url: "www.jiokheti.com/tomato-bajarbhav",
+					canonical_url: "www.jiokheti.com/tomato-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "डाळिंब",
+				code: "07007",
+				slug: "dalimb-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dalimb BajarBhav",
+					seo_description: "Dalimb Bajarbhav",
+					keywords: "डाळिंब, bajarbhav",
+					og_url: "www.jiokheti.com/dalimb-bajarbhav",
+					canonical_url: "www.jiokheti.com/dalimb-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "ढेमसे",
+				code: "08019",
+				slug: "dhemse-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dhemse BajarBhav",
+					seo_description: "Dhemse Bajarbhav",
+					keywords: "ढेमसे, bajarbhav",
+					og_url: "www.jiokheti.com/dhemse-bajarbhav",
+					canonical_url: "www.jiokheti.com/dhemse-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "ढोबळी मिरची",
+				code: "08049",
+				slug: "dhobli-mirchi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dhobli Mirchi BajarBhav",
+					seo_description: "Dhobli Mirchi Bajarbhav",
+					keywords: "ढोबळी मिरची, bajarbhav",
+					og_url: "www.jiokheti.com/dhobli-mirchi-bajarbhav",
+					canonical_url: "www.jiokheti.com/dhobli-mirchi-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -2920,6 +2200,42 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "तांदूळ",
+				code: "02023",
+				slug: "tandul-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Tandul BajarBhav",
+					seo_description: "Tandul Bajarbhav",
+					keywords: "तांदूळ, bajarbhav",
+					og_url: "www.jiokheti.com/tandul-bajarbhav",
+					canonical_url: "www.jiokheti.com/tandul-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "तीळ",
+				code: "04019",
+				slug: "til-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Til BajarBhav",
+					seo_description: "Til Bajarbhav",
+					keywords: "तीळ, bajarbhav",
+					og_url: "www.jiokheti.com/til-bajarbhav",
+					canonical_url: "www.jiokheti.com/til-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "तुळजापुरी",
 				code: "16018",
 				slug: "tuljapuri-bajarbhav",
@@ -2948,6 +2264,24 @@ const marketTypesDetails = {
 					keywords: "तूप, bajarbhav",
 					og_url: "www.jiokheti.com/toop-bajarbhav",
 					canonical_url: "www.jiokheti.com/toop-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "तूर",
+				code: "03020",
+				slug: "tur-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Tur BajarBhav",
+					seo_description: "Tur Bajarbhav",
+					keywords: "तूर, bajarbhav",
+					og_url: "www.jiokheti.com/tur-bajarbhav",
+					canonical_url: "www.jiokheti.com/tur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -2992,6 +2326,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "तोंडली",
+				code: "08072",
+				slug: "tondli-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Tondli BajarBhav",
+					seo_description: "Tondli Bajarbhav",
+					keywords: "तोंडली, bajarbhav",
+					og_url: "www.jiokheti.com/tondli-bajarbhav",
+					canonical_url: "www.jiokheti.com/tondli-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "दालचिनी",
 				code: "10022",
 				slug: "dalchini-bajarbhav",
@@ -3010,6 +2362,42 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "दुधी भोपळा",
+				code: "08012",
+				slug: "dudhi-bhopla-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dudhi Bhopla BajarBhav",
+					seo_description: "Dudhi Bhopla Bajarbhav",
+					keywords: "दुधी भोपळा, bajarbhav",
+					og_url: "www.jiokheti.com/dudhi-bhopla-bajarbhav",
+					canonical_url: "www.jiokheti.com/dudhi-bhopla-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "दोडका",
+				code: "08068",
+				slug: "dodka-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dodka BajarBhav",
+					seo_description: "Dodka Bajarbhav",
+					keywords: "दोडका, bajarbhav",
+					og_url: "www.jiokheti.com/dodka-bajarbhav",
+					canonical_url: "www.jiokheti.com/dodka-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "दोडका (शिराळी)",
 				code: "08068",
 				slug: "dodka-shirali-bajarbhav",
@@ -3020,6 +2408,42 @@ const marketTypesDetails = {
 					keywords: "दोडका (शिराळी), bajarbhav",
 					og_url: "www.jiokheti.com/dodka-shirali-bajarbhav",
 					canonical_url: "www.jiokheti.com/dodka-shirali-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "द्राक्ष",
+				code: "07008",
+				slug: "draksha-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Draksha BajarBhav",
+					seo_description: "Draksha Bajarbhav",
+					keywords: "द्राक्ष, bajarbhav",
+					og_url: "www.jiokheti.com/draksha-bajarbhav",
+					canonical_url: "www.jiokheti.com/draksha-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "धने",
+				code: "10005",
+				slug: "dhane-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Dhane BajarBhav",
+					seo_description: "Dhane Bajarbhav",
+					keywords: "धने, bajarbhav",
+					og_url: "www.jiokheti.com/dhane-bajarbhav",
+					canonical_url: "www.jiokheti.com/dhane-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3100,6 +2524,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "पपई",
+				code: "07018",
+				slug: "papai-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Papai BajarBhav",
+					seo_description: "Papai Bajarbhav",
+					keywords: "पपई, bajarbhav",
+					og_url: "www.jiokheti.com/papai-bajarbhav",
+					canonical_url: "www.jiokheti.com/papai-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "पपई (भाजी)",
 				code: "08056",
 				slug: "papai-bhaji-bajarbhav",
@@ -3128,6 +2570,24 @@ const marketTypesDetails = {
 					keywords: "परवर, bajarbhav",
 					og_url: "www.jiokheti.com/parvar-bajarbhav",
 					canonical_url: "www.jiokheti.com/parvar-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "पालक",
+				code: "08055",
+				slug: "palak-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Palak BajarBhav",
+					seo_description: "Palak Bajarbhav",
+					keywords: "पालक, bajarbhav",
+					og_url: "www.jiokheti.com/palak-bajarbhav",
+					canonical_url: "www.jiokheti.com/palak-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3218,6 +2678,24 @@ const marketTypesDetails = {
 					keywords: "पेअर, bajarbhav",
 					og_url: "www.jiokheti.com/pear-bajarbhav",
 					canonical_url: "www.jiokheti.com/pear-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "पेरू",
+				code: "07020",
+				slug: "peru-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Peru BajarBhav",
+					seo_description: "Peru Bajarbhav",
+					keywords: "पेरू, bajarbhav",
+					og_url: "www.jiokheti.com/peru-bajarbhav",
+					canonical_url: "www.jiokheti.com/peru-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3334,6 +2812,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "फुलकोबी",
+				code: "08021",
+				slug: "phulkobi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Phulkobi BajarBhav",
+					seo_description: "Phulkobi Bajarbhav",
+					keywords: "फुलकोबी, bajarbhav",
+					og_url: "www.jiokheti.com/phulkobi-bajarbhav",
+					canonical_url: "www.jiokheti.com/phulkobi-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "बकरा",
 				code: "09018",
 				slug: "bakra-bajarbhav",
@@ -3344,6 +2840,24 @@ const marketTypesDetails = {
 					keywords: "बकरा, bajarbhav",
 					og_url: "www.jiokheti.com/bakra-bajarbhav",
 					canonical_url: "www.jiokheti.com/bakra-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "बटाटा",
+				code: "08007",
+				slug: "batata-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Batata BajarBhav",
+					seo_description: "Batata Bajarbhav",
+					keywords: "बटाटा, bajarbhav",
+					og_url: "www.jiokheti.com/batata-bajarbhav",
+					canonical_url: "www.jiokheti.com/batata-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3388,6 +2902,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "बाजरी",
+				code: "02002",
+				slug: "bajri-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Bajri BajarBhav",
+					seo_description: "Bajri Bajarbhav",
+					keywords: "बाजरी, bajarbhav",
+					og_url: "www.jiokheti.com/bajri-bajarbhav",
+					canonical_url: "www.jiokheti.com/bajri-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "बिजली",
 				code: "16019",
 				slug: "bijli-bajarbhav",
@@ -3398,6 +2930,24 @@ const marketTypesDetails = {
 					keywords: "बिजली, bajarbhav",
 					og_url: "www.jiokheti.com/bijli-bajarbhav",
 					canonical_url: "www.jiokheti.com/bijli-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "बिट",
+				code: "08008",
+				slug: "beet-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Beet BajarBhav",
+					seo_description: "Beet Bajarbhav",
+					keywords: "बिट, bajarbhav",
+					og_url: "www.jiokheti.com/beet-bajarbhav",
+					canonical_url: "www.jiokheti.com/beet-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3586,6 +3136,42 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "भुईमूग",
+				code: "04003",
+				slug: "bhuimug-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Bhuimug BajarBhav",
+					seo_description: "Bhuimug Bajarbhav",
+					keywords: "भुईमूग, bajarbhav",
+					og_url: "www.jiokheti.com/bhuimug-bajarbhav",
+					canonical_url: "www.jiokheti.com/bhuimug-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "भेंडी",
+				code: "08009",
+				slug: "bhendi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Bhendi BajarBhav",
+					seo_description: "Bhendi Bajarbhav",
+					keywords: "भेंडी, bajarbhav",
+					og_url: "www.jiokheti.com/bhendi-bajarbhav",
+					canonical_url: "www.jiokheti.com/bhendi-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "भोपळा",
 				code: "08011",
 				slug: "bhopla-bajarbhav",
@@ -3596,6 +3182,24 @@ const marketTypesDetails = {
 					keywords: "भोपळा, bajarbhav",
 					og_url: "www.jiokheti.com/bhopla-bajarbhav",
 					canonical_url: "www.jiokheti.com/bhopla-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "मका",
+				code: "02015",
+				slug: "maka-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Maka BajarBhav",
+					seo_description: "Maka Bajarbhav",
+					keywords: "मका, bajarbhav",
+					og_url: "www.jiokheti.com/maka-bajarbhav",
+					canonical_url: "www.jiokheti.com/maka-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3694,6 +3298,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "मिरची",
+				code: "08001",
+				slug: "mirchi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Mirchi BajarBhav",
+					seo_description: "Mirchi Bajarbhav",
+					keywords: "मिरची, bajarbhav",
+					og_url: "www.jiokheti.com/mirchi-bajarbhav",
+					canonical_url: "www.jiokheti.com/mirchi-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "मिरची (लाल)",
 				code: "10014",
 				slug: "mirchi-lal-bajarbhav",
@@ -3748,6 +3370,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "मुळा",
+				code: "08051",
+				slug: "mula-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Mula BajarBhav",
+					seo_description: "Mula Bajarbhav",
+					keywords: "मुळा, bajarbhav",
+					og_url: "www.jiokheti.com/mula-bajarbhav",
+					canonical_url: "www.jiokheti.com/mula-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "मुळाशेंगा",
 				code: "08052",
 				slug: "mulashenga-bajarbhav",
@@ -3758,6 +3398,42 @@ const marketTypesDetails = {
 					keywords: "मुळाशेंगा, bajarbhav",
 					og_url: "www.jiokheti.com/mulashenga-bajarbhav",
 					canonical_url: "www.jiokheti.com/mulashenga-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "मूग",
+				code: "03016",
+				slug: "moog-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Moog BajarBhav",
+					seo_description: "Moog Bajarbhav",
+					keywords: "मूग, bajarbhav",
+					og_url: "www.jiokheti.com/moog-bajarbhav",
+					canonical_url: "www.jiokheti.com/moog-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "मूग डाळ",
+				code: "03017",
+				slug: "moog-dal-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Moog Dal BajarBhav",
+					seo_description: "Moog Dal Bajarbhav",
+					keywords: "मूग डाळ, bajarbhav",
+					og_url: "www.jiokheti.com/moog-dal-bajarbhav",
+					canonical_url: "www.jiokheti.com/moog-dal-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3784,6 +3460,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "मेथी भाजी",
+				code: "08048",
+				slug: "methi-bhaji-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Methi Bhaji BajarBhav",
+					seo_description: "Methi Bhaji Bajarbhav",
+					keywords: "मेथी,मेथी भाजी,  bajarbhav",
+					og_url: "www.jiokheti.com/methi-bhaji-bajarbhav",
+					canonical_url: "www.jiokheti.com/methi-bhaji-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "मोगरा",
 				code: "16014",
 				slug: "mogra-bajarbhav",
@@ -3802,6 +3496,42 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "मोसंबी",
+				code: "07016",
+				slug: "mosambi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Mosambi BajarBhav",
+					seo_description: "Mosambi Bajarbhav",
+					keywords: "मोसंबी, bajarbhav",
+					og_url: "www.jiokheti.com/mosambi-bajarbhav",
+					canonical_url: "www.jiokheti.com/mosambi-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "मोहरी",
+				code: "10015",
+				slug: "mohri-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Mohri BajarBhav",
+					seo_description: "Mohri Bajarbhav",
+					keywords: "मोहरी, bajarbhav",
+					og_url: "www.jiokheti.com/mohri-bajarbhav",
+					canonical_url: "www.jiokheti.com/mohri-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "म्हैस",
 				code: "09013",
 				slug: "mhais-bajarbhav",
@@ -3812,6 +3542,24 @@ const marketTypesDetails = {
 					keywords: "म्हैस, bajarbhav",
 					og_url: "www.jiokheti.com/mhais-bajarbhav",
 					canonical_url: "www.jiokheti.com/mhais-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "रताळे",
+				code: "08063",
+				slug: "ratale-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Ratale BajarBhav",
+					seo_description: "Ratale Bajarbhav",
+					keywords: "रताळे, bajarbhav",
+					og_url: "www.jiokheti.com/ratale-bajarbhav",
+					canonical_url: "www.jiokheti.com/ratale-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3892,6 +3640,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "लसूण",
+				code: "08045",
+				slug: "lasun-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Lasun BajarBhav",
+					seo_description: "Lasun Bajarbhav",
+					keywords: "लसूण, bajarbhav",
+					og_url: "www.jiokheti.com/lasun-bajarbhav",
+					canonical_url: "www.jiokheti.com/lasun-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "लसूण (सुका)",
 				code: "10011",
 				slug: "lasun-suka-bajarbhav",
@@ -3902,6 +3668,24 @@ const marketTypesDetails = {
 					keywords: "लसूण (सुका), bajarbhav",
 					og_url: "www.jiokheti.com/lasun-suka-bajarbhav",
 					canonical_url: "www.jiokheti.com/lasun-suka-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "लिंबू",
+				code: "07015",
+				slug: "limbu-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Limbu BajarBhav",
+					seo_description: "Limbu Bajarbhav",
+					keywords: "लिंबू, bajarbhav",
+					og_url: "www.jiokheti.com/limbu-bajarbhav",
+					canonical_url: "www.jiokheti.com/limbu-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -3928,6 +3712,42 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "वांगी",
+				code: "08078",
+				slug: "vangi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Vangi BajarBhav",
+					seo_description: "Vangi Bajarbhav",
+					keywords: "वांगी, bajarbhav",
+					og_url: "www.jiokheti.com/vangi-bajarbhav",
+					canonical_url: "www.jiokheti.com/vangi-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "वाटाणा",
+				code: "03025",
+				slug: "vatana-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Vatana BajarBhav",
+					seo_description: "Vatana Bajarbhav",
+					keywords: "वाटाणा, bajarbhav",
+					og_url: "www.jiokheti.com/vatana-bajarbhav",
+					canonical_url: "www.jiokheti.com/vatana-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "वाल",
 				code: "03024",
 				slug: "val-bajarbhav",
@@ -3938,6 +3758,24 @@ const marketTypesDetails = {
 					keywords: "वाल, bajarbhav",
 					og_url: "www.jiokheti.com/val-bajarbhav",
 					canonical_url: "www.jiokheti.com/val-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "वाल पापडी",
+				code: "08076",
+				slug: "val-papdi-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Val Papdi BajarBhav",
+					seo_description: "Val Papdi Bajarbhav",
+					keywords: "वाल पापडी, bajarbhav",
+					og_url: "www.jiokheti.com/val-papdi-bajarbhav",
+					canonical_url: "www.jiokheti.com/val-papdi-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -4054,6 +3892,60 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "शेपू",
+				code: "08066",
+				slug: "shepu-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Shepu BajarBhav",
+					seo_description: "Shepu Bajarbhav",
+					keywords: "शेपू, bajarbhav",
+					og_url: "www.jiokheti.com/shepu-bajarbhav",
+					canonical_url: "www.jiokheti.com/shepu-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "शेवंती",
+				code: "16007",
+				slug: "shevanti-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Shevanti BajarBhav",
+					seo_description: "Shevanti Bajarbhav",
+					keywords: "शेवंती, bajarbhav",
+					og_url: "www.jiokheti.com/shevanti-bajarbhav",
+					canonical_url: "www.jiokheti.com/shevanti-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "शेवगा",
+				code: "08067",
+				slug: "shevga-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Shevga BajarBhav",
+					seo_description: "Shevga Bajarbhav",
+					keywords: "शेवगा, bajarbhav",
+					og_url: "www.jiokheti.com/shevga-bajarbhav",
+					canonical_url: "www.jiokheti.com/shevga-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "शेळ्या",
 				code: "09015",
 				slug: "shelya-bajarbhav",
@@ -4064,6 +3956,42 @@ const marketTypesDetails = {
 					keywords: "शेळ्या, bajarbhav",
 					og_url: "www.jiokheti.com/shelya-bajarbhav",
 					canonical_url: "www.jiokheti.com/shelya-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "संत्रा",
+				code: "07027",
+				slug: "santra-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Santra BajarBhav",
+					seo_description: "Santra Bajarbhav",
+					keywords: "संत्रा, bajarbhav",
+					og_url: "www.jiokheti.com/santra-bajarbhav",
+					canonical_url: "www.jiokheti.com/santra-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "सफरचंद",
+				code: "07026",
+				slug: "safarchand-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Safarchand BajarBhav",
+					seo_description: "Safarchand Bajarbhav",
+					keywords: "सफरचंद, bajarbhav",
+					og_url: "www.jiokheti.com/safarchand-bajarbhav",
+					canonical_url: "www.jiokheti.com/safarchand-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -4126,6 +4054,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "सीताफळ",
+				code: "07028",
+				slug: "sitaphal-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Sitaphal BajarBhav",
+					seo_description: "Sitaphal Bajarbhav",
+					keywords: "सीताफळ, bajarbhav",
+					og_url: "www.jiokheti.com/sitaphal-bajarbhav",
+					canonical_url: "www.jiokheti.com/sitaphal-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "सुपारी",
 				code: "10017",
 				slug: "supari-bajarbhav",
@@ -4154,6 +4100,24 @@ const marketTypesDetails = {
 					keywords: "सुरण, bajarbhav",
 					og_url: "www.jiokheti.com/suran-bajarbhav",
 					canonical_url: "www.jiokheti.com/suran-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "सूर्यफूल",
+				code: "04018",
+				slug: "suryaphool-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Suryaphool BajarBhav",
+					seo_description: "Suryaphool Bajarbhav",
+					keywords: "सूर्यफूल, bajarbhav",
+					og_url: "www.jiokheti.com/suryaphool-bajarbhav",
+					canonical_url: "www.jiokheti.com/suryaphool-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
@@ -4198,6 +4162,24 @@ const marketTypesDetails = {
 				}
 			},
 			{
+				name: "सोयाबीन",
+				code: "04017",
+				slug: "soyabean-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Soyabean BajarBhav",
+					seo_description: "Soyabean Bajarbhav",
+					keywords: "सोयाबीन, bajarbhav",
+					og_url: "www.jiokheti.com/soyabean-bajarbhav",
+					canonical_url: "www.jiokheti.com/soyabean-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
 				name: "स्ट्रॉबेरी",
 				code: "07029",
 				slug: "strawberry-bajarbhav",
@@ -4208,6 +4190,24 @@ const marketTypesDetails = {
 					keywords: "स्ट्रॉबेरी, bajarbhav",
 					og_url: "www.jiokheti.com/strawberry-bajarbhav",
 					canonical_url: "www.jiokheti.com/strawberry-bajarbhav",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					author: "Jio Kheti",
+					published_date: "01/03/2025",
+					updated_date: "01/03/2025"
+				}
+			},
+			{
+				name: "हरभरा",
+				code: "03006",
+				slug: "harbhara-bajarbhav",
+				subType: "crop",
+				seoMeta: {
+					seo_title: "Harbhara BajarBhav",
+					seo_description: "Harbhara Bajarbhav",
+					keywords: "हरभरा, bajarbhav",
+					og_url: "www.jiokheti.com/harbhara-bajarbhav",
+					canonical_url: "www.jiokheti.com/harbhara-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
