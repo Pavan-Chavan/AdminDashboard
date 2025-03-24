@@ -109,7 +109,7 @@ const Index = () => {
 
   useEffect(() => {
     if (blogpostdata.is_enable) {
-      const isFormIncomplete = Object.values(blogpostdata).some(value => value === "" || (Array.isArray(value) && value.length === 0));
+      const isFormIncomplete = Object.entries(blogpostdata).some(([key, value]) => key !== "sub_category" && (value === "" || (Array.isArray(value) && value.length === 0)));
       setIsSaveDisabled(isFormIncomplete);
     } else {
       setIsSaveDisabled(false);
@@ -246,8 +246,7 @@ const Index = () => {
   const validateFormData = (formData) => {
     const errors = [];
     Object.keys(formData).forEach((key) => {
-      if (key === "is_featured") return;
-      if (key === "sub_category") return;
+      if (key === "is_featured" || key === "sub_category") return; // Skip validation for "is_featured" and "sub_category"
       const value = formData[key];
       if (Array.isArray(value) && value.length === 0) {
         errors.push(`${key.replace(/_/g, ' ')} is required.`);
@@ -347,7 +346,7 @@ const Index = () => {
           sub_category: []
         });
         showAlert(response.data.message || "Blog post saved successfully", "success");
-        navigate("/"); // Redirect to home
+        navigate("/admin-dashboard/blog-posts"); // Redirect to home
       } else {
         showAlert("Something went wrong", "error");
       }

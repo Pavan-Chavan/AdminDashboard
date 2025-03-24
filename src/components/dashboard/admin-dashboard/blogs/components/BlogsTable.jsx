@@ -11,7 +11,7 @@ import Pagination from "@/components/hotel-list/common/Pagination";
 const BlogsTable = ({ searchParameter="", refresh }) => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchParams, setSearchParams] = useState({ page: 1, limit: 2 }); 
+  const [searchParams, setSearchParams] = useState({ page: 1, limit: 30 }); 
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 

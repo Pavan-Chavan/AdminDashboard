@@ -6,7 +6,7 @@ const MediaAndResources = ({blogpostdata, setBlogPostData}) => {
       <div className="row x-gap-20 y-gap-20">
       <div className="col-12">
           <div className="mt-30">
-            <div className="fw-500">Twitter Image</div>
+            <div className="fw-500">Image</div>
             <GalleryUploader blogpostdata={blogpostdata} setBlogPostData={setBlogPostData} title="Feature Image" image="featured_image_data"/>
           </div>
         </div>
