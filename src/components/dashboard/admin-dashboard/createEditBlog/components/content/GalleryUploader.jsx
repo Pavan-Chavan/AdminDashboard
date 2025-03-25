@@ -23,10 +23,10 @@ const GalleryUploader = ({blogpostdata, setBlogPostData, image, title}) => {
               `Image ${file.name} exceeds the maximum size of ${maxSize}px.`,
             );
           } else if (
-            !["image/png", "image/jpeg"].includes(file.type.toLowerCase())
+            !["image/png", "image/jpeg", "image/webp"].includes(file.type.toLowerCase())
           ) {
             setError(
-              `Image ${file.name} is not a valid file type. Only PNG and JPEG are allowed.`,
+              `Image ${file.name} is not a valid file type. Only PNG, JPEG and WEBP are allowed.`,
             );
           } else {
             setBlogPostData((prevState) => ({
@@ -78,12 +78,12 @@ const GalleryUploader = ({blogpostdata, setBlogPostData, image, title}) => {
             type="file"
             id={image}
             name={image}
-            accept="image/png, image/jpeg"
+            accept="image/png, image/jpeg, image/webp"
             className="d-none"
             onChange={handleFileUpload}
           />
           <div className="text-start mt-10 text-14 text-light-1">
-            PNG or JPG no bigger than 800px wide and tall.
+            PNG, JPG, or WEBP no bigger than 800px wide and tall.
           </div>
         </div>
       </div>
