@@ -291,7 +291,7 @@ const CategoryTable = ({ searchParameter, refresh }) => {
               <label>
                 Featured Image URL:
                 <input
-                  type="url"
+                  type="text"
                   value={categoryData.featured_image}
                   onChange={(e) =>
                     setCategoryData({ ...categoryData, featured_image: e.target.value })

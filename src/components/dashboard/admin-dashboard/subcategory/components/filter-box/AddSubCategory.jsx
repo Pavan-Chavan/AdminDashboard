@@ -226,7 +226,7 @@ const AddSubCategory = ({ refreshTags = () => {} }) => {
               <label>
                 Featured Image URL:
                 <input
-                  type="url"
+                  type="text"
                   value={subCategoryData.featured_image}
                   onChange={(e) =>
                     setSubCategoryData({ ...subCategoryData, featured_image: e.target.value })
