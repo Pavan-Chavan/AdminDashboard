@@ -22,7 +22,6 @@ const marketTypesDetails = {
 				code: "32",
 				slug: "akola-bajarbhav",
 				subType: "district",
-				"is_featured": true,
 				seoMeta: {
 					seo_title: "अकोला बाजारभाव | Jio Kheti",
 					seo_description: "अकोला जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
@@ -30,7 +29,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/akola-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/akola-bajarbhav",
 					banner_img: "/images/blog-thumbnail/1.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/1.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -41,6 +40,7 @@ const marketTypesDetails = {
 				code: "33",
 				slug: "amravati-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "अमरावती बाजारभाव | Jio Kheti",
 					seo_description: "अमरावती जिल्ह्यातील ताजे बाजारभाव! सोयाबीन, गहू यांचे दर पहा. Jio Kheti वर नवीनतम दर जाणून घ्या.",
@@ -48,7 +48,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/amravati-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/amravati-bajarbhav",
 					banner_img: "/images/blog-thumbnail/2.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/2.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -59,6 +59,7 @@ const marketTypesDetails = {
 				code: "16",
 				slug: "ahilyanagar-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "अहिल्यानगर बाजारभाव | Jio Kheti",
 					seo_description: "अहिल्यानगर जिल्ह्यातील ताजे बाजारभाव! कापूस, गहू यांचे दर येथे पहा. Jio Kheti वर नवीन माहिती.",
@@ -66,7 +67,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/ahilyanagar-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/ahilyanagar-bajarbhav",
 					banner_img: "/images/blog-thumbnail/3.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/3.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -84,7 +85,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/kolhapur-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/kolhapur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/4.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/4.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -102,7 +103,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/gadchiroli-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/gadchiroli-bajarbhav",
 					banner_img: "/images/blog-thumbnail/5.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/5.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -120,7 +121,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/gondia-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/gondia-bajarbhav",
 					banner_img: "/images/blog-thumbnail/6.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/6.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -138,14 +139,14 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/chandrapur-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/chandrapur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/7.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/7.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
 				}
 			},
 			{
-				name: "छत्रपती संभाजीनगर",
+				name: "छ. संभाजीनगर",
 				code: "25",
 				slug: "sambhajinagar-bajarbhav",
 				subType: "district",
@@ -156,7 +157,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/sambhajinagar-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/sambhajinagar-bajarbhav",
 					banner_img: "/images/blog-thumbnail/8.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/8.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -174,7 +175,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/jalgaon-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/jalgaon-bajarbhav",
 					banner_img: "/images/blog-thumbnail/9.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/9.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -192,7 +193,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/jalna-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/jalna-bajarbhav",
 					banner_img: "/images/blog-thumbnail/10.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/10.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -210,7 +211,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/thane-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/thane-bajarbhav",
 					banner_img: "/images/blog-thumbnail/11.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/11.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -228,7 +229,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/dharashiv-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/dharashiv-bajarbhav",
 					banner_img: "/images/blog-thumbnail/12.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/12.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -246,7 +247,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/dhule-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/dhule-bajarbhav",
 					banner_img: "/images/blog-thumbnail/13.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/13.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -264,7 +265,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/nandurbar-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/nandurbar-bajarbhav",
 					banner_img: "/images/blog-thumbnail/14.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/14.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -282,7 +283,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/nanded-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/nanded-bajarbhav",
 					banner_img: "/images/blog-thumbnail/15.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/15.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -293,6 +294,7 @@ const marketTypesDetails = {
 				code: "39",
 				slug: "nagpur-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "नागपूर बाजारभाव | Jio Kheti",
 					seo_description: "नागपूर जिल्ह्यातील ताजे बाजारभाव! संत्रा, सोयाबीन यांचे दर पहा. Jio Kheti वर नवीन माहिती मिळवा.",
@@ -300,7 +302,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/nagpur-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/nagpur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/16.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/16.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -311,6 +313,7 @@ const marketTypesDetails = {
 				code: "19",
 				slug: "nashik-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "नाशिक बाजारभाव | Jio Kheti",
 					seo_description: "नाशिक जिल्ह्यातील ताजे बाजारभाव! द्राक्ष, कांदा यांचे दर पहा. Jio Kheti वर नवीनतम दर मिळवा。",
@@ -318,7 +321,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/nashik-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/nashik-bajarbhav",
 					banner_img: "/images/blog-thumbnail/17.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/17.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -336,7 +339,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/parbhani-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/parbhani-bajarbhav",
 					banner_img: "/images/blog-thumbnail/18.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/18.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -354,7 +357,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/palghar-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/palghar-bajarbhav",
 					banner_img: "/images/blog-thumbnail/19.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/19.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -365,6 +368,7 @@ const marketTypesDetails = {
 				code: "21",
 				slug: "pune-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "पुणे बाजारभाव | Jio Kheti",
 					seo_description: "पुणे जिल्ह्यातील ताजे बाजारभाव! ऊस, कांदा यांचे दर पहा. Jio Kheti वर नवीन माहिती मिळवा。",
@@ -372,7 +376,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/pune-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/pune-bajarbhav",
 					banner_img: "/images/blog-thumbnail/20.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/20.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -390,7 +394,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/beed-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/beed-bajarbhav",
 					banner_img: "/images/blog-thumbnail/21.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/21.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -408,7 +412,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/buldhana-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/buldhana-bajarbhav",
 					banner_img: "/images/blog-thumbnail/22.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/22.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -426,7 +430,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/bhandara-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/bhandara-bajarbhav",
 					banner_img: "/images/blog-thumbnail/23.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/23.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -437,6 +441,7 @@ const marketTypesDetails = {
 				code: "11",
 				slug: "mumbai-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "मुंबई बाजारभाव | Jio Kheti",
 					seo_description: "मुंबई जिल्ह्यातील ताजे बाजारभाव! तांदूळ, भाजीपाला यांचे दर पहा. Jio Kheti वर नवीन माहिती मिळवा。",
@@ -444,7 +449,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/mumbai-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/mumbai-bajarbhav",
 					banner_img: "/images/blog-thumbnail/24.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/24.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -462,7 +467,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/yavatmal-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/yavatmal-bajarbhav",
 					banner_img: "/images/blog-thumbnail/25.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/25.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -480,7 +485,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/ratnagiri-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/ratnagiri-bajarbhav",
 					banner_img: "/images/blog-thumbnail/26.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/26.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -498,7 +503,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/raigad-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/raigad-bajarbhav",
 					banner_img: "/images/blog-thumbnail/27.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/27.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -516,7 +521,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/latur-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/latur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/28.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/28.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -534,7 +539,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/vardha-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/vardha-bajarbhav",
 					banner_img: "/images/blog-thumbnail/29.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/29.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -552,7 +557,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/washim-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/washim-bajarbhav",
 					banner_img: "/images/blog-thumbnail/30.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/30.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -570,7 +575,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/sangli-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/sangli-bajarbhav",
 					banner_img: "/images/blog-thumbnail/31.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/31.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -588,7 +593,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/satara-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/satara-bajarbhav",
 					banner_img: "/images/blog-thumbnail/32.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/32.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -599,6 +604,7 @@ const marketTypesDetails = {
 				code: "24",
 				slug: "solapur-bajarbhav",
 				subType: "district",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "सोलापूर बाजारभाव | Jio Kheti",
 					seo_description: "सोलापूर जिल्ह्यातील ताजे बाजारभाव! डाळिंब, ऊस यांचे दर पहा. Jio Kheti वर नवीनतम दर मिळवा。",
@@ -606,7 +612,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/solapur-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/solapur-bajarbhav",
 					banner_img: "/images/blog-thumbnail/33.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/33.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -624,7 +630,7 @@ const marketTypesDetails = {
 					og_url: "https://www.jiokheti.com/bajarbhav/district/hingoli-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/district/hingoli-bajarbhav",
 					banner_img: "/images/blog-thumbnail/34.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
+					featured_image: "/images/blog-thumbnail/34.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -1106,6 +1112,7 @@ const marketTypesDetails = {
 				code: "08035",
 				slug: "kanda-bajarbhav",
 				subType: "crop",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "कांदा बाजारभाव | Jio Kheti",
 					seo_description: "कांद्याचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम कांदा दर आणि माहिती मिळवा。",
@@ -1196,6 +1203,7 @@ const marketTypesDetails = {
 				code: "01001",
 				slug: "kapus-bajarbhav",
 				subType: "crop",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "कापूस बाजारभाव | Jio Kheti",
 					seo_description: "कापसाचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम कापूस दर आणि माहिती मिळवा。",
@@ -2114,6 +2122,7 @@ const marketTypesDetails = {
 				code: "07007",
 				slug: "dalimb-bajarbhav",
 				subType: "crop",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "डाळिंब बाजारभाव | Jio Kheti",
 					seo_description: "डाळिंबाचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम डाळिंब दर आणि माहिती मिळवा。",
@@ -4166,6 +4175,7 @@ const marketTypesDetails = {
 				code: "04017",
 				slug: "soyabean-bajarbhav",
 				subType: "crop",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "सोयाबीन बाजारभाव | Jio Kheti",
 					seo_description: "सोयाबीनचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम सोयाबीन दर आणि माहिती मिळवा।",
@@ -4202,6 +4212,7 @@ const marketTypesDetails = {
 				code: "03006",
 				slug: "harbhara-bajarbhav",
 				subType: "crop",
+				is_featured: true,
 				seoMeta: {
 					seo_title: "हरभरा बाजारभाव | Jio Kheti",
 					seo_description: "हरभऱ्याचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम हरभरा दर आणि माहिती मिळवा।",
