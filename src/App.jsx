@@ -1,3 +1,4 @@
+// App.jsx
 import Aos from "aos";
 import { useEffect } from "react";
 import SrollTop from "./components/common/ScrollTop";
@@ -26,7 +27,11 @@ import WebSocketComponent from "./pages/bajarbhav-pulling/WebSocketComponent";
 import Blogs from "./pages/dashboard/admin-dashboard/blog";
 import Tags from "./pages/dashboard/admin-dashboard/tags";
 import SubCategory from "./pages/dashboard/admin-dashboard/subCategory";
+import ProtectedRoute from "./components/ProtectedRoute";
 
+if (typeof window !== "undefined") {
+  import("bootstrap");
+}
 
 function App() {
   useEffect(() => {
@@ -42,19 +47,68 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/">
-              <Route index element={<AdminDashboard />} />
-              <Route path="admin-login" element={<LogIn role={"admin"}/>} />
-              
+              {/* Public Routes */}
+              <Route index element={<LogIn role={"admin"} />} />
+              <Route path="admin-login" element={<LogIn role={"admin"} />} />
+
+              {/* Protected Admin Routes */}
               <Route path="admin-dashboard">
-                <Route path="dashboard" element={<AdminDashboard />} />
-                <Route path="bhajarbhav-pulling" element={<WebSocketComponent />} />
-                <Route path="categories" element={<Category />} />
-                <Route path="blog-posts" element={<Blogs />} />  need to modify to list
-                <Route path="subcategory" element={<SubCategory />} />
-                <Route path="blog-posts/:mode" element={<CreateEditBlog />} />
-                <Route path="tags" element={<Tags />} />
-                {/* <Route path="venues" element={<Venue />} />
-                <Route path="venue/:mode" element={<AdminAddVenue />} /> */}
+                <Route
+                  path="dashboard"
+                  element={
+                    <ProtectedRoute>
+                      <AdminDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="bhajarbhav-pulling"
+                  element={
+                    <ProtectedRoute>
+                      <WebSocketComponent />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="categories"
+                  element={
+                    <ProtectedRoute>
+                      <Category />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="blog-posts"
+                  element={
+                    <ProtectedRoute>
+                      <Blogs />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="subcategory"
+                  element={
+                    <ProtectedRoute>
+                      <SubCategory />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="blog-posts/:mode"
+                  element={
+                    <ProtectedRoute>
+                      <CreateEditBlog />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="tags"
+                  element={
+                    <ProtectedRoute>
+                      <Tags />
+                    </ProtectedRoute>
+                  }
+                />
               </Route>
             </Route>
           </Routes>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { api } from "@/utils/apiProvider";
 import { showAlert } from "@/utils/isTextMatched";
+import { generateJwt } from "@/utils/DOMUtils";
 
 const LoginForm = ({role}) => {
   const state = useLocation()?.state || null;
@@ -22,32 +23,37 @@ const LoginForm = ({role}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post(`${api}/api/auth/login`, 
-          {...formData,
-            role: role
-          }); 
-        if (response.status === 200) {
-            // showAlert('expenses added');
-            setFormData({
-              password:"",
-              email:"",
-            });
-            localStorage.setItem(`${role}Id`,response.data.userDate.user_id);
-            localStorage.setItem("role",response.data.userDate.role);
-            localStorage.setItem("user-image",response.data.userDate.image);
-            localStorage.setItem("username",response.data.userDate.name);
-            if (state !== null && state.type !== null && state.id !== null) {
-              navigate(`/${state.type}/${state.id}`)
-            } else {
-              role === "admin" ? navigate("/admin-dashboard/dashboard") : navigate("/");
-            }
-        } else {
-          // window.alert("Something went wrong : " , response.data.error);  
-          showAlert("Something went wrong.", "danger");
-        }
+      const { email, password } = formData;
+
+      // Mock email and password for verification
+      const mockEmail = "jiokheti@gmail.com";
+      const mockPassword = "JioKheti@123321";
+
+      // Verify credentials
+      if (email !== mockEmail || password !== mockPassword) {
+        showAlert("Invalid email or password", "danger");
+        return;
+      }
+
+      // Generate a proper JWT token
+      const payload = {
+        email,
+        role: "user",
+        exp: Math.floor(Date.now() / 1000) + 3600, // Expiry in 1 hour (in seconds)
+      };
+      const secret = "your-secret-key"; // In production, this should be on the server
+      const token = await generateJwt(payload, secret);
+
+      // Store the token in local storage
+      localStorage.setItem("jwtToken", token); // Changed key to "jwtToken" to match ProtectedRoute
+
+      showAlert("Login successful!", "success");
+
+      // Navigate to the dashboard
+      navigate("/admin-dashboard/dashboard");
     } catch (error) {
-        showAlert(error?.response?.data?.error, "danger");  
-        console.error('Error:', error);
+      console.error("Error during login:", error);
+      showAlert(error.message || "An error occurred during login", "danger");
     }
   };
 
@@ -123,5 +129,6 @@ const LoginForm = ({role}) => {
     </div>
   );
 };
+
 
 export default LoginForm;

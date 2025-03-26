@@ -253,3 +253,76 @@ export function formatDate(utcDate) {
   // Convert to local timezone and extract YYYY-MM-DD
   return date.toLocaleDateString("en-CA"); // "en-CA" ensures YYYY-MM-DD format
 }
+
+// Decode the JWT token (client-side)
+export const decodeToken = (token) => {
+  try {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+        .join('')
+    );
+    return JSON.parse(jsonPayload);
+  } catch (error) {
+    console.error('Error decoding token:', error);
+    return null;
+  }
+};
+
+// Check if the token is valid
+export const isTokenValid = (token) => {
+  if (!token) return false;
+
+  const decoded = decodeToken(token);
+  if (!decoded) return false;
+
+  // Check if the token is expired
+  const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds
+  return decoded.exp > currentTime; // Token is valid if expiration time is in the future
+};
+
+export const generateJwt = async (payload, secret) => {
+  try {
+    // 1. Create the header
+    const header = { alg: "HS256", typ: "JWT" };
+    const encodedHeader = base64UrlEncode(JSON.stringify(header));
+
+    // 2. Create the payload
+    const encodedPayload = base64UrlEncode(JSON.stringify(payload));
+
+    // 3. Create the signature
+    const signatureInput = `${encodedHeader}.${encodedPayload}`;
+    const encoder = new TextEncoder();
+    const data = encoder.encode(signatureInput);
+    const key = encoder.encode(secret); // Secret key (should be on server in production)
+    const signature = await crypto.subtle.sign(
+      "HMAC",
+      await crypto.subtle.importKey(
+        "raw",
+        key,
+        { name: "HMAC", hash: "SHA-256" },
+        false,
+        ["sign"]
+      ),
+      data
+    );
+    const encodedSignature = base64UrlEncode(
+      String.fromCharCode(...new Uint8Array(signature))
+    );
+
+    // 4. Combine the parts
+    return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
+  } catch (error) {
+    throw new Error("Failed to generate JWT: " + error.message);
+  }
+};
+
+const base64UrlEncode = (str) => {
+  return btoa(str)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+};
