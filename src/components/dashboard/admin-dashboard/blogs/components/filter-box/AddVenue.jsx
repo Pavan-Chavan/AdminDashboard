@@ -50,9 +50,9 @@ const AddVenue = ({ refreshVenues = () => {} }) => {
       {/* Add Venue Button */}
       <button
         className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-        onClick={() => {navigate("/admin-dashboard/venue/add")}}
+        onClick={() => {navigate("/admin-dashboard/blog-posts/add")}}
       >
-        Add Venue <div className="icon-arrow-top-right ml-15"></div>
+        Add Blogs <div className="icon-arrow-top-right ml-15"></div>
       </button>
 
       {/* Add Venue Modal */}
