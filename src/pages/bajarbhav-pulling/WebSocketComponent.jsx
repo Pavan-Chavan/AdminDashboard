@@ -39,7 +39,7 @@ const WebSocketComponent = () => {
             setStatusUpdates((prev) => [...prev, `${data.message}`]);
             switch (data.status) {
               case "error":
-                setFailed((prev)=>([...prev,data.data]))
+                setFailed((prev)=>([...prev,data]))
                 break;
               case "insert":
                 setInsert((prev)=>([...prev,data.data]))
@@ -245,7 +245,7 @@ const WebSocketComponent = () => {
                 </div>
                 <div className="container mt-5">
                   <h3 className="mb-4">Error data</h3>
-                    {failed.map((data)=>(<div  className='text-12 lh-16 fw-500 uppercase bg-dark-1 text-white tag error' style={{width: 'fit-content'}}> Section : {data?.Section || ""} Name : {data?.Name || ""} Code : {data?.Code || ""}</div>))}
+                    {failed.map((data)=>(<div  className='text-12 lh-16 fw-500 uppercase bg-dark-1 text-white tag error' style={{width: 'fit-content'}}> Section : {data?.data?.Section || ""} Name : {data?.data?.Name || ""} Code : {data?.data?.Code || ""} Error : {data.message}</div>))}
                 </div>
               </div>
             </div>
