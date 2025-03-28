@@ -78,9 +78,15 @@ app.get("/get-blogs", (req, res) => {
 
   // 🔍 Add category filter (if provided)
   if (category) {
-    query += " AND JSON_SEARCH(category, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
-    countQuery += " AND JSON_SEARCH(category, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
-    queryParams.push(category);
+    if (category === "new-information") {
+      query += " AND published_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)";
+      countQuery += " AND published_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)";
+    } else { 
+      query += " AND JSON_SEARCH(category, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
+      countQuery += " AND JSON_SEARCH(category, 'one', ?, NULL, '$[*].slug') IS NOT NULL";
+      queryParams.push(category);
+    }
+    // Add date filter for 'new-information' category (last 7 days)
   }
 
   // 🔍 Add subCategory filter (if provided)
