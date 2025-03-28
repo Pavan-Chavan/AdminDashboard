@@ -91,7 +91,7 @@ const Header1 = ({ staticHeader, userData = {} }) => {
               </div>
             </div>
 
-            <div className="col-auto">
+            {/* <div className="col-auto">
               <div className="d-flex items-center">
                 {!isLoggedIn && (
                   <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
@@ -238,7 +238,7 @@ const Header1 = ({ staticHeader, userData = {} }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

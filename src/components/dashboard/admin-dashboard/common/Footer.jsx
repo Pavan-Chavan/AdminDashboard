@@ -13,18 +13,20 @@ function Footer() {
           <div className="row y-gap-20 items-center">
             <div className="col-auto">
               <div className="text-14 lh-14 mr-30">
-                © {new Date().getFullYear()}<a
+              Copyright © {new Date().getFullYear()}
+              <a
                 href="https://jiokheti.com"
                 className="mx-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              Jio Kheti
+              JioKheti | 
               </a>
+              All Rights Reserved.
               </div>
             </div>
 
-            <div className="col-auto">
+            {/* <div className="col-auto">
               <div className="row x-gap-20 y-gap-10 items-center text-14">
                 {linksData.map((link, index) => (
                   <div className="col-auto" key={index}>
@@ -34,7 +36,7 @@ function Footer() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* End .col-auto */}

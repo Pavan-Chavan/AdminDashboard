@@ -31,7 +31,7 @@ const LogIn = ({role}) => {
                 <LoginForm role={role}/>
                 {/* End .Login */}
 
-                <div className="row y-gap-20 pt-30">
+                {/* <div className="row y-gap-20 pt-30">
                   <div className="col-12">
                   <Link to="/business-login" className="justify-center d-flex -white h-50">
                     Business Login</Link>
@@ -44,7 +44,7 @@ const LogIn = ({role}) => {
                       and Privacy Statement.
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* End .row */}
               </div>
             </div>
@@ -53,7 +53,7 @@ const LogIn = ({role}) => {
       </section>
       {/* End login section */}
 
-      <CallToActions />
+      {/* <CallToActions /> */}
       {/* End Call To Actions Section */}
 
       <DefaultFooter />

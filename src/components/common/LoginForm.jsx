@@ -64,13 +64,13 @@ const LoginForm = ({role}) => {
   return (
     <div className="row y-gap-20">
       <div className="col-12">
-        <h1 className="text-22 fw-500">Welcome back</h1>
-        <p className="mt-10">
+        <h1 className="text-22 fw-500">Admin Login</h1>
+        {/* <p className="mt-10">
           Don&apos;t have an account yet?{" "}
           <Link to="/signup" className="text-blue-1">
             Sign up for free
           </Link>
-        </p>
+        </p> */}
       </div>
       {/* End .col */}
 
@@ -90,11 +90,11 @@ const LoginForm = ({role}) => {
       </div>
       {/* End .col */}
 
-      <div className="col-12">
+      {/* <div className="col-12">
         <a href="#" className="text-14 fw-500 text-blue-1 underline">
           Forgot your password?
         </a>
-      </div>
+      </div> */}
       {/* End .col */}
 
       <div className="col-12">
@@ -106,7 +106,7 @@ const LoginForm = ({role}) => {
           Sign In <div className="icon-arrow-top-right ml-15" />
         </button>
       </div>
-      {role === "user" && <div className="col-12">
+      {/* {role === "user" && <div className="col-12">
         <div className="col-12 ">
       <div className="text-center px-30">
         <p>
@@ -124,7 +124,7 @@ const LoginForm = ({role}) => {
           Google <div className="icon-arrow-top-right ml-15" />
         </button>
       </div>
-      </div>}
+      </div>} */}
       {/* End .col */}
     </div>
   );

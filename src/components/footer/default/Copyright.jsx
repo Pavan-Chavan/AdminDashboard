@@ -7,41 +7,41 @@ const Copyright = () => {
         <div className="row x-gap-30 y-gap-10">
           <div className="col-auto">
             <div className="d-flex items-center">
-              © {new Date().getFullYear()}
+            Copyright © {new Date().getFullYear()}
               <a
                 href="https://jiokheti.com"
                 className="mx-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              Jio Kheti
+              JioKheti | 
               </a>
+              All Rights Reserved.
             </div>
           </div>
           {/* End .col */}
 
-          <div className="col-auto">
+          {/* <div className="col-auto">
             <div className="d-flex x-gap-15">
               <a href="#">Privacy</a>
               <a href="#">Terms</a>
             </div>
-          </div>
+          </div> */}
           {/* End .col */}
         </div>
         {/* End .row */}
       </div>
       {/* End .col */}
 
-      <div className="col-auto">
+      {/* <div className="col-auto">
         <div className="row y-gap-10 items-center">
           <div className="col-auto">
             <div className="d-flex x-gap-20 items-center">
               <Social />
             </div>
           </div>
-          {/* End .col */}
         </div>
-      </div>
+      </div> */}
       {/* End .col */}
     </div>
   );

@@ -16,7 +16,7 @@ export default function isTextMatched(tag, match) {
 function getStatusColors(status) {
   switch (status) {
     case "error":
-      return ['#639D49', '#fff']; 
+      return ['#005E38', '#fff']; 
       break;
     case "success":
       return ['#28a745', '#fff'];

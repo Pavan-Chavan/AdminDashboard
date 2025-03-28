@@ -10,7 +10,7 @@
 
 
 .status-published {
-  color: rgb(1, 173, 1);
+  color: #005E38;
 }
 
 .status-draft {
@@ -20,19 +20,19 @@
 /* Style for active sidebar item */
 .side_current {
   background-color: #43ff640d;
-  color: #266907; /* Red text color */
+  color: #005E38; /* Red text color */
   border-radius: 6px; /* Rounded corners */
 }
 
 .sidebar__item a:hover {
   background-color: #43ff640d;
-  color: #266907; /* Light grey hover effect */
+  color: #005E38; /* Light grey hover effect */
   border-radius: 6px;
 }
 
 .sidebar__item a.active {
   background-color: #43ff640d; /* Highlight background */
-  color: #266907; /* Active color */
+  color: #005E38; /* Active color */
   border-radius: 6px;
 }
 

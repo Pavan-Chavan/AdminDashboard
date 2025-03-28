@@ -43,74 +43,74 @@ const index = () => {
     setDashboardTitle(titles[role] || "Dashboard");
   }, []);
 
-  const fetchCount = async () => {
-    try {
-      const response = await axios.get(`${api}/api/dashboard/booking-status-count?type=${getRole()}&id=${getId()}`);
-      if (response.status === 200) {
-        setStateCount(response.data);
-      } else {
-        showAlert("Something went wrong while fetching card data", "danger");
-      }
-    } catch (err) {
-      console.log(err);
-      showAlert("Something went wrong while fetching card data", "danger");
-    }
-  };
+  // const fetchCount = async () => {
+  //   try {
+  //     const response = await axios.get(`${api}/api/dashboard/booking-status-count?type=${getRole()}&id=${getId()}`);
+  //     if (response.status === 200) {
+  //       setStateCount(response.data);
+  //     } else {
+  //       showAlert("Something went wrong while fetching card data", "danger");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     showAlert("Something went wrong while fetching card data", "danger");
+  //   }
+  // };
 
-  const fetchCardsCount = async () => {
-    try {
-      const response = await axios.get(`${api}/api/dashboard/get-cards-count`);
-      if (response.status === 200) {
-        setAdminCardData(response.data.results);
-      } else {
-        showAlert("Something went wrong while fetching card data", "danger");
-      }
-    } catch (err) {
-      console.log(err);
-      showAlert("Something went wrong while fetching card data", "danger");
-    }
-  };
+  // const fetchCardsCount = async () => {
+  //   try {
+  //     const response = await axios.get(`${api}/api/dashboard/get-cards-count`);
+  //     if (response.status === 200) {
+  //       setAdminCardData(response.data.results);
+  //     } else {
+  //       showAlert("Something went wrong while fetching card data", "danger");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     showAlert("Something went wrong while fetching card data", "danger");
+  //   }
+  // };
 
-  const fetchChartData = async () => {
-    try {
-      const response = await axios.get(
-        `${api}/api/dashboard/pending-chart-data?type=${getRole()}&id=${getId()}&period=${selectedOption.name}`
-      );
-      if (response.status === 200) {
-        setChartData(response.data);
-      } else {
-        showAlert("Something went wrong while fetching chart data", "danger");
-      }
-    } catch (err) {
-      console.log(err);
-      showAlert("Something went wrong while fetching chart data", "danger");
-    }
-  };
+  // const fetchChartData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${api}/api/dashboard/pending-chart-data?type=${getRole()}&id=${getId()}&period=${selectedOption.name}`
+  //     );
+  //     if (response.status === 200) {
+  //       setChartData(response.data);
+  //     } else {
+  //       showAlert("Something went wrong while fetching chart data", "danger");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     showAlert("Something went wrong while fetching chart data", "danger");
+  //   }
+  // };
 
-  const fetchTodaysBooking = async () => {
-    try {
-      const response = await axios.get(`${api}/api/dashboard/bookings-today?type=${getRole()}&id=${getId()}`);
-      if (response.status === 200) {
-        setTodaysBooking(response.data);
-        setFilterTodaysBooking(response.data);
-      } else {
-        showAlert("Something went wrong while fetching chart data", "danger");
-      }
-    } catch (err) {
-      console.log(err);
-      showAlert("Something went wrong while fetching chart data", "danger");
-    }
-  };
+  // const fetchTodaysBooking = async () => {
+  //   try {
+  //     const response = await axios.get(`${api}/api/dashboard/bookings-today?type=${getRole()}&id=${getId()}`);
+  //     if (response.status === 200) {
+  //       setTodaysBooking(response.data);
+  //       setFilterTodaysBooking(response.data);
+  //     } else {
+  //       showAlert("Something went wrong while fetching chart data", "danger");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     showAlert("Something went wrong while fetching chart data", "danger");
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchCount();
-    fetchTodaysBooking();
-    fetchCardsCount();
-  }, []);
+  // useEffect(() => {
+  //   fetchCount();
+  //   fetchTodaysBooking();
+  //   fetchCardsCount();
+  // }, []);
 
-  useEffect(() => {
-    fetchChartData();
-  }, [selectedOption]);
+  // useEffect(() => {
+  //   fetchChartData();
+  // }, [selectedOption]);
 
   return (
     <>
@@ -139,9 +139,9 @@ const index = () => {
             </div>
             {/* End .row */}
 
-            <DashboardCard stateCount={stateCount} adminCardData={adminCardData} />
+            {/* <DashboardCard stateCount={stateCount} adminCardData={adminCardData} /> */}
 
-            <div className="row y-gap-30 pt-20 chart_responsive">
+            {/* <div className="row y-gap-30 pt-20 chart_responsive">
               <div className="col-xl-5 col-md-6">
                 <div className="py-30 px-30 rounded-4 bg-white shadow-3">
                   <div className="d-flex justify-between items-center">
@@ -152,7 +152,6 @@ const index = () => {
                       </Link>
                     </div>
                   </div>
-                  {/* End d-flex */}
 
                   <RercentBooking
                     todaysBooking={todaysBooking}
@@ -160,9 +159,7 @@ const index = () => {
                     setFilterTodaysBooking={setFilterTodaysBooking}
                   />
                 </div>
-                {/* End py-30 */}
               </div>
-              {/* End .col */}
               <div className="col-xl-7 col-md-6">
                 <div className="py-30 px-30 rounded-4 bg-white shadow-3">
                   <div className="d-flex justify-between items-center">
@@ -173,16 +170,13 @@ const index = () => {
                       setSelectedOption={setSelectedOption}
                     />
                   </div>
-                  {/* End .d-flex */}
 
                   <div className="pt-30">
                     <ChartMain chartData={chartData} />
                   </div>
                 </div>
               </div>
-              {/* End .col */}
-            </div>
-            {/* End .row */}
+            </div> */}
 
             <Footer />
           </div>

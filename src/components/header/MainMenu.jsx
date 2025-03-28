@@ -41,19 +41,19 @@ const MainMenu = ({ style = "" , staticHeader}) => {
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
-      <li
+      {/* <li
           className={`${ isActiveParentChaild(homeItems, pathname) ? "current" : "" } menu-item-has-children`}
         > 
           <Link to="/">
             <span className={`mr-10 ${pathname === "/" ? "current" : navbar || staticHeader ? "text-black" : ""}`}>Home</span>
           </Link>
-        </li>
+        </li> */}
         {/* End home page menu */}
 
-        <li className={pathname === "/destinations" ? "current" : ""}>
+        {/* <li className={pathname === "/destinations" ? "current" : ""}>
           <Link to="/destinations"><span className={`mr-10 ${pathname === "/destinations" ? "current" : navbar || staticHeader ? "text-black" : ""}`}>Destinations</span></Link>
         </li>
-        {/* End Destinatinos single menu */}
+
         {isUserLoggedIn && <li className={pathname === "/booking" ? "current" : ""}>
           <Link to="/booking"><span className={`mr-10 ${pathname === "/booking" ? "current" : navbar || staticHeader ? "text-black" : ""}`}>Bookings</span></Link>
         </li>}
@@ -64,7 +64,7 @@ const MainMenu = ({ style = "" , staticHeader}) => {
         
         <li className={pathname === "/contact" ? "current" : ""}>
           <Link to="/contact"><span className={`mr-10 ${pathname === "/contact" ? "current" : navbar || staticHeader ? "text-black" : ""}`}>Contact</span></Link>
-        </li>        
+        </li>         */}
 
         {/* <li
           className={`${
