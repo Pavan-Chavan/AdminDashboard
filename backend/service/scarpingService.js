@@ -92,7 +92,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
 
         ws.send(JSON.stringify({ status: "info", message: manipulationResult }));
 
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 2000)); // MANOJ : make this 3000 for scarping data loading
 
         // Scrape data
         const data = await page.evaluate((marketTypeData) => {
@@ -100,6 +100,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
         return items ? items.outerHTML : null;
         }, marketTypeData);
 
+        console.log("data" + data);
         if (!data) {
         ws.send(JSON.stringify({
           status: "error",

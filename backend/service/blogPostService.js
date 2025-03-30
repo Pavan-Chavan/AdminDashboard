@@ -130,9 +130,13 @@ app.get("/get-blogs", (req, res) => {
     queryParams.push(searchParam, searchParam, searchParam, searchParam, searchParam, searchParam, searchParam, searchParam);
   }
 
+  // ✅ Apply sorting by published_date in descending order
+  query += " ORDER BY published_date DESC";
+
   // ✅ Apply pagination
   query += " LIMIT ? OFFSET ?";
   queryParams.push(limit, offset);
+
   // Execute count query first to get total records
   db.query(countQuery, queryParams.slice(0, queryParams.length - 2), (err, countResult) => {
     if (err) return res.status(500).json({ success: false, error: "Database error", details: err });
