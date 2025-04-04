@@ -100,7 +100,6 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
         return items ? items.outerHTML : null;
         }, marketTypeData);
 
-        console.log("data" + data);
         if (!data) {
         ws.send(JSON.stringify({
           status: "error",

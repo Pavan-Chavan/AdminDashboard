@@ -21,6 +21,14 @@ const Sidebar = () => {
     },
     {
       icon: "/img/dashboard/sidebar/gear.svg",
+      title: "Marketing",
+      allowedRole: ["admin"],
+      links: [
+        { title: "Push Notification", href: "push-notification", allowedRole: ["admin"] }
+      ],
+    },
+    {
+      icon: "/img/dashboard/sidebar/gear.svg",
       title: "BajarBhav data pulling",
       href: "bhajarbhav-pulling"
     },

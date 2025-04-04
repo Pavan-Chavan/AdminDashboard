@@ -28,6 +28,7 @@ import Blogs from "./pages/dashboard/admin-dashboard/blog";
 import Tags from "./pages/dashboard/admin-dashboard/tags";
 import SubCategory from "./pages/dashboard/admin-dashboard/subCategory";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PushNotification from "./pages/dashboard/admin-dashboard/push-notification";
 
 if (typeof window !== "undefined") {
   import("bootstrap");
@@ -82,6 +83,14 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <Blogs />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="push-notification"
+                  element={
+                    <ProtectedRoute>
+                      <PushNotification />
                     </ProtectedRoute>
                   }
                 />

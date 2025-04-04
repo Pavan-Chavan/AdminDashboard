@@ -133,7 +133,7 @@ const WebSocketComponent = () => {
 				return acc;
 			}, {});
 			if (ws && ws.readyState === WebSocket.OPEN) {
-				ws.send(JSON.stringify({ secretKeys:"processArray" , payload: {marketTypes : Object.keys(dataToSend) , marketTypesDetails : dataToSend} }));
+				ws.send(JSON.stringify({ type:"BajarbhavPulling", secretKeys:"processArray" , payload: {marketTypes : Object.keys(dataToSend) , marketTypesDetails : dataToSend} }));
 			}
 			console.log("Data to send to backend:", dataToSend)
 			// Here you would typically send the data to a server

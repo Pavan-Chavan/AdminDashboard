@@ -26,7 +26,9 @@ const tagService = require('./service/tagService.js');
 const bajarbhavPullingService = require('./service/bajarbhavPullingService');
 const blogPostService = require('./service/blogPostService');
 const bajarbhavService = require("./service/bajarbhavService");
+const pushNotificationServer = require("./service/pushNotificationService");
 const scarpingWeb = require('./service/scarpingService');
+const pushNotification = require('./service/PushNotificationMethod');
 
 // routes
 app.use('/api/auth', authService);
@@ -36,6 +38,7 @@ app.use('/api/tags', tagService);
 app.use('/api', bajarbhavPullingService);
 app.use('/api/blogpost', blogPostService);
 app.use('/api/bajarbhav', bajarbhavService)
+app.use('/api/push-notification', pushNotificationServer)
 
 const server = http.createServer(app);
 
@@ -49,10 +52,12 @@ wss.on('connection', (ws) => {
   ws.on('message', (message) => {
     try {
       const data = JSON.parse(message);
-      if (data.secretKeys === process.env.WEBSCOKET_secretKeys) {
+      if (data.secretKeys === process.env.WEBSCOKET_secretKeys && data.type === "BajarbhavPulling") {
         const marketTypes = data.payload.marketTypes;
         const marketTypesDetails = data.payload.marketTypesDetails;
         scarpingWeb(marketTypes, ws, marketTypesDetails);
+      } else if(data.type === "PushNotification") {
+        pushNotification(data.data, ws);
       }
     } catch (err) {
       console.error('Error processing message', err);
@@ -62,7 +67,7 @@ wss.on('connection', (ws) => {
   ws.on('close', () => {
     console.log('WebSocket client disconnected');
   });
-  ws.send(JSON.stringify({status : "info" , message : `Welcome to data pulling service`}));
+  ws.send(JSON.stringify({status : "info" , message : `Welcome Again to Jiokheti WebSocket`}));
 });
 
 // Start the server
