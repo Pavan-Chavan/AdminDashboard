@@ -26,7 +26,7 @@ const tagService = require('./service/tagService.js');
 const bajarbhavPullingService = require('./service/bajarbhavPullingService');
 const blogPostService = require('./service/blogPostService');
 const bajarbhavService = require("./service/bajarbhavService");
-const pushNotificationServer = require("./service/pushNotificationService");
+const pushNotificationService = require("./service/pushNotificationService");
 const scarpingWeb = require('./service/scarpingService');
 const pushNotification = require('./service/PushNotificationMethod');
 
@@ -38,7 +38,7 @@ app.use('/api/tags', tagService);
 app.use('/api', bajarbhavPullingService);
 app.use('/api/blogpost', blogPostService);
 app.use('/api/bajarbhav', bajarbhavService)
-app.use('/api/push-notification', pushNotificationServer)
+app.use('/api/push-notification', pushNotificationService)
 
 const server = http.createServer(app);
 
