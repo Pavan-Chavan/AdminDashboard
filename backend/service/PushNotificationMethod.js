@@ -63,6 +63,45 @@ const pushNotification = async (data, ws) => {
 			let totalSent = 0;
 			let totalFailed = 0;
 			const totalSubscriptions = subscriptions.length;
+			let notificationId = null;
+			db.query(
+				`INSERT INTO notifications (
+					title, 
+					description, 
+					badge, 
+					vibrate, 
+					requireInteraction, 
+					tag, 
+					renotify, 
+					image, 
+					url, 
+					icon
+				) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+				[
+					title,
+					description,
+					badge,
+					JSON.stringify(vibrate),
+					requireInteraction,
+					tag,
+					renotify,
+					image,
+					url,
+					icon
+				],
+				(err, result) => {
+					if (err) {
+						console.error('Error inserting notification into database:', err);
+						ws.send(JSON.stringify({
+							status: 'error',
+							message: 'Error inserting notification into database'
+						}));
+						throw err;
+					}
+					notificationId = result.insertId;
+					console.log('Notification inserted into database with ID:', result.insertId);
+				}
+			);
 
 			// Initial progress update
 			ws.send(JSON.stringify({
@@ -101,53 +140,36 @@ const pushNotification = async (data, ws) => {
 					TotalSuccess: totalSent,
 					message: 'Sending notifications in progress...'
 				}));
+				
 				db.query(
-					`INSERT INTO notifications (
-						title, 
-						description, 
-						badge, 
-						vibrate, 
-						requireInteraction, 
-						tag, 
-						renotify, 
-						image, 
-						url, 
-						icon, 
-						TotalSubscriptions, 
-						TotalSent, 
-						TotalFailed, 
-						TotalPending, 
-						TotalSuccess
-					) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+					`UPDATE notifications 
+					 SET 
+						TotalSubscriptions = ?, 
+						TotalSent = ?, 
+						TotalFailed = ?, 
+						TotalPending = ?, 
+						TotalSuccess = ? 
+					 WHERE id = ?`,
 					[
-						title,
-						description,
-						badge,
-						JSON.stringify(vibrate),
-						requireInteraction,
-						tag,
-						renotify,
-						image,
-						url,
-						icon,
 						totalSubscriptions,
 						totalSent,
 						totalFailed,
-						totalSubscriptions - (totalSent + totalFailed),
-						totalSent,
+						totalSubscriptions - (totalSent + totalFailed), // TotalPending
+						totalSent, // TotalSuccess
+						notificationId
 					],
 					(err, result) => {
 						if (err) {
-							console.error('Error inserting notification into database:', err);
+							console.error('Error updating notification in database:', err);
 							ws.send(JSON.stringify({
 								status: 'error',
-								message: 'Error inserting notification into database'
+								message: 'Error updating notification in database'
 							}));
 							throw err;
 						}
-						console.log('Notification inserted into database with ID:', result.insertId);
 					}
 				);
+
 			});
 
 			await Promise.all(sendPromises);

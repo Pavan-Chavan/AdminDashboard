@@ -5,6 +5,7 @@ import Footer from "@/components/dashboard/admin-dashboard/common/Footer";
 import { webSocketServer, api, krushiMahaDomain } from "@/utils/apiProvider";
 import Sidebar from "../../../../components/dashboard/admin-dashboard/common/Sidebar";
 import axios from "axios";
+import { set } from "lodash";
 
 const metadata = {
   title: "Admin Push Notification | WedEazzy",
@@ -18,17 +19,19 @@ export default function PushNotification() {
   const [isImageUploaded, setIsImageUploaded] = useState(false);
   const [isImageUploading, setIsImageUploading] = useState(false);
   const fileInputRef = useRef(null);
+  const [reconnecting, setReconnecting] = useState(false);
+  const [WebSocketStatus, setWebSocketStatus] = useState("Connecting...");
   const [notificationData, setNotificationData] = useState({
     title: "",
     description: "",
-    badge: "/favicon.ico",
+    badge: "/badge.png",
     vibrate: [200, 100, 200],
     requireInteraction: true,
     tag: "general",
     renotify: false,
     image: "",
     url:"https://jiokheti.com",
-    icon: "/favicon.ico",
+    icon: "/JK.png",
   });
   const [notificationStats, setNotificationStats] = useState({
     totalSubscriptions: 0,
@@ -42,7 +45,7 @@ export default function PushNotification() {
   useEffect(() => {
     const socket = new WebSocket(webSocketServer);
     setWs(socket);
-
+    setWebSocketStatus(socket.readyState);
     socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
       setNotificationStats({
@@ -55,7 +58,7 @@ export default function PushNotification() {
       });
     };
     return () => socket.close();
-  }, []);
+  }, [reconnecting]);
 
   const handleInputChange = (field, value) => {
     setNotificationData((prev) => ({ ...prev, [field]: value }));
@@ -81,8 +84,9 @@ export default function PushNotification() {
         if (response.data.success) {
           setNotificationData((prev) => ({
             ...prev,
-            image: response.data.imageUrl,
+            image: "https://jiokheti.com" + response.data.imageUrl,
           }));
+          console.log("Image uploaded successfully:", response.data.imageUrl);
           setIsImageUploaded(true);
           alert("Image uploaded successfully!");
         }
@@ -125,15 +129,18 @@ export default function PushNotification() {
       setNotificationData({
         title: "",
         description: "",
-        badge: "/favicon.ico",
+        badge: "/badge.png",
         vibrate: [200, 100, 200],
         requireInteraction: true,
         tag: "general",
         renotify: false,
         image: "",
         url:"https://jiokheti.com",
-        icon: "/favicon.ico",
+        icon: "/JK.png",
       });
+    } else {
+      setReconnecting(!reconnecting)
+      console.error("WebSocket connection is not open" + ws.readyState);
     }
   };
 
@@ -282,7 +289,7 @@ export default function PushNotification() {
                     />
                     <label className="lh-1 text-16 text-light-1">Icon URL</label>
                     <div className="d-flex ratio ratio-1:1 " style={{height:'60px', width:'60px', margin: '6px'}}>
-                      <img src={`https://jiokheti.com/${notificationData.badge}`} alt="image" className="img-ratio rounded-4" />
+                      <img src={`https://jiokheti.com/${notificationData.icon}`} alt="image" className="img-ratio rounded-4" />
                     </div>
                   </div>
                   <div className="form-input" style={{display: 'flex',flexDirection: 'column', gap: '8px'}}>
@@ -316,9 +323,9 @@ export default function PushNotification() {
                   <button
                     className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                     onClick={handleSubmit}
-                    disabled={!isImageUploaded && notificationData.image}
+                    disabled={!isImageUploaded && notificationData.image && ws && ws.readyState === WebSocket.OPEN }
                   >
-                    Send Push Notification
+                    {ws.readyState === WebSocket.OPEN ? "Send Push Notification" : "Retry Connection"}
                     <div className="icon-arrow-top-right ml-15" />
                   </button>
                   <button
