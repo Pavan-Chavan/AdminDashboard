@@ -27,6 +27,18 @@ app.post('/subscribe', async (req, res) => {
 	});
 });
 
+app.post('/unsubscribe', (req, res) => {
+	const { endpoint } = req.body;
+	const query = 'DELETE FROM subscriptions WHERE endpoint = ?';
+	db.query(query, [endpoint], (err, results) => {
+		if (err) {
+			console.error('Unsubscription error:', err);
+			return res.status(500).json({ error: 'Unsubscription failed! Please try again.' });
+		}
+		res.status(200).json({ message: 'Unsubscribed successfully' });
+	});
+});
+
 app.get('/notifications', async (req, res) => {
 	const { page = 1, limit = 10 } = req.query;
 
