@@ -1588,7 +1588,7 @@ const marketTypesDetails = {
 					keywords: "गोल्डन, डि.जी, गोल्डन दर, golden dg bajarbhav, बाजारभाव, Jio Kheti",
 					og_url: "https://www.jiokheti.com/bajarbhav/crop/golden-dg-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/golden-dg-bajarbhav",
-					banner_img: "images/blog-thumbnail/Bajarbhav.jpg",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
@@ -2345,7 +2345,7 @@ const marketTypesDetails = {
 					keywords: "तोंडली, तोंडली दर, tondli bajarbhav, बाजारभाव, Jio Kheti",
 					og_url: "https://www.jiokheti.com/bajarbhav/crop/tondli-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/tondli-bajarbhav",
-					banner_img: "images/blog-thumbnail/Bajarbhav.jpg",
+					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
@@ -2383,24 +2383,6 @@ const marketTypesDetails = {
 					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/dudhi-bhopla-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "दोडका",
-				code: "08068",
-				slug: "dodka-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "दोडका बाजारभाव | Jio Kheti",
-					seo_description: "दोडक्याचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम दोडका दर आणि माहिती मिळवा।",
-					keywords: "दोडका, दोडका दर, dodka bajarbhav, बाजारभाव, Jio Kheti",
-					og_url: "https://www.jiokheti.com/bajarbhav/crop/dodka-bajarbhav",
-					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/dodka-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
 					published_date: "01/03/2025",
 					updated_date: "01/03/2025"
@@ -3137,24 +3119,6 @@ const marketTypesDetails = {
 					keywords: "भुईमुग शेंग (सुकी), भुईमुग शेंग सुकी दर, bhuimug sheng suki bajarbhav, बाजारभाव, Jio Kheti",
 					og_url: "https://www.jiokheti.com/bajarbhav/crop/bhuimug-sheng-suki-bajarbhav",
 					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/bhuimug-sheng-suki-bajarbhav",
-					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-					author: "Jio Kheti",
-					published_date: "01/03/2025",
-					updated_date: "01/03/2025"
-				}
-			},
-			{
-				name: "भुईमूग",
-				code: "04003",
-				slug: "bhuimug-bajarbhav",
-				subType: "crop",
-				seoMeta: {
-					seo_title: "भुईमूग बाजारभाव | Jio Kheti",
-					seo_description: "भुईमुगाचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम भुईमूग दर आणि माहिती मिळवा।",
-					keywords: "भुईमूग, भुईमूग दर, bhuimug bajarbhav, बाजारभाव, Jio Kheti",
-					og_url: "https://www.jiokheti.com/bajarbhav/crop/bhuimug-bajarbhav",
-					canonical_url: "https://www.jiokheti.com/bajarbhav/crop/bhuimug-bajarbhav",
 					banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
 					featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
 					author: "Jio Kheti",
