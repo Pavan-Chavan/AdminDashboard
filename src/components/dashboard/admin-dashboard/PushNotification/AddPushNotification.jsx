@@ -170,7 +170,11 @@ export default function PushNotification() {
       fileInputRef.current.value = ''; // Clear the input value
     }
   }
-
+  const getIconUrl = () => {
+    return notificationData.tag === "alert" 
+      ? "https://jiokheti.com/alert.png" 
+      : `https://jiokheti.com/${notificationData.icon}`;
+  }
   return (
     <>
       <div>
@@ -291,7 +295,7 @@ export default function PushNotification() {
                     />
                     <label className="lh-1 text-16 text-light-1">Icon URL</label>
                     <div className="d-flex ratio ratio-1:1 " style={{height:'60px', width:'60px', margin: '6px'}}>
-                      <img src={`https://jiokheti.com/${notificationData.icon}`} alt="image" className="img-ratio rounded-4" />
+                      <img src={getIconUrl()} alt="image" className="img-ratio rounded-4" />
                     </div>
                   </div>
                   <div className="form-input" style={{display: 'flex',flexDirection: 'column', gap: '8px'}}>
