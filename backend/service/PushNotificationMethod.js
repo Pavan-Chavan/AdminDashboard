@@ -47,48 +47,16 @@ const pushNotification = async (data, ws) => {
 				return;
 			}
 
-			const payload = JSON.stringify({
-				title,
-				description,
-				badge,
-				vibrate,
-				requireInteraction,
-				tag,
-				renotify,
-				image,
-				url,
-				icon,
-			});
+			const payload = JSON.stringify({ title, description, badge, vibrate, requireInteraction, tag, renotify, image, url, icon});
 
 			let totalSent = 0;
 			let totalFailed = 0;
+			let totalUnsubscribed = 0;
 			const totalSubscriptions = subscriptions.length;
 			let notificationId = null;
 			db.query(
-				`INSERT INTO notifications (
-					title, 
-					description, 
-					badge, 
-					vibrate, 
-					requireInteraction, 
-					tag, 
-					renotify, 
-					image, 
-					url, 
-					icon
-				) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-				[
-					title,
-					description,
-					badge,
-					JSON.stringify(vibrate),
-					requireInteraction,
-					tag,
-					renotify,
-					image,
-					url,
-					icon
-				],
+				`INSERT INTO notifications (title, description, badge, vibrate, requireInteraction, tag, renotify, image, url, icon ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+				[ title, description, badge, JSON.stringify(vibrate), requireInteraction, tag, renotify, image, url, icon ],
 				(err, result) => {
 					if (err) {
 						console.error('Error inserting notification into database:', err);
@@ -111,6 +79,7 @@ const pushNotification = async (data, ws) => {
 				TotalFailed: totalFailed,
 				TotalPending: totalSubscriptions,
 				TotalSuccess: totalSent,
+				TotalUnsubscribed : totalUnsubscribed,
 				message: 'Starting to send notifications...'
 			}));
 
@@ -127,6 +96,20 @@ const pushNotification = async (data, ws) => {
 					totalSent++;
 				} catch (err) {
 					totalFailed++;
+					if (err.body && err.body.includes('unsubscribed') || err.body.includes('expired')) {
+						db.query(
+							'DELETE FROM subscriptions WHERE endpoint = ?',
+							[sub.endpoint],
+							(deleteErr) => {
+								if (deleteErr) {
+									console.error('Error removing unsubscribed/expired endpoint from database:', deleteErr);
+								} else {
+									totalUnsubscribed++;
+									console.log('Removed unsubscribed/expired endpoint from database:', sub.endpoint);
+								}
+							}
+						);
+					}
 					console.error('Failed to send to', sub.endpoint, err);
 				}
 
@@ -138,6 +121,7 @@ const pushNotification = async (data, ws) => {
 					TotalFailed: totalFailed,
 					TotalPending: totalSubscriptions - (totalSent + totalFailed),
 					TotalSuccess: totalSent,
+					TotalUnsubscribed : totalUnsubscribed,
 					message: 'Sending notifications in progress...'
 				}));
 				
@@ -183,6 +167,7 @@ const pushNotification = async (data, ws) => {
 				TotalFailed: totalFailed,
 				TotalPending: 0,
 				TotalSuccess: totalSent,
+				TotalUnsubscribed : totalUnsubscribed,
 				message: 'Notifications sent successfully'
 			}));
 		});

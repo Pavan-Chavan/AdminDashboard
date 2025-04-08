@@ -40,6 +40,7 @@ export default function PushNotification() {
     totalPending: 0,
     totalSuccess: 0,
     message: "",
+    totalUnsubscribed: 0,
   });
 
   useEffect(() => {
@@ -55,6 +56,7 @@ export default function PushNotification() {
         totalPending: data.TotalPending,
         totalSuccess: data.TotalSuccess,
         message: data.message,
+        totalUnsubscribed: data.TotalUnsubscribed,
       });
     };
     return () => socket.close();
@@ -345,6 +347,7 @@ export default function PushNotification() {
                       <p>Total Pending: {notificationStats.totalPending}</p>
                       <p>Total Success: {notificationStats.totalSuccess}</p>
                       <p>Message: {notificationStats.message}</p>
+                      <p>Total Unsubscribed: {notificationStats.totalUnsubscribed}</p>
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('jwtToken');
-  const isValid = true || isTokenValid(token);
+  const isValid = isTokenValid(token);
 
   if (!isValid) {
     return <Navigate to="/admin-login" replace />
