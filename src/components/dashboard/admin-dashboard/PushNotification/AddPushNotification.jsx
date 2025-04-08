@@ -170,10 +170,13 @@ export default function PushNotification() {
       fileInputRef.current.value = ''; // Clear the input value
     }
   }
-  const getIconUrl = () => {
-    return notificationData.tag === "alert" 
-      ? "https://jiokheti.com/alert.png" 
-      : `https://jiokheti.com/${notificationData.icon}`;
+  const handleDropdownChange = (e) => { 
+    if (e.target.value === "alert") {
+      handleInputChange("icon", "./alert.png")
+    } else {
+      handleInputChange("icon", "./JK.png")
+    }
+    handleInputChange("tag", e.target.value)
   }
   return (
     <>
@@ -266,7 +269,7 @@ export default function PushNotification() {
                   <div className="form-input" style={{border: "2px solid #dbdbdb59"}}>
                     <select
                       value={notificationData.tag}
-                      onChange={(e) => handleInputChange("tag", e.target.value)}
+                      onChange={(e) => {handleDropdownChange(e)}}
                     >
                       <option value="">Select Notification tag</option>
                       <option value="general">General - For all general notifications</option>
@@ -295,7 +298,7 @@ export default function PushNotification() {
                     />
                     <label className="lh-1 text-16 text-light-1">Icon URL</label>
                     <div className="d-flex ratio ratio-1:1 " style={{height:'60px', width:'60px', margin: '6px'}}>
-                      <img src={getIconUrl()} alt="image" className="img-ratio rounded-4" />
+                      <img src={`https://jiokheti.com${notificationData.icon}`} alt="image" className="img-ratio rounded-4" />
                     </div>
                   </div>
                   <div className="form-input" style={{display: 'flex',flexDirection: 'column', gap: '8px'}}>
