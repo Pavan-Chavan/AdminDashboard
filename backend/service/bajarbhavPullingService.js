@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const db = require("../db");
-const marketTypesDetails = require('../constant/marketTypesData');
+const marketTypesDetails = require('../constant/bajarbhavConstants/marketTypesData');
 const app = express();
 
 app.get('/get-sections', (req, res) => {
