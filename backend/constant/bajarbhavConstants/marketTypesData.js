@@ -1,7 +1,12 @@
-import { CommodityGird } from "./CommodityGird";
-import { DistrictCommodityGird } from "./DistrictCommodityGird";
+const ArrivalGrid = require('./ArrivalGird');
+const CommodityGird = require('./CommodityGird');
+const DistrictCommodityGird = require('./DistrictCommodityGird');
 
-export const marketTypesDetails = {
-	...DistrictCommodityGird,
-	...CommodityGird
+
+const marketTypesDetails = {
+	DistrictCommodityGird,
+	CommodityGird,
+	ArrivalGrid
 }
+
+module.exports = marketTypesDetails;

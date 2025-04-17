@@ -1,4 +1,4 @@
-export const DistrictCommodityGird = {
+const DistrictCommodityGird = {
     name: "जिल्हा शेतमाल निहाय/DistrictCommodityGird",
     tableId: "DistrictCommodityGird",
     SelectOptionId: "drpDistrictCommodity",
@@ -21,6 +21,7 @@ export const DistrictCommodityGird = {
             code: "32",
             slug: "akola-bajarbhav",
             subType: "district",
+            is_frequent: true,
             seoMeta: {
                 seo_title: "अकोला बाजारभाव | Jio Kheti",
                 seo_description: "अकोला जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
@@ -638,3 +639,4 @@ export const DistrictCommodityGird = {
     ]
 
 } 
+module.exports = DistrictCommodityGird;

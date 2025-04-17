@@ -113,6 +113,25 @@ const WebSocketComponent = () => {
 			}))
 		}
 
+    const handleSelectAllImportant = (section) => {
+			setSelectedOptions((prev) => ({
+				...prev,
+				[section]: {
+					...prev[section],
+					DropdownOptions: prev[section].DropdownOptions.map((option) => {
+            if (option.is_frequent) {
+              return {
+                ...option,
+                selected: !prev[section].DropdownOptions.every((opt) => (option.is_frequent && option.selected) || !option.is_frequent),
+              }
+            } else {
+              return option
+            }
+          }),
+				},
+			}))
+		}
+
     // const handleSubmit = () => {
 		// 		console.log(selectedOptions);
 
@@ -184,12 +203,26 @@ const WebSocketComponent = () => {
                           <input
                             className="form-check-input"
                             type="checkbox"
+                            style={{width:"16px", outline:"inset"}}
                             id={`select-all-${key}`}
                             checked={section.DropdownOptions.every((option) => option.selected)}
                             onChange={() => handleSelectAll(key)}
                           />
                           <label className="form-check-label" htmlFor={`select-all-${key}`}>
                             Select All
+                          </label>
+                        </div>
+                        <div className="form-check mb-3">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            style={{width:"16px", outline:"inset"}}
+                            id={`select-all-important-${key}`}
+                            checked={section.DropdownOptions.every((option) => (option.is_frequent && option.selected) || !option.is_frequent )}
+                            onChange={() => handleSelectAllImportant(key)}
+                          />
+                          <label className="form-check-label" htmlFor={`select-all-important-${key}`}>
+                            Select All Important
                           </label>
                         </div>
                         <div className="row">

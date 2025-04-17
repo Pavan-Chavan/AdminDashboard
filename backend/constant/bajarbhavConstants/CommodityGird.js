@@ -1,4 +1,4 @@
-export const CommodityGird = {
+const CommodityGird = {
     name: "शेतमाल निहाय/CommodityGird",
     tableId: "CommodityGird",
     SelectOptionId: "drpCommodities",
@@ -3682,3 +3682,5 @@ export const CommodityGird = {
         }
     ]
 }
+
+module.exports = CommodityGird;
