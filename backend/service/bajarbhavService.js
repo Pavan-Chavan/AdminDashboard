@@ -87,14 +87,23 @@ app.get('/getCommodityData', async (req, res) => {
         }));
 
         // Get total count for pagination
-        const countQuery = `
+        let countQuery = `
             SELECT COUNT(*) as total
             FROM ${table}
             WHERE ${filterColumn} = ?
-            ${fromDate || toDate ? 'AND data_date BETWEEN ? AND ?' : ''}
         `;
         const countParams = [name];
-        if (fromDate && toDate) countParams.push(fromDate, toDate);
+
+        if (fromDate && toDate) {
+            countQuery += ' AND data_date BETWEEN ? AND ?';
+            countParams.push(fromDate, toDate);
+        } else if (fromDate) {
+            countQuery += ' AND data_date >= ?';
+            countParams.push(fromDate);
+        } else if (toDate) {
+            countQuery += ' AND data_date <= ?';
+            countParams.push(toDate);
+        }
 
         db.query(countQuery, countParams, (err, countResult) => {
             if (err) {
