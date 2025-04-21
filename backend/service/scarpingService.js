@@ -111,7 +111,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails) => {
           tableId : marketTypeData.tableId,
           table_data: JSON.stringify(data)
         };
-
+        console.log(payload)
         // Call the endpoint
         try {
           const response = await axios.post(

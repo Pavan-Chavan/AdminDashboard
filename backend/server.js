@@ -27,6 +27,7 @@ const bajarbhavPullingService = require('./service/bajarbhavPullingService');
 const blogPostService = require('./service/blogPostService');
 const bajarbhavService = require("./service/bajarbhavService");
 const pushNotificationService = require("./service/pushNotificationService");
+const JIO_KHETI_AI = require("./service/jioKhetiAIService");
 const scarpingWeb = require('./service/scarpingService');
 const pushNotification = require('./service/PushNotificationMethod');
 
@@ -39,6 +40,7 @@ app.use('/api', bajarbhavPullingService);
 app.use('/api/blogpost', blogPostService);
 app.use('/api/bajarbhav', bajarbhavService)
 app.use('/api/push-notification', pushNotificationService)
+app.use('/JIOKHETI_AI', JIO_KHETI_AI)
 
 const server = http.createServer(app);
 
