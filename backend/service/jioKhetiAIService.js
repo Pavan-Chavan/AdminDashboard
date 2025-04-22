@@ -67,7 +67,7 @@ app.post('/weather-predict', async (req, res) => {
     }
 });
 
-  app.post('/crop-price-prediction', (req, res) => {
+app.post('/crop-price-prediction', (req, res) => {
     const { commodity_name, market_name } = req.body;
   
     // Validate input
@@ -103,10 +103,9 @@ app.post('/weather-predict', async (req, res) => {
       // Format data into a string for AI
       let dataString = `Historical market data for ${commodity_name} at ${market_name}:\n\n`;
       rows.forEach(row => {
-        // Ensure date is formatted correctly (MySQL returns Date objects)
         const dateStr = row.date instanceof Date 
           ? row.date.toISOString().split('T')[0]
-          : row.date; // Handle if already a string
+          : row.date;
         dataString += `Date: ${dateStr}\n`;
         dataString += `Variety: ${row.variety}\n`;
         dataString += `Unit: ${row.unit}\n`;
@@ -118,25 +117,26 @@ app.post('/weather-predict', async (req, res) => {
   
       // System prompt for AI in Marathi
       const systemPrompt = `
-            तुम्ही एक कृषी बाजार विश्लेषक आहात. खालील ऐतिहासिक बाजार डेटा ${commodity_name} साठी ${market_name} येथे उपलब्ध आहे.
-            कृपया हा डेटा विश्लेषित करा आणि पुढील 7 दिवसांसाठी बाजारभावाचा अंदाज द्या.
-            तुमचा अंदाज आणि स्पष्टीकरण मराठीत द्या.
-            स्पष्टीकरणात किंमतीच्या ट्रेंडचे विश्लेषण, प्रभावित करणारे घटक आणि तुमच्या अंदाजाचे तर्क समाविष्ट करा.
-
-            तुमच्या उत्तरात खालील सूचनांचे पालन करा:
-            1. कोणत्याही चिन्हांचा वापर करू नका (उदा., *, #, _, **, -, >).
-            2. महत्त्वाच्या शब्दांना ठळक करण्यासाठी <b></b> टॅग वापरा.
-            3. उत्तर स्पष्ट आणि यादीच्या स्वरूपात द्या, ज्यामध्ये खालील गोष्टींचा समावेश असेल:
-            a. सरासरी किंमत चे ट्रेंड विश्लेषण
-            b. किंमतींवर परिणाम करणारे घटक
-            c. पुढील 7 दिवसांसाठी किंमत अंदाज
-            d. अंदाजाचे तर्क
-
-            डेटा:
-            ${dataString}
-    `;
-
-      // Call OpenRouter API
+        तुम्ही एक कृषी बाजार विश्लेषक आहात. खालील ऐतिहासिक बाजार डेटा ${commodity_name} साठी ${market_name} येथे उपलब्ध आहे.
+        कृपया हा डेटा विश्लेषित करा आणि पुढील 7 दिवसांसाठी बाजारभावाचा अंदाज द्या.
+        तुमचा अंदाज आणि स्पष्टीकरण मराठीत द्या.
+        स्पष्टीकरणात किंमतीच्या ट्रेंडचे विश्लेषण, प्रभावित करणारे घटक आणि तुमच्या अंदाजाचे तर्क समाविष्ट करा.
+  
+        तुमच्या उत्तरात खालील सूचनांचे पालन करा:
+        1. कोणत्याही चिन्हांचा वापर करू नका (उदा., *, #, _, **, -, >).
+        2. महत्त्वाच्या शब्दांना ठळक करण्यासाठी <b></b> टॅग वापरा.
+        3. उत्तर स्पष्ट आणि यादीच्या स्वरूपात द्या, ज्यामध्ये खालील गोष्टींचा समावेश असेल:
+        a. सरासरी किंमत चे ट्रेंड विश्लेषण
+        b. किंमतींवर परिणाम करणारे घटक
+        c. पुढील 7 दिवसांसाठी किंमत अंदाज
+        d. अंदाजाचे तर्क
+  
+        डेटा:
+        ${dataString}
+      `;
+      console.log(systemPrompt);
+  
+      // Call OpenRouter API with streaming
       axios.post(
         'https://openrouter.ai/api/v1/chat/completions',
         {
@@ -145,26 +145,36 @@ app.post('/weather-predict', async (req, res) => {
             { role: 'system', content: systemPrompt },
             { role: 'user', content: 'कृपया बाजारभावाचा अंदाज आणि स्पष्टीकरण मराठीत द्या.' }
           ],
-          max_tokens: 1000,
+          max_tokens: 1000, // Reduced for faster response
           temperature: 0.3,
+          stream: true
         },
         {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
             'HTTP-Referer': 'http://localhost:3000',
-            'X-Title': 'Crop Price Predictor',
+            'X-Title': 'Crop Price Predictor'
           },
+          responseType: 'stream' // Enable streaming
         }
       )
-      .then(aiResponse => {
-        // Extract AI response
-        const prediction = aiResponse.data.choices[0].message.content;
+      .then(response => {
+        // Set headers for streaming
+        res.setHeader('Content-Type', 'text/plain');
+        res.setHeader('Transfer-Encoding', 'chunked');
   
-        // Send response
-        res.json({
-          rows: rows.length,
-          aiPrediction: prediction
+        // Pipe the stream to the response
+        response.data.on('data', (chunk) => {
+          res.write(chunk.toString()); // Send each chunk to the frontend
+        });
+  
+        response.data.on('end', () => {
+          res.end(); // Close the response when streaming is complete
+        });
+  
+        response.data.on('error', (err) => {
+          res.status(500).send('Error streaming response');
         });
       })
       .catch(aiError => {

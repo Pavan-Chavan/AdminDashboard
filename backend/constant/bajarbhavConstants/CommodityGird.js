@@ -16,27 +16,6 @@ const CommodityGird = {
         updated_date: "01/03/2025"
     },
     DropdownOptions: [
-
-        {
-            name: "सोयाबीन",
-            is_frequent: true,
-            code: "04017",
-            slug: "soyabean-bajarbhav",
-            subType: "crop",
-            is_featured: true,
-            seoMeta: {
-                seo_title: "सोयाबीन बाजारभाव | Jio Kheti",
-                seo_description: "सोयाबीनचे ताजे बाजारभाव येथे पहा! Jio Kheti वर नवीनतम सोयाबीन दर आणि माहिती मिळवा।",
-                keywords: "सोयाबीन, सोयाबीन दर, soyabean bajarbhav, बाजारभाव, Jio Kheti",
-                og_url: "https://www.jiokheti.com/bajarbhav/crop/soyabean-bajarbhav",
-                canonical_url: "https://www.jiokheti.com/bajarbhav/crop/soyabean-bajarbhav",
-                banner_img: "/images/blog-thumbnail/Bajarbhav.jpg",
-                featured_image: "/images/blog-thumbnail/Bajarbhav.jpg",
-                author: "Jio Kheti",
-                published_date: "01/03/2025",
-                updated_date: "01/03/2025"
-            }
-        },
             {
                 name: "कापूस",
                 code: "01001",
