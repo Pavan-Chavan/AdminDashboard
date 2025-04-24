@@ -153,7 +153,7 @@ app.post('/crop-price-prediction', (req, res) => {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            'HTTP-Referer': 'http://localhost:3000',
+            'HTTP-Referer': 'jiokheti.com', // Optional for OpenRouter
             'X-Title': 'Crop Price Predictor'
           },
           responseType: 'stream' // Enable streaming

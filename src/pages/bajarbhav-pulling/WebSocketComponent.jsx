@@ -19,6 +19,7 @@ const WebSocketComponent = () => {
     const { secretKey } = useParams();
     const nagivate = useNavigate();
     const [failed, setFailed] = useState([]);
+    const [failedOptions, setFailedOptions] = useState([]);
     const [insert, setInsert] = useState([]);
     const [update, setUpdate] = useState([]);
     const [percentage, setPercentage] = useState(null);
@@ -40,6 +41,7 @@ const WebSocketComponent = () => {
             switch (data.status) {
               case "error":
                 setFailed((prev)=>([...prev,data]))
+                setFailedOptions((prev)=>([...prev,data.data]))
                 break;
               case "insert":
                 setInsert((prev)=>([...prev,data.data]))
@@ -131,15 +133,36 @@ const WebSocketComponent = () => {
 				},
 			}))
 		}
+    
+    const setFailedBajarbhav = () => {
+      // unselecting all option
+      Object.keys(selectedOptions).forEach((section) => { 
+        setSelectedOptions((prev) => ({
+          ...prev,
+          [section]: {
+            ...prev[section],
+            DropdownOptions: prev[section].DropdownOptions.map((option) => ({
+              ...option,
+              selected: false,
+            })),
+          },
+        }))
+      })
 
-    // const handleSubmit = () => {
-		// 		console.log(selectedOptions);
-
-    //     if (ws && ws.readyState === WebSocket.OPEN) {
-    //         // Send the array to the server
-    //         ws.send(JSON.stringify({ secretKeys:"processArray" , payload: {marketTypes : array} }));
-    //     }
-    // };
+      // selecting all failed option
+      Object.keys(selectedOptions).forEach((section) => { 
+        setSelectedOptions((prev) => ({
+          ...prev,
+          [section]: {
+            ...prev[section],
+            DropdownOptions: prev[section].DropdownOptions.map((option) => ({
+              ...option,
+              selected: failedOptions.some((failedOption) => failedOption.Code === option.code)
+            })),
+          },
+        }))
+      })
+    }
 
 		const handleSubmit = (e) => {
 			e.preventDefault();
@@ -280,6 +303,9 @@ const WebSocketComponent = () => {
                   <h3 className="mb-4">Error data</h3>
                     {failed.map((data)=>(<div  className='text-12 lh-16 fw-500 uppercase bg-dark-1 text-white tag error' style={{width: 'fit-content'}}> Section : {data?.data?.Section || ""} Name : {data?.data?.Name || ""} Code : {data?.data?.Code || ""} Error : {data.message}</div>))}
                 </div>
+                <button onClick={setFailedBajarbhav} className="btn btn-primary w-100">
+                    Set Failed Bajarbhav
+                </button>
               </div>
             </div>
           </div>
