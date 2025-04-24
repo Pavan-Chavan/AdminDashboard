@@ -3,7 +3,7 @@ const axios = require('axios');
 const baseURL = 'https://www.msamb.com/ApmcDetail/APMCPriceInformation';
 const https = require('https');
 
-const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 5) => {
+const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 2) => {
   try {
     // Calculate the total number of dropdown options to process
     let totalOptions = 0;

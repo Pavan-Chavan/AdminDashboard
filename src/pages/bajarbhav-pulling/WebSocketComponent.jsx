@@ -167,6 +167,10 @@ const WebSocketComponent = () => {
 		const handleSubmit = (e) => {
 			e.preventDefault();
       setStatusUpdates([]);
+      setFailed([]);
+      setInsert([]);
+      setFailedOptions([]);
+      setUpdate([]);
 			let dataToSend = Object.keys(selectedOptions).reduce((acc, key) => {
 				acc[key] = {
 					...selectedOptions[key],
