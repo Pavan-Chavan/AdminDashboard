@@ -72,24 +72,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "अचलपूर",
-          code: "079",
-          slug: "achlpoor-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "अचलपूर बाजारभाव | Jio Kheti",
-            seo_description: "अचलपूर जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "अचलपूर बाजारभाव, achlpoor-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/achlpoor-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/achlpoor-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "अजनगाव सुर्जी",
           code: "080",
           slug: "ajngav-surjee-bajarbhav",
@@ -352,24 +334,6 @@ const ArrivalGrid = {
             keywords: "इंदापूर बाजारभाव, indapoor-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/indapoor-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/indapoor-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "इंदापूर-भिगवन",
-          code: "10301",
-          slug: "indapoor-bhigvn-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "इंदापूर-भिगवन बाजारभाव | Jio Kheti",
-            seo_description: "इंदापूर-भिगवन जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "इंदापूर-भिगवन बाजारभाव, indapoor-bhigvn-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/indapoor-bhigvn-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/indapoor-bhigvn-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -702,24 +666,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "कळमनूरी",
-          code: "057",
-          slug: "klmnooree-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "कळमनूरी बाजारभाव | Jio Kheti",
-            seo_description: "कळमनूरी जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "कळमनूरी बाजारभाव, klmnooree-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/klmnooree-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/klmnooree-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "कळमेश्वर",
           code: "263",
           slug: "klmeshvr-bajarbhav",
@@ -1026,24 +972,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "गडहिंग्लज",
-          code: "092",
-          slug: "gdhinglj-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "गडहिंग्लज बाजारभाव | Jio Kheti",
-            seo_description: "गडहिंग्लज जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "गडहिंग्लज बाजारभाव, gdhinglj-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/gdhinglj-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/gdhinglj-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "गेवराई",
           code: "109",
           slug: "gevraee-bajarbhav",
@@ -1242,24 +1170,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "चाळीसगाव",
-          code: "062",
-          slug: "chaleesgav-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "चाळीसगाव बाजारभाव | Jio Kheti",
-            seo_description: "चाळीसगाव जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "चाळीसगाव बाजारभाव, chaleesgav-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/chaleesgav-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/chaleesgav-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "चाळीसगाव-नागदरोड",
           code: "06201",
           slug: "chaleesgav-nagdrod-bajarbhav",
@@ -1360,24 +1270,6 @@ const ArrivalGrid = {
             keywords: "जलगाव - मसावत बाजारभाव, jlgav-msavt-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/jlgav-msavt-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/jlgav-msavt-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "जळकोट",
-          code: "291",
-          slug: "jlkot-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "जळकोट बाजारभाव | Jio Kheti",
-            seo_description: "जळकोट जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "जळकोट बाजारभाव, jlkot-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/jlkot-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/jlkot-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -1540,24 +1432,6 @@ const ArrivalGrid = {
             keywords: "जुन्नर -ओतूर बाजारभाव, junnr-otoor-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/junnr-otoor-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/junnr-otoor-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "झरीझामिणी",
-          code: "284",
-          slug: "jhreejhaminee-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "झरीझामिणी बाजारभाव | Jio Kheti",
-            seo_description: "झरीझामिणी जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "झरीझामिणी बाजारभाव, jhreejhaminee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/jhreejhaminee-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/jhreejhaminee-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -1890,24 +1764,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "धरणगाव",
-          code: "151",
-          slug: "dhrngav-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "धरणगाव बाजारभाव | Jio Kheti",
-            seo_description: "धरणगाव जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "धरणगाव बाजारभाव, dhrngav-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/dhrngav-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/dhrngav-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "धर्माबाद",
           code: "006",
           slug: "dhrmabad-bajarbhav",
@@ -1936,24 +1792,6 @@ const ArrivalGrid = {
             keywords: "धामणगाव -रेल्वे बाजारभाव, dhamngav-relve-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/dhamngav-relve-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/dhamngav-relve-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "धारणी",
-          code: "223",
-          slug: "dharnee-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "धारणी बाजारभाव | Jio Kheti",
-            seo_description: "धारणी जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "धारणी बाजारभाव, dharnee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/dharnee-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/dharnee-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -2106,24 +1944,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "नादगाव खांडेश्वर",
-          code: "225",
-          slug: "nadgav-khandeshvr-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "नादगाव खांडेश्वर बाजारभाव | Jio Kheti",
-            seo_description: "नादगाव खांडेश्वर जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "नादगाव खांडेश्वर बाजारभाव, nadgav-khandeshvr-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/nadgav-khandeshvr-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/nadgav-khandeshvr-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "नामपूर",
           code: "307",
           slug: "nampoor-bajarbhav",
@@ -2188,24 +2008,6 @@ const ArrivalGrid = {
             keywords: "नाशिक - देवळाली बाजारभाव, nashik-devlalee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/nashik-devlalee-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/nashik-devlalee-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "निरा",
-          code: "160",
-          slug: "nira-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "निरा बाजारभाव | Jio Kheti",
-            seo_description: "निरा जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "निरा बाजारभाव, nira-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/nira-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/nira-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -2394,24 +2196,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "पवनी",
-          code: "044",
-          slug: "pvnee-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "पवनी बाजारभाव | Jio Kheti",
-            seo_description: "पवनी जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "पवनी बाजारभाव, pvnee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/pvnee-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/pvnee-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "पांढरकवडा",
           code: "240",
           slug: "pandhrkvda-bajarbhav",
@@ -2584,24 +2368,6 @@ const ArrivalGrid = {
             keywords: "पारशिवनी बाजारभाव, parshivnee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/parshivnee-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/parshivnee-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "पारोळा",
-          code: "152",
-          slug: "parola-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "पारोळा बाजारभाव | Jio Kheti",
-            seo_description: "पारोळा जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "पारोळा बाजारभाव, parola-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/parola-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/parola-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -2926,24 +2692,6 @@ const ArrivalGrid = {
             keywords: "बसमत बाजारभाव, bsmt-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/bsmt-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/bsmt-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "बसमत (कुरुंडा)",
-          code: "21001",
-          slug: "bsmt-kurunda-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "बसमत (कुरुंडा) बाजारभाव | Jio Kheti",
-            seo_description: "बसमत (कुरुंडा) जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "बसमत (कुरुंडा) बाजारभाव, bsmt-kurunda-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/bsmt-kurunda-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/bsmt-kurunda-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -3366,24 +3114,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "मंठा",
-          code: "183",
-          slug: "mntha-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "मंठा बाजारभाव | Jio Kheti",
-            seo_description: "मंठा जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "मंठा बाजारभाव, mntha-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/mntha-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/mntha-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "मनमाड",
           code: "066",
           slug: "mnmad-bajarbhav",
@@ -3654,24 +3384,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "मुदखेड",
-          code: "194",
-          slug: "mudkhed-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "मुदखेड बाजारभाव | Jio Kheti",
-            seo_description: "मुदखेड जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "मुदखेड बाजारभाव, mudkhed-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/mudkhed-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/mudkhed-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "मुरबाड",
           code: "135",
           slug: "murbad-bajarbhav",
@@ -3780,24 +3492,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "मोताळा",
-          code: "227",
-          slug: "motala-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "मोताळा बाजारभाव | Jio Kheti",
-            seo_description: "मोताळा जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "मोताळा बाजारभाव, motala-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/motala-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/motala-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "मोर्शी",
           code: "224",
           slug: "morshee-bajarbhav",
@@ -3808,24 +3502,6 @@ const ArrivalGrid = {
             keywords: "मोर्शी बाजारभाव, morshee-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/morshee-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/morshee-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "मोहोळ",
-          code: "173",
-          slug: "mohol-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "मोहोळ बाजारभाव | Jio Kheti",
-            seo_description: "मोहोळ जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "मोहोळ बाजारभाव, mohol-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/mohol-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/mohol-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -4042,24 +3718,6 @@ const ArrivalGrid = {
             keywords: "राहूरी -वांबोरी बाजारभाव, rahooree-vanboree-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/rahooree-vanboree-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/rahooree-vanboree-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "राहूरी -सोनगाव",
-          code: "04202",
-          slug: "rahooree-songav-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "राहूरी -सोनगाव बाजारभाव | Jio Kheti",
-            seo_description: "राहूरी -सोनगाव जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "राहूरी -सोनगाव बाजारभाव, rahooree-songav-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/rahooree-songav-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/rahooree-songav-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -4500,24 +4158,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "वाशी (धाराशिव)",
-          code: "289",
-          slug: "vashee-dharashiv-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "वाशी (धाराशिव) बाजारभाव | Jio Kheti",
-            seo_description: "वाशी (धाराशिव) जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "वाशी (धाराशिव) बाजारभाव, vashee-dharashiv-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/vashee-dharashiv-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/vashee-dharashiv-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "वाशीम",
           code: "049",
           slug: "vasheem-bajarbhav",
@@ -4662,24 +4302,6 @@ const ArrivalGrid = {
           }
         },
         {
-          name: "शिरुर-पिंपळे जगताप",
-          code: "16102",
-          slug: "shirur-pinple-jgtap-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "शिरुर-पिंपळे जगताप बाजारभाव | Jio Kheti",
-            seo_description: "शिरुर-पिंपळे जगताप जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "शिरुर-पिंपळे जगताप बाजारभाव, shirur-pinple-jgtap-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/shirur-pinple-jgtap-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/shirur-pinple-jgtap-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
           name: "शेगाव",
           code: "230",
           slug: "shegav-bajarbhav",
@@ -4744,24 +4366,6 @@ const ArrivalGrid = {
             keywords: "श्रीगोंदा बाजारभाव, shreegonda-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/shreegonda-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/shreegonda-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "श्रीगोंदा - घोगरगाव",
-          code: "09401",
-          slug: "shreegonda-ghogrgav-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "श्रीगोंदा - घोगरगाव बाजारभाव | Jio Kheti",
-            seo_description: "श्रीगोंदा - घोगरगाव जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "श्रीगोंदा - घोगरगाव बाजारभाव, shreegonda-ghogrgav-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/shreegonda-ghogrgav-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/shreegonda-ghogrgav-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
@@ -4852,24 +4456,6 @@ const ArrivalGrid = {
             keywords: "समुद्रपूर बाजारभाव, smudrpoor-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
             og_url: "https://www.jiokheti.com/bajarbhav/district/smudrpoor-bajarbhav",
             canonical_url: "https://www.jiokheti.com/bajarbhav/district/smudrpoor-bajarbhav",
-            banner_img: "/images/blog-thumbnail/1.jpg",
-            featured_image: "/images/blog-thumbnail/1.jpg",
-            author: "Jio Kheti",
-            published_date: "01/03/2025",
-            updated_date: "01/03/2025"
-          }
-        },
-        {
-          name: "समुद्रपूर -वरवटबकाल",
-          code: "22901",
-          slug: "smudrpoor-vrvtbkal-bajarbhav",
-          subType: "district",
-          seoMeta: {
-            seo_title: "समुद्रपूर -वरवटबकाल बाजारभाव | Jio Kheti",
-            seo_description: "समुद्रपूर -वरवटबकाल जिल्ह्यातील ताजे बाजारभाव! कापूस, सोयाबीनचे दर येथे पहा. Jio Kheti वर नवीन माहिती मिळवा.",
-            keywords: "समुद्रपूर -वरवटबकाल बाजारभाव, smudrpoor-vrvtbkal-bajarbhav, पिकांचे दर, कापूस दर, Jio Kheti",
-            og_url: "https://www.jiokheti.com/bajarbhav/district/smudrpoor-vrvtbkal-bajarbhav",
-            canonical_url: "https://www.jiokheti.com/bajarbhav/district/smudrpoor-vrvtbkal-bajarbhav",
             banner_img: "/images/blog-thumbnail/1.jpg",
             featured_image: "/images/blog-thumbnail/1.jpg",
             author: "Jio Kheti",
