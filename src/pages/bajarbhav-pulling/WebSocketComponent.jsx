@@ -204,7 +204,13 @@ const WebSocketComponent = () => {
     )
   }
 
- 
+  const getTotalSelected = () => { 
+    let total = 0;
+    Object.keys(selectedOptions).forEach((section) => {
+      total += selectedOptions[section].DropdownOptions.filter((option) => option.selected).length;
+    });
+    return total;
+  }
 
   return (
     <>
@@ -280,8 +286,10 @@ const WebSocketComponent = () => {
                 </form>
 
                 <div className="container mt-5">
-                  <h4 className="mb-4">Total Progess in %: {percentage || 0}</h4>
-                
+                  <h6 className="mb-4">Total Progess in %: {percentage || 0}</h6>
+                  <h6 className="mb-4">Total Selected : { getTotalSelected() || 0}</h6>
+                  <h6 className="mb-4">Total Completed : {insert.length || 0}</h6>
+                  <h6 className="mb-4">Total Failed : {failed.length || 0}</h6>
                   <h1 className="mb-4">Script Logs</h1>
                   <div className="card">
                     <div className="card-body" style={{ height: "100px", overflowY: "auto" }} ref={logContainerRef}>
