@@ -147,7 +147,11 @@ app.post('/crop-price-prediction', (req, res) => {
           ],
           max_tokens: 1000, // Reduced for faster response
           temperature: 0.3,
-          stream: true
+          stream: true,
+          provider: {
+            order : ["Chutes"], // Prioritize Chutes as the provider
+            allow_fallbacks: false // Prevent falling back to other providers if Chutes fails
+          }
         },
         {
           headers: {
