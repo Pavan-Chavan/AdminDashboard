@@ -117,20 +117,12 @@ app.post('/crop-price-prediction', (req, res) => {
   
       // System prompt for AI in Marathi
       const systemPrompt = `
-        तुम्ही एक कृषी बाजार विश्लेषक आहात. खालील ऐतिहासिक बाजार डेटा ${commodity_name} साठी ${market_name} येथे उपलब्ध आहे.
-        कृपया हा डेटा विश्लेषित करा आणि पुढील 7 दिवसांसाठी बाजारभावाचा अंदाज द्या.
-        तुमचा अंदाज आणि स्पष्टीकरण मराठीत द्या.
-        स्पष्टीकरणात किंमतीच्या ट्रेंडचे विश्लेषण, प्रभावित करणारे घटक आणि तुमच्या अंदाजाचे तर्क समाविष्ट करा.
-  
-        तुमच्या उत्तरात खालील सूचनांचे पालन करा:
-        1. कोणत्याही चिन्हांचा वापर करू नका (उदा., *, #, _, **, -, >).
-        2. महत्त्वाच्या शब्दांना ठळक करण्यासाठी <b></b> टॅग वापरा.
-        3. उत्तर स्पष्ट आणि यादीच्या स्वरूपात द्या, ज्यामध्ये खालील गोष्टींचा समावेश असेल:
-        a. सरासरी किंमत चे ट्रेंड विश्लेषण
-        b. किंमतींवर परिणाम करणारे घटक
-        c. पुढील 7 दिवसांसाठी किंमत अंदाज
-        d. अंदाजाचे तर्क
-  
+        तुम्ही एक कृषी बाजार विश्लेषक आहात. खालील ऐतिहासिक बाजार डेटा ${commodity_name} साठी ${market_name} येथे उपलब्ध आहे. कृपया हा डेटा विश्लेषित करा आणि पुढील 7 दिवसांसाठी बाजारभावाचा अंदाज द्या. तुमचा अंदाज आणि स्पष्टीकरण मराठीत द्या. अंदाजासाठी <b>वित्तीय मॉडेल</b> (उदा., टाइम सीरिज विश्लेषण, रिग्रेशन मॉडेल किंवा इतर योग्य मॉडेल) वापरा आणि स्पष्टीकरणात मॉडेलचा उल्लेख करा. स्पष्टीकरणात किंमतीच्या ट्रेंडचे विश्लेषण, प्रभावित करणारे घटक आणि तुमच्या अंदाजाचे तर्क समाविष्ट करा.
+        तुमच्या उत्तरात खालील सूचनांचे काटेकोरपणे पालन करा:
+        कोणत्याही चिन्हांचा वापर करू नका (उदा., *, #, _, **, -, >, :, |). शीर्षके किंवा मजकूर यांच्यासाठी केवळ साधा मजकूर किंवा <b></b> टॅग वापरा.
+        महत्त्वाच्या शब्दांना ठळक करण्यासाठी <b></b> टॅग वापरा.
+        उत्तर स्पष्ट आणि यादीच्या स्वरूपात द्या, ज्यामध्ये खालील गोष्टींचा समावेश असेल: a. सरासरी किंमतीचे ट्रेंड विश्लेषण b. ${commodity_name} ची किंमतींवर परिणाम करणारे घटक c. पुढील 7 दिवसांसाठी किंमत अंदाज d. अंदाजाचे तर्क आणि वापरलेले वित्तीय मॉडेल
+        तुमच्या उत्तरात कोणतेही संकेतस्थळ किंवा संदर्भ URL समाविष्ट करू नका.      
         डेटा:
         ${dataString}
       `;
@@ -140,24 +132,20 @@ app.post('/crop-price-prediction', (req, res) => {
       axios.post(
         'https://openrouter.ai/api/v1/chat/completions',
         {
-          model: 'deepseek/deepseek-chat-v3-0324:free',
+          model: 'google/gemini-2.0-flash-001',
           messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: 'कृपया बाजारभावाचा अंदाज आणि स्पष्टीकरण मराठीत द्या.' }
           ],
           max_tokens: 1000, // Reduced for faster response
           temperature: 0.3,
-          stream: true,
-          provider: {
-            order : ["Chutes"], // Prioritize Chutes as the provider
-            allow_fallbacks: false // Prevent falling back to other providers if Chutes fails
-          }
+          stream: true
         },
         {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            'HTTP-Referer': 'jiokheti.com', // Optional for OpenRouter
+            'HTTP-Referer': 'www.jiokheti.com', // Optional for OpenRouter
             'X-Title': 'Crop Price Predictor'
           },
           responseType: 'stream' // Enable streaming
