@@ -5,7 +5,7 @@ const app = express();
 const lodash = require('lodash');
 
 app.get('/getCommodityData', async (req, res) => {
-  const { page , limit , fromDate, toDate, name, view } = req.query;
+  const { page , limit , fromDate, toDate, name, view, option } = req.query;
 
     // Validate input
     if (!name || !view) {
@@ -18,6 +18,7 @@ app.get('/getCommodityData', async (req, res) => {
     const offset = (page - 1) * limit;
     const table = view === 'crop' ? 'crop_commodity_data' : 'district_commodity_data';
     const filterColumn = view === 'crop' ? 'commodity_name' : 'district_name';
+    const optionColumn = view === 'crop' ? 'market_name' : 'commodity_name';
 
     // Build the SQL query
     let query = `
@@ -35,6 +36,11 @@ app.get('/getCommodityData', async (req, res) => {
     `;
 
     const params = [name];
+
+    if (option) {
+      query += ` AND ${optionColumn} = ?`;
+      params.push(option);
+    }
 
     // Add date range if provided
     if (fromDate && toDate) {
@@ -93,6 +99,11 @@ app.get('/getCommodityData', async (req, res) => {
             WHERE ${filterColumn} = ?
         `;
         const countParams = [name];
+
+        if (option) {
+          countQuery += ` AND ${optionColumn} = ?`;
+          countParams.push(option);
+        }
 
         if (fromDate && toDate) {
             countQuery += ' AND data_date BETWEEN ? AND ?';
@@ -269,5 +280,52 @@ app.get('/getCropDateWiseMarketData', async (req, res) => {
       });
     });
   });
+
+  app.get('/getCropDistrictDropdownOption', (req, res) => {
+    const { name, view } = req.query;
+
+    // Validate input
+    if (!name || !view) {
+        return res.status(400).json({ error: 'name and view are required parameters' });
+    }
+    if (!['crop', 'district'].includes(view)) {
+        return res.status(400).json({ error: 'view must be either "crop" or "district"' });
+    }
+
+    // Query for unique names
+    let uniqueQuery;
+    let uniqueParams = [name];
+
+    if (view === 'crop') {
+        uniqueQuery = `
+            SELECT DISTINCT market_name AS name
+            FROM crop_commodity_data
+            WHERE commodity_name = ?
+            ORDER BY market_name
+        `;
+    } else {
+        uniqueQuery = `
+            SELECT DISTINCT commodity_name AS name
+            FROM district_commodity_data
+            WHERE district_name = ?
+            ORDER BY commodity_name
+        `;
+    }
+
+    // Execute query
+    db.query(uniqueQuery, uniqueParams, (err, uniqueResults) => {
+        if (err) {
+            console.error('Error processing request:', err);
+            return res.status(500).json({ error: err.message });
+        }
+
+        // Extract unique names list
+        const uniqueNames = uniqueResults.map(row => row.name);
+
+        res.status(200).json({
+            uniqueNames
+        });
+    });
+});
 
 module.exports = app;

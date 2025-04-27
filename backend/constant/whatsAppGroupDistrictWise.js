@@ -1,0 +1,41 @@
+const whatsappGroups = {
+    'अहिल्यानगर': 'https://chat.whatsapp.com/KijtlD2AgYG16E1vr0WyaH',
+    'अकोला': 'https://chat.whatsapp.com/KoeiNo9uDi7AALnqWqwEI8',
+    'अमरावती': 'https://chat.whatsapp.com/J2nTQSRK21C4KpEa4fl4Ws',
+    'छ. संभाजीनगर': 'https://chat.whatsapp.com/JIWvFdEQccY99V8caSwpwO',
+    'बीड': 'https://chat.whatsapp.com/KTEvvvpPkAGCbcC1jXvhGD',
+    'भंडारा': 'https://chat.whatsapp.com/CY3hlEtMKWhJTg2qqd1N1X',
+    'बुलढाणा': 'https://chat.whatsapp.com/FnL8xRkip4JAG9ny1GnNLi',
+    'चंद्रपूर': 'https://chat.whatsapp.com/JqWe7hCY9emIdv2Vs1Zy6m',
+    'धुळे': 'https://chat.whatsapp.com/Hp307BJP47MLQ7yaa3Gb5z',
+    'गडचिरोली': 'https://chat.whatsapp.com/HMSNQxMRaUu02hwbhpbrID',
+    'गोंदिया': 'https://chat.whatsapp.com/HytrUkMWe2A4ssgQNxmxKk',
+    'हिंगोली': 'https://chat.whatsapp.com/HoImKPwgGIiL29ZH6I80pX',
+    'जळगाव': 'https://chat.whatsapp.com/EKyKM6tGgIbIC6tklNUZo2',
+    'जालना': 'https://chat.whatsapp.com/K4TsZwwolNf78J4gQXd8nM',
+    'कोल्हापूर': 'https://chat.whatsapp.com/JwFmPNR50nlJ7IZII3xM7Q',
+    'लातूर': 'https://chat.whatsapp.com/DSA4H3ojR8z62NSNO6ibAF',
+    'मुंबई शहर': 'https://chat.whatsapp.com/KOI3aNpHrZyDBo2138t8uK',
+    'नागपूर': 'https://chat.whatsapp.com/DqtTTZn8xcq9l2DX9C5rJj',
+    'नांदेड': 'https://chat.whatsapp.com/GEgYY1tMGGA45JFxkp4ieN',
+    'नंदुरबार': 'https://chat.whatsapp.com/G9yfsJfDAKKHcNBZ2qQCsY',
+    'नाशिक': 'https://chat.whatsapp.com/CfWq6z2R71FILPpIFCPC1j',
+    'धाराशिव': 'https://chat.whatsapp.com/IgCMAB0S4bU81wWzyTutj6',
+    'पालघर': 'https://chat.whatsapp.com/K6EQxpQxLac9ao1z3WOIfA',
+    'परभणी': 'https://chat.whatsapp.com/GlUHMAR3IWdHDd1rFgxOsZ',
+    'पुणे': 'https://chat.whatsapp.com/BUdUTDNPGtbCnq05z3EibS',
+    'रायगड': 'https://chat.whatsapp.com/CxvPG8oWIGi6pTL9W2y5ia',
+    'रत्नागिरी': 'https://chat.whatsapp.com/FoLU1u8ojLIIQzcEkwb2KW',
+    'सांगली': 'https://chat.whatsapp.com/IwckFfSnSZ1AT0tEtUTa1f',
+    'सातारा': 'https://chat.whatsapp.com/BBV80Cipk1GG2EHxItE9Qw',
+    'सिंधुदुर्ग': 'https://chat.whatsapp.com/BtW2NpsqFzd8qKHbbeRflA',
+    'सोलापूर': 'https://chat.whatsapp.com/D4EJbsnVwaP3gjCdbu7nUG',
+    'ठाणे': 'https://chat.whatsapp.com/KsLKckWIq7yIiumaZq4UGD',
+    'वर्धा': 'https://chat.whatsapp.com/JABlP6YIWssJ9UPJTsgDpq',
+    'वाशिम': 'https://chat.whatsapp.com/J6PazJgZM2j4yh0SNCz3DS',
+    'यवतमाळ': 'https://chat.whatsapp.com/EdfdnKS166DALJjQOOwxpE'
+};
+
+  module.exports = {
+    whatsappGroups
+  };
