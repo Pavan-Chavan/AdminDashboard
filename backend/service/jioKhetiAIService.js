@@ -40,7 +40,7 @@ app.post('/weather-predict', async (req, res) => {
       const response = await axios.post(
         'https://openrouter.ai/api/v1/chat/completions',
         {
-          model: 'deepseek/deepseek-chat-v3-0324:free',
+          model: 'google/gemini-2.0-flash-001',
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 1000,
           temperature: 0.3, // Low temperature for consistent numerical outputs
