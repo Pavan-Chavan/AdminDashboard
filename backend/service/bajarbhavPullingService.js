@@ -282,7 +282,7 @@ async function storeDistrictData(records) {
                     record.district_name,
                     record.date,
                     record.commodity_name,
-                    record.variety === "---" ? null : record.variety, // Handle "---" as NULL
+                    record.variety === "---" ? "" : record.variety, // Handle "---" as NULL
                     record.unit,
                     record.arrival_quantity,
                     record.min_price,
@@ -406,7 +406,7 @@ async function storeCropData(records) {
                     record.commodity_name,
                     record.market_name,
                     record.data_date,
-                    record.variety === "---" ? null : record.variety,
+                    record.variety === "---" ? "" : record.variety,
                     record.unit,
                     record.arrival_quantity,
                     record.min_price,
