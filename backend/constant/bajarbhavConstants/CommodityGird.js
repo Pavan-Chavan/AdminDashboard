@@ -286,7 +286,7 @@ const CommodityGird = {
                 is_frequent: true
             },
             {
-                name: "डाळिंब",
+                name: "डाळींब",
                 code: "07007",
                 slug: "dalimb-bajarbhav",
                 subType: "crop",

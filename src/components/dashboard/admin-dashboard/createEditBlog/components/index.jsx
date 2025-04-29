@@ -8,7 +8,8 @@ import axios from "axios";
 import { api, krushiMahaDomain } from "@/utils/apiProvider";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { showAlert } from "@/utils/isTextMatched";
-import { formatPublishDate } from "@/utils/DOMUtils";
+import { createSlug, formatPublishDate } from "@/utils/DOMUtils";
+import { create } from "lodash";
 
 const Index = () => {
   let params = useParams();
@@ -182,7 +183,9 @@ const Index = () => {
           "title": value,
           "seo_title" : value,
           "og_title" :value,
-          "twitter_title" : value
+          "twitter_title" : value,
+          "slug": createSlug(value),
+          "canonical_url" : generateCanonicalUrl(createSlug(value)),
        })); 
     } else if (name === "seo_description") {
       setBlogPostData((prevState) => ({
@@ -194,7 +197,7 @@ const Index = () => {
     }else if (name === "slug") {
       setBlogPostData((prevState) => ({
           ...prevState,
-          "slug": value,
+          "slug": modifySlug(value),
           "canonical_url" : generateCanonicalUrl(value),
           "og_url" : generateCanonicalUrl(value)
        }));
@@ -207,6 +210,11 @@ const Index = () => {
     
   }
 
+  const modifySlug = (slug) => {
+    const modifiedSlug = slug.replace(/[^a-zA-Z0-9-]/g, "-").replace(/--+/g, "-").toLowerCase();
+    return modifiedSlug;
+  
+  }
   const handleCheckBox = (checkbox)=>{
     const {name,value} = checkbox;
     setBlogPostData((prevState) => ({

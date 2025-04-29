@@ -36,7 +36,7 @@ app.get('/getCommodityData', async (req, res) => {
     `;
 
     const params = [name];
-
+    let date_order = 'DESC';
     if (option) {
       query += ` AND ${optionColumn} = ?`;
       params.push(option);
@@ -45,6 +45,7 @@ app.get('/getCommodityData', async (req, res) => {
     // Add date range if provided
     if (fromDate && toDate) {
         query += ' AND data_date BETWEEN ? AND ?';
+        date_order = 'ASC';
         params.push(fromDate, toDate);
     } else if (fromDate) {
         query += ' AND data_date >= ?';
@@ -54,7 +55,7 @@ app.get('/getCommodityData', async (req, res) => {
         params.push(toDate);
     }
 
-    query += ' ORDER BY data_date DESC LIMIT ? OFFSET ?';
+    query += ` ORDER BY data_date ${date_order} LIMIT ? OFFSET ?`;
     params.push(parseInt(limit), parseInt(offset));
 
     // Execute query
@@ -168,7 +169,7 @@ app.get('/getCropDateWiseMarketData', async (req, res) => {
     `;
   
     const params = [];
-  
+    let date_order = 'DESC';
     // Add filters for apmc and crop if provided
     if (apmc) {
       query += ' AND apmc_name = ?';
@@ -182,6 +183,7 @@ app.get('/getCropDateWiseMarketData', async (req, res) => {
     // Add date range if provided
     if (fromDate && toDate) {
       query += ' AND date BETWEEN ? AND ?';
+      date_order = 'ASC';
       params.push(fromDate, toDate);
     } else if (fromDate) {
       query += ' AND date >= ?';
@@ -191,7 +193,7 @@ app.get('/getCropDateWiseMarketData', async (req, res) => {
       params.push(toDate);
     }
   
-    query += ' ORDER BY date DESC LIMIT ? OFFSET ?';
+    query += ` ORDER BY date ${date_order} LIMIT ? OFFSET ?`;
     params.push(parseInt(limit), parseInt(offset));
   
     // Execute query

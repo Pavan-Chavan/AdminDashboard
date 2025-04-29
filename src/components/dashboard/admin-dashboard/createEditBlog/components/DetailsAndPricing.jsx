@@ -9,7 +9,7 @@ const DetailsAndPricing = ({
 
   return (
     <div className="col-xl-10">
-      <div className="text-18 fw-500 mb-10">Details & Pricing</div>
+      <div className="text-18 fw-500 mb-10">Blog Details</div>
       <div className="row x-gap-20 y-gap-20">
         <div className="col-12">
           <ReactQuill
