@@ -18,7 +18,8 @@ export default function PushNotification({ searchParameter = "", refresh }) {
   const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useState({ page: 1, limit: 30 });
   const [error, setError] = useState(null);
-  
+  const [subCount, setSubCount] = useState(0);
+
   const fetchNotifications = async () => {
     setLoading(true);
     setError(null);
@@ -43,6 +44,24 @@ export default function PushNotification({ searchParameter = "", refresh }) {
     }
   };
 
+  const fetchSubCount = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await axios.get(`${api}/api/push-notification/notifications/sub-count`);
+      if (response.status === 200) {
+        setSubCount(response.data.totalRecords);
+      } else {
+        setError("Failed to fetch notifications.");
+      }
+    } catch (err) {
+      setError("An error occurred while fetching notifications.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Format vibrate array to readable string
   const renderVibrate = (vibrate) => {
     return vibrate ? vibrate.join(", ") : "N/A";
@@ -50,6 +69,7 @@ export default function PushNotification({ searchParameter = "", refresh }) {
 
   useEffect(() => {
     fetchNotifications();
+    fetchSubCount();
   }, [refresh, searchParams, searchParameter]);
 
   return (
@@ -69,6 +89,9 @@ export default function PushNotification({ searchParameter = "", refresh }) {
                 <div><h1 className="text-30 lh-14 fw-600">Push Notification</h1>
                 <div className="text-15 text-light-1">
                   Manage the list of all available push notifications here.
+                </div>
+                <div className="text-15 text-light-1">
+                  Total Subscriptions: {subCount}
                 </div></div>
                 <div className="col-auto">
                   <AddPushNotification/>

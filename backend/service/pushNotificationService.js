@@ -82,4 +82,25 @@ app.get('/notifications', async (req, res) => {
 	}
 });
 
+app.get('/notifications/sub-count', async (req, res) => {
+	const countQuery = 'SELECT COUNT(*) AS totalRecords FROM subscriptions';
+
+	try {
+		const totalRecordsResult = await new Promise((resolve, reject) => {
+			db.query(countQuery, (err, results) => {
+				if (err) return reject(err);
+				resolve(results[0].totalRecords);
+			});
+		});
+
+		res.status(200).json({
+			success: true,
+			totalRecords: totalRecordsResult,
+		});
+	} catch (error) {
+		console.error('Error fetching notification count:', error);
+		res.status(500).json({ success: false, error: 'Failed to fetch notification count' });
+	}
+});
+
 module.exports = app;
