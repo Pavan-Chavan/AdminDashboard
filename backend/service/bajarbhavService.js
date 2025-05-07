@@ -330,4 +330,37 @@ app.get('/getCropDateWiseMarketData', async (req, res) => {
     });
 });
 
+app.get('/getApmcDropdownOptions', (req, res) => {
+  const { crop } = req.query;
+
+  // Validate input
+  if (!crop) {
+    return res.status(400).json({ error: 'crop is a required parameter' });
+  }
+
+  // Query for distinct APMC names
+  const query = `
+    SELECT DISTINCT apmc_name AS name
+    FROM apmc_crop_prices
+    WHERE crop_name = ?
+    ORDER BY apmc_name
+  `;
+  const params = [crop];
+
+  // Execute query
+  db.query(query, params, (err, results) => {
+    if (err) {
+      console.error('Error processing request:', err);
+      return res.status(500).json({ error: err.message });
+    }
+
+    // Extract distinct APMC names
+    const uniqueNames = results.map(row => row.name);
+
+    res.status(200).json({
+      uniqueNames
+    });
+  });
+});
+
 module.exports = app;

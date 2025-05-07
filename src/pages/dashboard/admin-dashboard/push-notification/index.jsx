@@ -106,7 +106,7 @@ export default function PushNotification({ searchParameter = "", refresh }) {
                     <p>Loading notifications...</p>
                   ) : error ? (
                     <p className="text-red-1">{error}</p>
-                  ) : notifications.results.length === 0 ? (
+                  ) : notifications?.results?.length === 0 ? (
                     <p>No notifications available.</p>
                   ) : (
                     <div className="overflow-scroll scroll-bar-1">
@@ -125,7 +125,7 @@ export default function PushNotification({ searchParameter = "", refresh }) {
                           </tr>
                         </thead>
                         <tbody>
-                          {notifications.results.map((notification, index) => (
+                          {notifications.results?.map((notification, index) => (
                             <tr key={index}>
                               <td>{notification.title}</td>
                               <td>{notification.description}</td>

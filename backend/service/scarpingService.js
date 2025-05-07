@@ -3,7 +3,7 @@ const axios = require('axios');
 const baseURL = 'https://www.msamb.com/ApmcDetail/APMCPriceInformation';
 const https = require('https');
 
-const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 15) => {
+const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 10) => {
   try {
     // Calculate the total number of dropdown options to process
     let totalOptions = 0;
@@ -137,7 +137,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 15) 
               }
             }));
           } catch (apiError) {
-            console.log(apiError.message);
+            console.log(apiError);
             ws.send(JSON.stringify({
               status: "error",
               message: `API call failed: ${apiError.message}`,
