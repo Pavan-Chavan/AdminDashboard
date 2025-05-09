@@ -112,7 +112,8 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 10) 
           // Prepare data for API call
           const payload = {
             tableId: marketTypeData.tableId,
-            table_data: JSON.stringify(data)
+            table_data: JSON.stringify(data),
+            name: option.name,
           };
           // Call the endpoint
           try {
@@ -126,6 +127,7 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 10) 
               }
             );
             console.log(marketTypeData.name + " - " + option.name + " - " + option.code + " - " + response.data.status);
+            // console.log("data :: " + data);
             ws.send(JSON.stringify({
               status: response.data.status,
               message: response.data.message,
@@ -137,10 +139,11 @@ const scarpingWeb = async (marketTypes, ws, marketTypesDetails, batchSize = 10) 
               }
             }));
           } catch (apiError) {
-            console.log(apiError);
+            // console.log(apiError.response.data.message);
+            // console.log("data :: " + data);
             ws.send(JSON.stringify({
               status: "error",
-              message: `API call failed: ${apiError.message}`,
+              message: `API call failed: ${apiError.response.data.message}`,
               data: {
                 Section: marketTypeData.name,
                 Name: option.name,

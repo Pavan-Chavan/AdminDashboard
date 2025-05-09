@@ -22,7 +22,7 @@ app.get('/get-sections', (req, res) => {
 });
 
 app.post('/insert-market-data', async (req, res) => {
-    const { table_data, tableId } = req.body;
+    const { table_data, tableId, name } = req.body;
     try {
         if (!table_data) {
             return res.status(400).json({
@@ -33,15 +33,15 @@ app.post('/insert-market-data', async (req, res) => {
         let data = null;
         switch (tableId) {
             case "DistrictCommodityGird":
-                data = await extractDistrictData(table_data);
+                data = await extractDistrictData(table_data, name);
                 await storeDistrictData(data);
                 break;
             case "ArrivalGird":
-                data = await extractData(table_data);
+                data = await extractData(table_data, name);
                 await storeData(data);
                 break;
             case "CommodityGird":
-                data = await extractCropData(table_data);
+                data = await extractCropData(table_data, name);
                 await storeCropData(data);
                 break;
             default:
@@ -63,7 +63,7 @@ app.post('/insert-market-data', async (req, res) => {
     }
 });
 
-async function extractData(html) {
+async function extractData(html, name) {
     try {
         const $ = cheerio.load(JSON.parse(html));
         const records = [];
@@ -77,7 +77,7 @@ async function extractData(html) {
         }
 
         // Extract APMC name
-        const apmcName = $('#APMCsAPMC').text().trim();
+        const apmcName = $('#APMCsAPMC').text().trim() || name;;
 
         if (!apmcName) {
             console.error('APMC name is missing');
@@ -185,8 +185,9 @@ async function storeData(records) {
     }
 }
 
-async function extractDistrictData(html) {
+async function extractDistrictData(html, name) {
     try {
+        console.log("Starting to extract district data from HTML.");
         const $ = cheerio.load(JSON.parse(html)); // Assuming html is already a string, no JSON.parse needed
         const records = [];
         let currentDate = null;
@@ -198,14 +199,16 @@ async function extractDistrictData(html) {
             console.error("HTML is not district-specific (DistrictCommodityGird not found)");
             throw new Error("Invalid HTML structure");
         }
+        console.log("District-specific grid found in HTML.");
 
         // Extract district name
-        const districtName = $("#APMCDistrictCommodity").text().trim();
+        const districtName = $("#APMCDistrictCommodity").text().trim() || name;
 
         if (!districtName) {
             console.error("District name is missing");
             throw new Error("Unable to determine district name");
         }
+        console.log(`Extracted district name: ${districtName}`);
 
         // Process table rows
         $("#tblDistrictCommodityGird tr").each((index, element) => {
@@ -215,6 +218,7 @@ async function extractDistrictData(html) {
             if (columns.length === 1) {
                 // Date row
                 const dateText = columns.text().trim();
+                console.log(`Processing date row: ${dateText}`);
                 // Validate and convert DD/MM/YYYY to YYYY-MM-DD
                 const dateMatch = dateText.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
                 if (!dateMatch) {
@@ -230,6 +234,7 @@ async function extractDistrictData(html) {
                     currentDate = null;
                     return;
                 }
+                console.log(`Extracted date: ${currentDate}`);
             } else if (columns.length === 7 && currentDate) {
                 // Data row
                 const record = {
@@ -243,10 +248,12 @@ async function extractDistrictData(html) {
                     max_price: parseFloat(columns.eq(5).text().trim()) || 0,
                     avg_price: parseFloat(columns.eq(6).text().trim()) || 0
                 };
+                // console.log(`Extracted record: ${JSON.stringify(record)}`);
                 records.push(record);
             } else if (columns.length === 4 && columns.eq(0).text().includes("एकुण आवक")) {
                 // Total arrival row (optional handling)
                 const totalArrival = parseFloat(columns.eq(1).text().trim()) || 0;
+                console.log(`Total arrival row found: ${totalArrival}`);
                 // Note: Not storing totalArrival in records to match table schema
             }
         });
@@ -256,6 +263,7 @@ async function extractDistrictData(html) {
             throw new Error("No valid data extracted from HTML");
         }
 
+        console.log(`Successfully extracted ${records.length} records from district data.`);
         return records;
     } catch (error) {
         console.error("Error extracting district data:", error);
@@ -312,7 +320,7 @@ async function storeDistrictData(records) {
     }
 }
 
-async function extractCropData(html) {
+async function extractCropData(html, name) {
     try {
         const $ = cheerio.load(JSON.parse(html)); // Assuming html is already a string, no JSON.parse needed
         const records = [];
@@ -327,7 +335,7 @@ async function extractCropData(html) {
         }
 
         // Extract commodity name
-        const commodityName = $("#APMCCommodity").text().trim();
+        const commodityName = $("#APMCCommodity").text().trim() || name;;
 
         if (!commodityName) {
             console.error("Commodity name is missing");
