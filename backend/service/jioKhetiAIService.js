@@ -55,7 +55,7 @@ app.post('/weather-predict', async (req, res) => {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            'HTTP-Referer': 'http://localhost:3000', // Optional for OpenRouter
+            'HTTP-Referer': 'Wheather.app', // Optional for OpenRouter
             'X-Title': 'Weather Predictor', // Optional for OpenRouter
           },
         }
@@ -150,7 +150,7 @@ app.post('/crop-price-prediction', (req, res) => {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            'HTTP-Referer': 'www.jiokheti.com', // Optional for OpenRouter
+            'HTTP-Referer': 'croppricejiokheit.com', // Optional for OpenRouter
             'X-Title': 'Crop Price Predictor'
           },
           responseType: 'stream' // Enable streaming
@@ -267,7 +267,7 @@ app.post('/district-crop-ai', (req, res) => {
               headers: {
                   'Content-Type': 'application/json',
                   Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                  'HTTP-Referer': 'www.jiokheti.com',
+                  'HTTP-Referer': 'districtcropai.com', // Optional for OpenRouter
                   'X-Title': 'District Crop AI Predictor'
               },
               responseType: 'stream'

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ActionsButton from "./ActionsButton";
-import { api } from "@/utils/apiProvider";
+import { api, krushiMahaDomain } from "@/utils/apiProvider";
 import { showAlert } from "@/utils/isTextMatched";
 import { useNavigate } from "react-router-dom";
 import { getId } from "@/utils/DOMUtils";
 import Pagination from "@/components/hotel-list/common/Pagination";
-import { statesArray } from "../../../../../constant/weather/states-data";
 import { districts } from "../../../../../constant/weather/districts-data";
 import { talukas } from "@/constant/weather/talukas-data";
+import { statesArray } from "../../../../../constant/weather/states-data";
 
-const UserTable = ({ searchParameter = "", refresh }) => {
-  const [users, setUsers] = useState([]);
+const BlogCommentTable = ({ searchParameter = "", refresh }) => {
+  const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,24 +27,24 @@ const UserTable = ({ searchParameter = "", refresh }) => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useState({ page: 1, limit: 30 });
 
-  // Fetch users
+  // Fetch comments
   const fetchUsers = async () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`${api}/api/user/users`, {
+      const response = await axios.get(`${api}/api/admin/comments`, {
         params: {
           ...searchParams,
           search: searchParameter,
         },
       });
       if (response.status === 200) {
-        setUsers(response.data);
+        setComments(response.data);
       } else {
-        setError("Failed to fetch users.");
+        setError("Failed to fetch comments.");
       }
     } catch (err) {
-      setError("An error occurred while fetching users.");
+      setError("An error occurred while fetching comments.");
       console.error(err);
     } finally {
       setLoading(false);
@@ -110,9 +110,9 @@ const UserTable = ({ searchParameter = "", refresh }) => {
   };
 
   // Handle Delete
-  const handleDelete = async (id) => {
+  const handleDelete = async (type,id) => {
     try {
-      await axios.delete(`${api}/api/user/delete-user/${id}`);
+      await axios.delete(`${api}/api/delete-blog-comment/${type}/${id}`);
       showAlert("User deleted successfully.", "success");
       fetchUsers();
     } catch (error) {
@@ -123,6 +123,13 @@ const UserTable = ({ searchParameter = "", refresh }) => {
       );
     }
   };
+
+  const onUserNameClick = (userId) => {
+    window.open(`${krushiMahaDomain}/user-info/${userId}`, "_blank");
+  };
+  const onBlogNameClick = (blogSlug) => {
+    window.open(`${krushiMahaDomain}/blog/${blogSlug}`, "_blank");
+  }
 
   // Close Modal
   const closeModal = () => {
@@ -141,43 +148,39 @@ const UserTable = ({ searchParameter = "", refresh }) => {
   return (
     <>
       <div className="tabs -underline-2 js-tabs">
-        Total Users: {users?.pagination?.totalRecords || 0}
+        Total Comments: {comments?.pagination?.totalRecords || 0}
         <div className="tabs__content pt-30 js-tabs-content">
           <div className="tabs__pane -tab-item-1 is-tab-el-active">
             {loading ? (
-              <p>Loading users...</p>
+              <p>Loading comments...</p>
             ) : error ? (
               <p className="text-red-1">{error}</p>
-            ) : users?.results.length === 0 ? (
-              <p>No users available.</p>
+            ) : comments?.results.length === 0 ? (
+              <p>No comments available.</p>
             ) : (
               <div className="overflow-scroll scroll-bar-1">
                 <table className="table-3 -border-bottom col-12">
                   <thead className="bg-light-2">
                     <tr>
-                      <th>Name</th>
-                      <th>Mobile</th>
-                      <th>State</th>
-                      <th>District</th>
-                      <th>Taluka</th>
-                      <th>Address</th>
+                      <th>Comment</th>
+                      <th>User Name</th>
+                      <th>Blog Title</th>
+                      <th>Time</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {users.results.map((user, index) => (
+                    {comments.results.map((comment, index) => (
                       <tr key={index}>
-                        <td>{user.name || "N/A"}</td>
-                        <td>{user.number || "N/A"}</td>
-                        <td>{user.state || "N/A"}</td>
-                        <td>{user.district || "N/A"}</td>
-                        <td>{user.taluka || "N/A"}</td>
-                        <td>{user.address || "N/A"}</td>
+                        <td>{comment.comment || "N/A"}</td>
+                        <td onClick={()=>{onUserNameClick(comment.user_id)}}>{comment.user_name || "N/A"}</td>
+                        <td onClick={()=>{onBlogNameClick(comment.blog_slug)}}>{comment.blog_name || "N/A"}</td>
+                        <td>{comment.time || "N/A"}</td>
                         <td>
                           <ActionsButton
-                            user={user}
-                            onEdit={() => handleEdit(user)}
-                            onDelete={() => handleDelete(user.id)}
+                            comment={comment}
+                            onEdit={() => {}}
+                            onDelete={() => handleDelete(comment.type,comment.id)}
                           />
                         </td>
                       </tr>
@@ -189,7 +192,7 @@ const UserTable = ({ searchParameter = "", refresh }) => {
           </div>
         </div>
         <Pagination
-          totalPages={users?.pagination?.totalPages}
+          totalPages={comments?.pagination?.totalPages}
           setSearchParams={setSearchParams}
         />
       </div>
@@ -328,4 +331,4 @@ const UserTable = ({ searchParameter = "", refresh }) => {
   );
 };
 
-export default UserTable;
+export default BlogCommentTable;

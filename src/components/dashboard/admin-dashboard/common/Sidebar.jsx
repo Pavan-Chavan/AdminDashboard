@@ -34,6 +34,16 @@ const Sidebar = () => {
     },
     {
       icon: "/img/dashboard/sidebar/gear.svg",
+      title: "Users",
+      href: "users"
+    },
+    {
+      icon: "/img/dashboard/sidebar/gear.svg",
+      title: "Blog Comments",
+      href: "blogs-comments"
+    },
+    {
+      icon: "/img/dashboard/sidebar/gear.svg",
       title: "Settings",
       href: "settings",
       allowedRole: ["admin", "venue-user", "vendor-user"],

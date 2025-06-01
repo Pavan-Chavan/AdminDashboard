@@ -1,86 +1,106 @@
-
 const express = require('express');
-require('dotenv').config();
-const db = require("../db");
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+const db = require('../db'); // Assuming db is a MySQL connection with callback-based query method
 const app = express();
-const crypto = require("crypto");
-const sendEmail = require('../Utils/SendEmail');
 
-let otpStore = {};
+app.use(express.json());
 
-app.post('/login', (req, res) => {
-    const { email, password, role } = req.body;
-  
-    if (!email || !password || !role) {
-      return res.status(400).json({ message: 'Email, password, and role are required' });
-    }
+const JWT_SECRET = process.env.JWT_SECRET || 'test';
 
-    // Check if the user exists
-    
-    const query = 'SELECT * FROM user WHERE email = ? AND role = ?';
-    db.query(query, [email,role], async (err, results) => {
-      if (err || results.length === 0) {
-        return res.status(401).json({ error: 'Invalid credentials' });
-      }
-      const user = results[0];
-  
-      // Compare passwords
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-      if (!isPasswordValid) {
-        return res.status(401).json({ error: 'Invalid credentials pass' });
-      }
-
-      res.status(200).json({ message: 'Login successful', userDate : user });
-    });
-  });
-  
-  app.post("/send-otp", async (req, res) => {
-    const { email } = req.body;
-    if (!email) {
-        return res.status(400).send({ message: "Email is required" });
-    }
-
-    const otp = crypto.randomInt(100000, 999999); 
-    otpStore[email] = otp;
-
-    setTimeout(() => {
-        delete otpStore[email];
-        console.log(`OTP for ${email} has expired.`);
-    }, 5 * 60 * 1000);
-
-    const mailOptions = {
-      from: 'info@wedeazzy.com', // sender address
-      to: email, // list of receivers
-      subject: `OTP from Wedeazzy !!`,
-      text: `Hello Lovely Couple,
-        
-Here is your OTP: ${otp}.
-
-This will only be valid for 5 minutes.
-
-Warm regards,
-Wedeazzy Team`, 
-    };
-
+// Signup endpoint
+app.post('/signup', async (req, res) => {
     try {
-        await sendEmail(mailOptions);
-        res.status(200).send({ message: "OTP sent successfully" });
+        const { name, number, state, district, taluka, address, photo, password } = req.body;
+
+        // Validate required fields
+        if (!name || !number || !password) {
+            return res.status(400).json({ error: 'Name, number, and password are required' });
+        }
+
+        // Check if number already exists
+        db.query('SELECT * FROM users WHERE number = ?', [number], async (err, existingUser) => {
+            if (err) {
+                console.error('Database error:', err);
+                return res.status(500).json({ error: 'Signup failed. Please try again.' });
+            }
+
+            if (existingUser.length > 0) {
+                return res.status(400).json({ error: 'यह नंबर पहले से मौजूद है' });
+            }
+
+            // Hash password
+            const saltRounds = 10;
+            const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+            // Insert user into database
+            db.query(
+                'INSERT INTO users (name, number, state, district, taluka, address, photo, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+                [name, number, state || null, district || null, taluka || null, address || null, photo || null, hashedPassword],
+                (err, result) => {
+                    if (err) {
+                        console.error('Database error:', err);
+                        return res.status(500).json({ error: 'Signup failed. Please try again.' });
+                    }
+
+                    // Generate JWT
+                    const token = jwt.sign({ id: result.insertId, number }, JWT_SECRET, { expiresIn: '1h' });
+
+                    try {
+                      const decoded = jwt.verify(token, JWT_SECRET);
+                      console.log('Decoded:', decoded);
+                    } catch (error) {
+                      console.error('Verification failed:', error);
+                    }
+                    res.status(201).json({ token });
+                }
+            );
+        });
     } catch (error) {
-        res.status(500).send({ message: "Error sending email", error });
+        console.error('Signup error:', error);
+        res.status(500).json({ error: 'Signup failed. Please try again.' });
     }
 });
 
-// Verify OTP
-app.post("/verify-otp", (req, res) => {
-    const { email, otp } = req.body;
+// Login endpoint
+app.post('/login', async (req, res) => {
+    try {
+        const { number, password } = req.body;
 
-    if (otpStore[email] && otpStore[email].toString() === otp) {
-        delete otpStore[email]; // Clear OTP after verification
-        res.status(200).send({ message: "OTP verified successfully" });
-    } else {
-        res.status(400).send({ message: "Invalid or expired OTP" });
+        // Validate input
+        if (!number || !password) {
+            return res.status(400).json({ error: 'नंबर और पासवर्ड आवश्यक हैं' });
+        }
+
+        // Find user
+        db.query('SELECT * FROM users WHERE number = ?', [number], async (err, users) => {
+            if (err) {
+                console.error('Database error:', err);
+                return res.status(500).json({ error: 'लॉगिन विफल रहा। कृपया पुनः प्रयास करें।' });
+            }
+
+            if (users.length === 0) {
+                return res.status(401).json({ error: 'अमान्य नंबर या पासवर्ड' });
+            }
+
+            const user = users[0];
+
+            // Verify password
+            const isPasswordValid = await bcrypt.compare(password, user.password);
+            if (!isPasswordValid) {
+                return res.status(401).json({ error: 'अमान्य नंबर या पासवर्ड' });
+            }
+
+            // Generate JWT
+            const token = jwt.sign({ userId: user.id, number: user.number }, JWT_SECRET);
+
+            res.json({ token });
+        });
+    } catch (error) {
+        console.error('Login error:', error);
+        res.status(500).json({ error: 'लॉगिन विफल रहा। कृपया पुनः प्रयास करें।' });
     }
 });
 
-  module.exports = app;
+module.exports = app;

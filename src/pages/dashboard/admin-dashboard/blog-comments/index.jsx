@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import { useNavigate } from "react-router-dom";
-import UserTable from "@/components/dashboard/admin-dashboard/users";
+import BlogCommentsList from "@/components/dashboard/admin-dashboard/blog-comment";
 
 const metadata = {
   title: "Users | Jio Kheti - अन्नदाता सुखी भव:",
@@ -10,7 +10,7 @@ const metadata = {
 };
 const allowedUser = ["admin"];
 
-export default function Users() {
+export default function BlogComments() {
   // const navigate = useNavigate();
   // useEffect(()=>{
   //   if (!allowedUser.includes(localStorage.getItem("role"))) {
@@ -20,7 +20,7 @@ export default function Users() {
   return (
     <>
       <MetaComponent meta={metadata} />
-      <UserTable />
+      <BlogCommentsList />
     </>
   );
 }

@@ -70,4 +70,163 @@ app.post('/whatsapp-user-register', (req, res) => {
     });
   });
 
-module.exports = app;
+  app.get('/user-info/:userId', (req, res) => {
+    const { userId } = req.params;
+
+    // Validate input
+    if (!userId) {
+      return res.status(400).json({
+        status: 'error',
+        message: 'कृपया वैध उपयोगकर्ता आईडी प्रदान करें'
+      });
+    }
+
+    // Fetch user information from the database
+    const selectSql = 'SELECT * FROM users WHERE id = ?';
+    db.query(selectSql, [userId], (err, results) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'error',
+          message: 'डेटाबेस त्रुटि: ' + err.message
+        });
+      }
+
+      if (results.length === 0) {
+        return res.status(404).json({
+          status: 'error',
+          message: 'उपयोगकर्ता नहीं मिला'
+        });
+      }
+
+      res.json({
+        status: 'success',
+        data: results[0]
+      });
+    });
+  });
+
+  app.put('/update-user-info/:userId', (req, res) => {
+    const { userId } = req.params;
+    const { name, state, district, taluka, number, address, photo } = req.body;
+
+    // Validate input
+    if (!userId || !name || !state || !district || !taluka || !number || !address) {
+      return res.status(400).json({
+        status: 'error',
+        message: 'कृपया सर्व आवश्यक माहिती प्रदान करा (नाव, राज्य, जिल्हा, तालुका, नंबर, पत्ता, फोटो)'
+      });
+    }
+
+    // Update user information in the database
+    const updateSql = `
+      UPDATE users 
+      SET name = ?, state = ?, district = ?, taluka = ?, number = ?, address = ?, photo = ? 
+      WHERE id = ?
+    `;
+    db.query(updateSql, [name, state, district, taluka, number, address, photo, userId], (err, result) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'error',
+          message: 'डेटाबेस त्रुटी: ' + err.message
+        });
+      }
+
+      if (result.affectedRows === 0) {
+        return res.status(404).json({
+          status: 'error',
+          message: 'उपयोगकर्ता सापडला नाही'
+        });
+      }
+
+      res.json({
+        status: 'success',
+        message: 'उपयोगकर्ता माहिती यशस्वीरित्या अद्यतनित केली गेली आहे'
+      });
+    });
+  });
+
+  app.get('/users', (req, res) => {
+    const { page = 1, limit = 10, search = '' } = req.query;
+
+    // Calculate offset for pagination
+    const offset = (page - 1) * limit;
+
+    // Fetch users with pagination and search
+    const selectSql = `
+      SELECT * FROM users 
+      WHERE name LIKE ? 
+      LIMIT ? OFFSET ?
+    `;
+    db.query(selectSql, [`%${search}%`, parseInt(limit), parseInt(offset)], (err, results) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'error',
+          message: 'डेटाबेस त्रुटी: ' + err.message
+        });
+      }
+
+      // Count total users for pagination metadata with search
+      const countSql = `
+        SELECT COUNT(*) AS total 
+        FROM users 
+        WHERE name LIKE ?
+      `;
+      db.query(countSql, [`%${search}%`], (err, countResults) => {
+        if (err) {
+          return res.status(500).json({
+            status: 'error',
+            message: 'डेटाबेस त्रुटी: ' + err.message
+          });
+        }
+
+        const total = countResults[0].total;
+        const totalPages = Math.ceil(total / limit);
+
+        res.json({
+          pagination: {
+            currentPage: parseInt(page),
+            totalPages,
+            totalRecords: total,
+            limit: parseInt(limit)
+          },
+          results
+        });
+      });
+    });
+  });
+
+  app.delete('/delete-user/:userId', (req, res) => {
+    const { userId } = req.params;
+
+    // Validate input
+    if (!userId) {
+      return res.status(400).json({
+        status: 'error',
+        message: 'कृपया वैध उपयोगकर्ता आईडी प्रदान करा'
+      });
+    }
+
+    // Delete user from the database
+    const deleteSql = 'DELETE FROM users WHERE id = ?';
+    db.query(deleteSql, [userId], (err, result) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'error',
+          message: 'डेटाबेस त्रुटी: ' + err.message
+        });
+      }
+
+      if (result.affectedRows === 0) {
+        return res.status(404).json({
+          status: 'error',
+          message: 'उपयोगकर्ता सापडला नाही'
+        });
+      }
+
+      res.json({
+        status: 'success',
+        message: 'उपयोगकर्ता यशस्वीरित्या हटविला गेला आहे'
+      });
+    });
+  });
+  module.exports = app;

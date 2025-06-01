@@ -29,6 +29,9 @@ import Tags from "./pages/dashboard/admin-dashboard/tags";
 import SubCategory from "./pages/dashboard/admin-dashboard/subCategory";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PushNotification from "./pages/dashboard/admin-dashboard/push-notification";
+import UserTable from "./components/dashboard/admin-dashboard/users/components/UserTable";
+import Users from "./pages/dashboard/admin-dashboard/users";
+import BlogComments from "./pages/dashboard/admin-dashboard/blog-comments";
 
 if (typeof window !== "undefined") {
   import("bootstrap");
@@ -59,6 +62,22 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <AdminDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="users"
+                  element={
+                    <ProtectedRoute>
+                      <Users />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="blogs-comments"
+                  element={
+                    <ProtectedRoute>
+                      <BlogComments />
                     </ProtectedRoute>
                   }
                 />
